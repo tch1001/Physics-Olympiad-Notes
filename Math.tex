@@ -135,14 +135,13 @@ Try differentiating the following functions with respect to $x$ or $t$. You can 
     \item $\frac{d}{dx} \tan x$
 \end{itemize}
 
-\section{Math: Integration / Anti-Differentiation (Basic)}
+\section{Math: Integration / Anti-Differentiation }
 
 Geometrically, (definite) integration gives you the area under the graph. Algebraically, there are a few techniques for common functions but integration is tricky in general. 
 
 \subsubsection{Indefinite Integration / Antiderivative}
 Q: If I give you a function $f(x)$ and told you that it's derivative is $f'(x) = 2x + 1$, can you find out what $f(x)$ is? \\
-A: $f(x) = x^2 + x + C$ where $C$ is an arbitrary constant. Why are there multiple answers?
-
+A: $f(x) = x^2 + x + C$ where $C$ is an arbitrary constant. Why are there multiple answers?\\[10pt]
 Mathematically, we say $$\int 2x + 1\ dx = x^2 + x + C$$
 More generally, $$\int f'(x) dx = f(x) + C$$
 
@@ -499,7 +498,8 @@ $$
 
 \subsection{Exercises}
 \begin{samepage}
-SJPO 2015 General Round Q11: A force $\vec{F} = \vec{F}_1 + \vec{F}_2$ can be decomposed as the sum of 2 vectors $\vec{F}_1$ and $\vec{F}_2$. Only the magnitude of $\vec{F}_1$ and the direction of $\vec{F}_2$ are known. Which of the following is the most accurate statement?
+\subsubsection{SJPO 2015 General Round Q11}
+A force $\vec{F} = \vec{F}_1 + \vec{F}_2$ can be decomposed as the sum of 2 vectors $\vec{F}_1$ and $\vec{F}_2$. Only the magnitude of $\vec{F}_1$ and the direction of $\vec{F}_2$ are known. Which of the following is the most accurate statement?
 \begin{itemize}
 \item[](A) Only one combination of $\vec{F}_1$ and $\vec{F}_2$ exists.
 \item[](B) There exists exactly two combinations of $\vec{F}_1$ and $\vec{F}_2$.
@@ -523,8 +523,8 @@ Ans: E \\[10pt]
 Extra: What are the possible directions of the applied force? 
 \end{samepage}
 \newpage
-\section{Physics: Dynamics and Projectile Motion}
 
+\section{Physics: Newtonian Mechanics}
 The following quantities are scalars (real numbers)
 \begin{itemize}
     \item mass $m$
@@ -532,7 +532,6 @@ The following quantities are scalars (real numbers)
     \item kinetic energy $E = \frac{1}{2} m|\vec{v}|^2$
     \item potential energy $U$
 \end{itemize}
-\leavevmode \\
 The following quantities are vectors
 \begin{itemize}
     \item position $\vec{r}(t)$
@@ -542,12 +541,85 @@ The following quantities are vectors
     \item momentum $\vec{p}(t) \equiv m\vec{v}(t)$
 \end{itemize}
 \leavevmode \\
+\subsection{Newton's Three Laws}
+Newton's 1st law defines what an inertial reference frame is: \textbf{In an inertial reference frame}, an object at rest remains at rest, or if in motion, remains in motion at a constant velocity unless acted on by a net external force.\\[10pt]
 Newton's 2nd law
-$$\vec{F}_{\text{net}} = \frac{d\vec{p}}{dt}$$
+$$\vec{F}_{\text{net}} = \frac{d(m\vec{v})}{dt}$$
 Newton's 3rd law 
-$$\vec{F}_{\text{A on B}} = -\vec{F}_{\text{B on A}}$$
+$$\vec{F}_{\text{A on B}}(t) = -\vec{F}_{\text{B on A}}(t)$$
 
-\subsection{Projectile Motion}
+\subsection{Momentum \& Impulse}
+Change in a particle's momentum is equal to the impulse it experiences. \\[10pt]
+Newton's 2nd law: Let $\vec{F}(t)$ be the net force on a particle, then
+$$\vec{F}(t) = \frac{d\vec{p}}{dt}$$
+Let's focus on one component of the vector equation (say $F_x, p_x$)
+$$F_x(t) = \frac{dp_x}{dt}$$
+Integrating both sides wrt time $t$ from $t=t_A$ to $t=t_B$ yields
+
+\begin{align}
+    \int_{t_A}^{t_B} F_x(t) dt &= \int_{t_A}^{t_B} \frac{dp_x}{dt} dt \\
+    \int_{t_A}^{t_B} F_x(t) dt &= \int_{p_x(t_A)}^{p_x(t_B)} dp_x \\
+    &= p_x(t_B) - p_x(t_A) \\
+    &= \Delta p_x
+\end{align}
+If a particle experiences a force $\vec{F}(t)$ over a time period $t_A$ to $t_B$, it's ($x$-component of) momentum will change by $\Delta p_x = \int_{t_A}^{t_B} F_x(t) dt$.\\[10pt]
+This is true for each component $x,y,z$ so actually it is a vector equation 
+$$\Delta \vec{p} = \int_{t_A}^{t_B} \vec{F}(t) dt$$
+The quantity on the right hand side is called \textbf{impulse}.
+
+\subsection{Kinetic Energy \& Work}
+Often in physics, it is unnecessary to know the exact path $x(t)$ of a particle. Sometimes, the question only requires us to know $v(t)$. \\[10pt]
+Example: A particle of mass $m$ experiences a force $F(x(t)) = \frac{A}{x(t)^2}$. It starts at $x(0)=x_0,\ x_0 > 0$ with an initial speed of $v_0$ toward $x=0$. Where will the particle come to a rest? \\[10pt]
+One way of solving this is to find the function $x(t)$ that satisfies $F=ma$
+$$\frac{A}{x^2} = m \frac{d^2x}{dt^2}$$
+This is a differential equation, which we will cover later. We realise we cannot integrate wrt $t$ because the LHS itself is a function of $t$ we do not know the expression for. We will actually integrate wrt $x(t)$. We need to massage the equation into a different form first.\\[10pt]
+By chain rule,
+\begin{align}
+\frac{d}{d t}\left[\left(\frac{d x}{d t}\right)^2\right]&=2  \frac{d x}{d t} \frac{d^2 x}{d t^2} 
+\end{align}
+Substituting this back in and simplifying
+\begin{align}
+\frac{A}{x^2}&=\frac{m}{2 \frac{d x}{d t}} \frac{d}{d t}\left[\left(\frac{d x}{d t}\right)^2\right] \\
+& =\frac{m}{2} \frac{d}{d x}\left[\left(\frac{d x}{d t}\right)^2\right] \\
+& =\frac{m}{2} \frac{d}{d x} v^2 
+\end{align}
+Then integrating from the starting to the stopping point wrt $x$ instead of $t$,
+\begin{align} 
+\int_{x_0}^{x_{\text {stop }}} \frac{A}{x^2} d x&=\frac{m}{2} \int_{v_0^2}^{v_{\text {stop }}^2=0} d\left[\left(\frac{d x}{d t}\right)^2\right] \\
+\left[-\frac{A}{x}\right]_{x_0}^{x_\text{stop}} &= \left[\frac{1}{2} m v^2\right]_{v^2=v_0^2}^{v^2=0} \\
+\frac{A}{x_0}-\frac{A}{x_\text {stop }}&=-\frac{1}{2} m v_0^2 \\
+\frac{A}{x_0}+\frac{1}{2} m v_0^2&=\frac{A}{x_\text {stop }} \label{eq:pepke}\\
+x_{\text{stop}} &= A \left(\frac{A}{x_0}+\frac{1}{2} m v_0^2\right)^{-1}
+\end{align}
+The left hand side of Equation \ref{eq:pepke} is actually potential energy + kinetic energy. We will talk about potential energy in future, but for now we observe that integrating $F$ with respect to $x$ instead of $t$ was a useful trick. Generalizing this to a general force $F$,
+
+\begin{align}
+    F &= ma \\
+    \int_{x_A}^{x_B} F dx &= m \int_{x_A}^{x_B} a dx 
+\end{align}
+Claim: $a\ dx = v\ dv$. Proof: 
+\begin{align}
+v\ dv
+& = \frac{1}{2} d\left(v^2\right) \\
+& =\frac{1}{2} \frac{d}{d t}\left(v^2\right) d t \\
+& =\frac{1}{2} 2 v a\ d t \\
+& =a\ v\ d t \\
+& =a \ d x
+\end{align}
+So by a change in variables, $a\ dx = v\ dv$. 
+\begin{align}
+    \int_{x_A}^{x_B} F dx &= m \int_{x_A}^{x_B} a dx \\
+    &= m \int_{v_A}^{v_B} v dv \\
+    &= \frac{1}{2} m \left[v^2\right]_{v_A}^{v_B} \\
+    &= \frac{1}{2} m v_B^2 - \frac{1}{2} mv_A^2 \\
+    &= \Delta K.E.
+\end{align}
+In other words, if a particle experiences a force $F(x)$ over a distance interval from $x_A$ to $x_B$, it's change of kinetic energy $\Delta\left(\frac{1}{2}mv^2\right)$ is given by $$\int_{x_A}^{x_B} F(x)\ dx$$
+which we call the \textbf{work done} on the particle.\\[10pt]
+Extra: Mathematically, what we have actually done is we have transformed a 2nd order ODE $a(x)$ into a 1st order ODE $v(x)$, which should be easier to integrate in general.
+
+\section{Physics: Projectile Motion}
+
 \begin{align}
 \vec{F}_{\text{net}} &= m \vec{a} \\
 \Rightarrow \left(
@@ -605,13 +677,13 @@ Then that gives us the path of the projectile with respect to time
 \end{align}
 This is also known as a parametric curve, with time $t$ being the parameter. Every value of $t$ gives us a point in space $(x(t),y(t),z(t))$. 
 
-\subsubsection{From parametric to $y(x)$}
+\subsection{From parametric to $y(x)$}
 If we want to convert parametric curve into a formula for the graph $y(x)$, then we need to invert Equation \ref{eq:xt} to yield $$t(x) = {\frac{x}{u \cos \theta}}$$
 Substituting $t(x)$ into $y(t)$ gives us $y(x)$
 \begin{align}
     y(x) &= \tan \theta\ x - \frac{g}{2u^2 \cos^2 \theta} x^2
 \end{align}
-\subsubsection{Finding Range}
+\subsection{Finding Range}
 There are 2 solutions to $y(x) = 0$: the starting one being $x_{\text{start}}=0$. The other is 
 $$x_{\text{end}} = \frac{2u^2}{g} \sin \theta \cos \theta = \frac{u^2}{g} \sin 2\theta$$
 
@@ -632,6 +704,7 @@ When we studied $F(t)=ma(t)$, we noted that as long as we know the function $F(t
     \item Lorentz Force $\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})$
 \end{itemize}
 In these scenarios, we can no longer simply "integrate twice" since we hit a circular dependency. To resolve this, we need to solve the "differential equation". Differential equations are very common in physics. If you solve the Navier-Stokes Differential Equation, you earn a million dollars.
+
 \subsection{What is a Differential Equation?}
 When we first learned the quadratic equation, we were looking for \textbf{values} of $x$ that satisfy $$ax^2 + bx + c = 0$$  We can find 2 complex \textbf{solutions} to this \textbf{algebraic} equation
 $$x = \frac{-b - \sqrt{b^2 - 4ac}}{2a} \quad \text{or}\quad x = \frac{-b + \sqrt{b^2 - 4ac}}{2a}$$
@@ -647,7 +720,7 @@ Find $q(t)$ that satisfies the following ($R,C$ are constants).
 $$\frac{dq}{dt} = -\frac{q}{RC}$$ with initial condition $q(t=0) = q_0$. \\Answer: $q(t) = q_0 \exp (-t/RC)$ \\[10pt]
 What if the initial condition was $I(t=0) := \left. \frac{dq}{dt} \right|_{t=0} = I_0$ instead? \\ Answer: $q(t) = {I_0 RC} \exp (-t/RC)$\\[10pt]
 
-\subsection{2nd Order Differential Equations}
+\subsection{Simple Harmonic Motion: 2nd Order Differential Equations}
 In polynomial equations, the largest power $x^n$ is the degree $n$ of the polynomial. In differential equations, the highest derivative $\frac{d^n y}{dx^n}$ is the order of the differential equation. In this section, we cover a very common class of 2nd order differential equations
 $$\frac{d^2 y}{dx^2} = -\omega^2 y$$
 which has solution
@@ -678,7 +751,6 @@ are 2 valid solutions.
     &= A [f(x) + g(x)] \\
     &= \text{RHS}
 \end{align}
-
 Examples of Linear Differential Equations:
 \begin{itemize}
     \item Simple Harmonic Motion
@@ -688,12 +760,11 @@ Examples of Linear Differential Equations:
     \item Maxwell's Equation (Electromagnetism)
 \end{itemize}
 \leavevmode \\
-Since $$y_+(x)=y_0 \exp(+ i \omega x)$$ and $$y_-(x) = y_0 \exp(- i \omega x)$$ are 2 solutions to the \textbf{linear} DE $$\frac{d^2 f}{ dx^2} = A f(x)$$
+Since $$y_+(x)=y_0 \exp(+ i \omega x)$$  $$y_-(x) = y_0 \exp(- i \omega x)$$ are 2 solutions to the \textbf{linear} DE $$\frac{d^2 f}{ dx^2} = A f(x)$$
 any linear combination of them is a valid solution.
 
 $$y(x) = C \exp(+i\omega x) + D \exp(-i \omega x)$$
-where $C,D$ are arbitrary complex constants.
-
+where $C,D$ are arbitrary complex constants.\\[10pt]
 \textbf{But what is a complex exponential? } Euler's formula: 
 $$e^{i\theta} = \cos \theta + i \sin \theta$$
 Some say it's just a mathematical trick, since "our system doesn't involve complex numbers". It gets philosophical. Richard Feynman famously said: "Shut up and calculate". \\[10pt]
@@ -704,7 +775,8 @@ So we want our solution $y(x)$ to be real, i.e. $\text{Im }[y(x)] = 0$. So that 
     &= |C| \text{Re}[\exp(+i (\omega x + \phi))] \\
     &= |C| \cos (\omega x + \phi)
 \end{align}
-which is the general solution we heuristically arrived at previously. The complex exponential solution adds more rigour to the claim that "this is the most general solution possible".
+which is the general solution we heuristically arrived at previously. \\[10pt]
+Extra: How do we know there are no other functions that solve the ODE? The answer is we can factorise $\left(\frac{d^2}{dx^2} + \omega^2\right) = \left(\frac{d}{dx} - i\omega\right) \left(\frac{d}{dx} + i\omega\right)$ and calculate the kernel of these 2 differential operators.
 
 \subsubsection{Simple Harmonic Motion}
 
@@ -717,8 +789,6 @@ where $\omega = 2\pi/T$ will turn out to be the angular frequency of the oscilla
 Side note: The $\phi$ accounts for the $\cos$ solution by R-formula $a \sin \theta + b \cos \theta = \sqrt{a^2 + b^2} \sin(\theta + \arctan \left(\frac{b}{a}\right))$
 
 
-
-\subsection{Physics Examples/Exercises}
 \subsubsection{Spring Mass}
 A mass $m$ lies on a frictionless table, attached to an unstretched spring with spring constant $k$. The other end of the spring is fixed to a wall. The mass is displaced from it's equilibrium position by $x_0$ (in a direction perpendicular to the wall) and released. Find the amplitude and period of oscillation.\\[10pt]
 Hooke's Law: The restoring force $F$ of a spring stretched by $\vec{r}$ is $F(\vec{r}) = -k\vec{r}$.\\[10pt]
@@ -726,35 +796,30 @@ Extra: Find the period of oscillation of a mass $m$ hung vertically on a spring 
 
 \subsubsection{Spring Mass (with a Push)}
 Same as the above, mass $m$ on frictioness table attached to spring with spring constant $k$ displaced by $x_0$. But this time, instead of a release, it is pushed, giving the mass an initial speed $v_0$ (toward the point of equilibrium). Find the new amplitude of oscillation.\\[10pt]
-This question emphasizes the initial conditions of a differential equation.
+This question emphasizes the initial conditions of a differential equation.\\[10pt]
+Extra: What happens if the initial speed $v_0$ was directed away from the point of equilibrium instead? Why do we get the same answer for amplitude? 
 
 \subsubsection{Pendulum}
 A mass $m$ is hung by an inextensible string of length $l$ in a gravitational field strength $g$. It is displaced by a small angular displacement $\theta_0$ and released. Find the amplitude and period of oscillation.
 
-\section{Physics: Newtonian Mechanics}
-Newton's Three Laws
-\subsection{}
-\subsection{Momentum \& Impulse}
-Change in a particle's momentum is equal to the impulse it experiences. \\[10pt]
-Newton's 2nd law: Let $\vec{F}(t)$ be the net force on a particle, then
-$$\vec{F}(t) = \frac{d\vec{p}}{dt}$$
-Let's focus on one component of the vector equation (say $F_x, p_x$)
-$$F_x(t) = \frac{dp_x}{dt}$$
-Integrating both sides wrt time $t$ from $t=t_A$ to $t=t_B$ yields
+\subsection{1st Order Differential Equations}
+\subsubsection{Separable}
+\subsubsection{Integrating Factor}
 
-\begin{align}
-    \int_{t_A}^{t_B} F_x(t) dt &= \int_{t_A}^{t_B} \frac{dp_x}{dt} dt \\
-    \int_{t_A}^{t_B} F_x(t) dt &= \int_{p_x(t_A)}^{p_x(t_B)} dp_x \\
-    &= p_x(t_B) - p_x(t_A) \\
-    &= \Delta p_x
-\end{align}
-If a particle experiences a force $\vec{F}(t)$ over a time period $t_A$ to $t_B$, it's ($x$-component of) momentum will change by $\Delta p_x = \int_{t_A}^{t_B} F_x(t) dt$.\\[10pt]
-This is true for each component $x,y,z$ so actually it is a vector equation 
-$$\Delta \vec{p} = \int_{t_A}^{t_B} \vec{F}(t) dt$$
-The quantity on the right hand side is called impulse.
+\section{Math: Polar Coordinates}
+\section{Physics: Rotational Dynamics}
 
+\section{Math: Other Coordinates}
+\section{Math: 2D \& 3D Integrals}
+\section{Physics: Moment of Inertia}
+\section{Physics: Electrostatics}
 
-\section{Kinetic Energy \& Work}
+\section{Math: Vector Calculus}
+\section{Physics: Potentials \& Potential Energy}
+\section{Physics: Electromagnetism}
 
+\section{Math: Differential Equations}
+\subsection{SHM: Driven and Damping}
+\subsection{Laplace Transform}
 
 \end{document}
