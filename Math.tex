@@ -5,6 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage{enumitem}
+\usepackage{wrapfig}
 \graphicspath{ {./images} }
 
 
@@ -18,6 +19,10 @@
 
 \date{\today}
 \begin{document}
+\newif\ifpaper
+
+% TOGGLE ANSWER HERE
+\paperfalse 
 
 \maketitle
 \tableofcontents
@@ -148,7 +153,7 @@ More generally, $$\int f'(x) dx = f(x) + C$$
 \subsubsection{Exercises}
 You can check whether you are correct by putting your answer in the derivative calculator and checking if you get the function to be integrated!
 \begin{itemize}
-    \item $\int 5\ dx$
+    \item $\int 5\ dx$ 
     \item $\int \left( \int -10 dt \right) dt$
     \item $\int \sin(5t) \ dt$
     \item $\int (1/x^2) dx$
@@ -160,7 +165,7 @@ You can check whether you are correct by putting your answer in the derivative c
 \subsubsection{Definite Integration / Area under graph}
 You can calculate the area under a curve by performing a \textbf{definite} integral.
 \begin{align}
-    \text{Area under }f'(x)\text{ from }x=a\text{ to }x=b &= \int_a^b f'(x)\ dx  \\
+    \text{Area under }f'(x)\text{ from }(x=a)\text{ to }(x=b) &= \int_a^b f'(x)\ dx  \\
     &= \left[f(x) + C\right]^b_a \\
     &= f(b) - f(a)
 \end{align}
@@ -236,7 +241,7 @@ SJPO 2015 General Round Q13: An object is travelling on a straight path and exhi
 \item[](D) $2.0 \mathrm{~ms}^{-2}$
 \item[](E) $2.5 \mathrm{~ms}^{-2}$
 \end{itemize}
-Ans: B
+Ans: \ifpaper B \fi
 \end{samepage}
 \\[20pt]
 % SJPO 2015 General Round Q28: The Moon is approximately $380,000 \mathrm{~km}$ from Earth. The time a laser light beam takes to travel from the Earth to the Moon and back is most nearly
@@ -255,7 +260,7 @@ A train moving on straight horizontal tracks slows down from $66 \mathrm{~ms}^{-
 \item[](C) $740 \mathrm{~m}$
 \item[](D) $970 \mathrm{~m}$ 
 \item[](E) $1100 \mathrm{~m}$ \end{itemize}
-Ans: D
+Ans: \ifpaper D \fi
 \end{samepage}
 \\[20pt]
 % SJPO 2016 General Round Q9 A (Projectile Motion)
@@ -263,7 +268,7 @@ Ans: D
 \begin{samepage}
 \subsubsection{SJPO 2018 General Round Q10} The position of an object moving along a linear track is plotted as a function of time. It started from rest and underwent a positive acceleration for some time, followed by a constant velocity. Which of the following graphs correctly shows this situation?\\
 \includegraphics[width=\linewidth]{2018q10.png}\\
-Ans: E\\
+Ans: \ifpaper E \fi\\
 \end{samepage}
 % SJPO 2018 General Round Q11 B
 % SJPO 2018 General Round Q13 A
@@ -279,7 +284,7 @@ v-t graph. \\ \includegraphics[width=0.5\linewidth]{images/2018q16.png} \\
 \item[] (C) $-3.0 \mathrm{~m} / \mathrm{s}^2$ 
 \item[] (D) $\quad 3.0 \mathrm{~m} / \mathrm{s}^2$
 \item[] (E) $-0.33 \mathrm{~m} / \mathrm{s}^2$\end{itemize}
-Ans: E
+Ans: \ifpaper E \fi
 \end{samepage}
 \\[20pt]
 \begin{samepage}
@@ -291,7 +296,7 @@ Ans: E
 \item[] (D) $180 \mathrm{~m}$
 \item[] (E) $210 \mathrm{~m}$ 
 \end{itemize}
-Ans: C\\
+Ans: \ifpaper C \fi\\
 \end{samepage}
 \\
 \begin{samepage}
@@ -304,7 +309,7 @@ An electron in a vacuum, starting from rest falls $5 \mathrm{~cm}$ near the surf
 \item[] (D) $\quad 0.001 \mathrm{~s}$
 \item[] (E) $\quad 0.0001 \mathrm{~s}$
 \end{itemize}
-Ans: A
+Ans: \ifpaper A \fi
 \end{samepage}
 % SJPO 2018 General Round Q18 C
 
@@ -507,7 +512,7 @@ A force $\vec{F} = \vec{F}_1 + \vec{F}_2$ can be decomposed as the sum of 2 vect
 \item[](D) At least three combinations of $\vec{F}_1$ and $\vec{F}_2$ exist but the total number of combinations is finite.
 \item[](E) Only one or two combinations of $\vec{F}_1$ and $\vec{F}_2$ exist.
 \end{itemize}
-Ans: E
+Ans: \ifpaper E \fi
 \end{samepage}
 \begin{samepage}
 \subsubsection{SJPO 2016 General Round Q21}
@@ -519,11 +524,10 @@ Initially, a $1\mathrm{~kg}$ box was sliding on frictionless surface at a consta
 \item[](D) $4 \mathrm{kgms}^{-1}$
 \item[](E) $5 \mathrm{kgms}^{-1}$
 \end{itemize}
-Ans: E \\[10pt]
+Ans: \ifpaper E \fi \\[10pt]
 Extra: What are the possible directions of the applied force? 
 \end{samepage}
 \newpage
-
 \section{Physics: Newtonian Mechanics}
 The following quantities are scalars (real numbers)
 \begin{itemize}
@@ -614,8 +618,8 @@ So by a change in variables, $a\ dx = v\ dv$.
     &= \frac{1}{2} m v_B^2 - \frac{1}{2} mv_A^2 \\
     &= \Delta K.E.
 \end{align}
-In other words, if a particle experiences a force $F(x)$ over a distance interval from $x_A$ to $x_B$, it's change of kinetic energy $\Delta\left(\frac{1}{2}mv^2\right)$ is given by $$\int_{x_A}^{x_B} F(x)\ dx$$
-which we call the \textbf{work done} on the particle.\\[10pt]
+In other words, if a particle experiences a force $F(x)$ over a distance interval from $x_A$ to $x_B$, it's change of kinetic energy $\Delta\left(\frac{1}{2}mv^2\right)$ is given by $$\Delta K.E. = \int_{x_A}^{x_B} F(x)\ dx$$
+which we call the \textbf{work done} on the particle. This is the \textbf{Work Energy theorem}.\\[10pt]
 Extra: Mathematically, what we have actually done is we have transformed a 2nd order ODE $a(x)$ into a 1st order ODE $v(x)$, which should be easier to integrate in general.
 
 \section{Physics: Projectile Motion}
@@ -690,11 +694,73 @@ $$x_{\text{end}} = \frac{2u^2}{g} \sin \theta \cos \theta = \frac{u^2}{g} \sin 2
 We now have range as a function of angle $x_{\text{end}}(\theta)$. We can differentiate this with respect to $\theta$ and set the derivative $dx_{\text{end}}/d\theta = 0$ to find the maximum range. Strictly speaking, we have to check the second derivative too.
 % \subsubsection{Region of Reachability}
 \subsection{Exercises}
-Region of Reachability\\
-Hitting a slope\\
-Starting from a height \\
-Minimum velocity to cross a wall (spot)\\
-(ODE) With air resistance
+\begin{samepage}
+\subsubsection{SJPO 2016 General Round Q9}
+A fruit drops from a tree. A boy, $1.5 \mathrm{~m}$ tall, stands on the flat ground just under the fruit. The fruit was initially $10 \mathrm{~m}$ above the boy's head. A woman standing on the level ground $10 \mathrm{~m}$ from the boy immediately throws a ball from a height of $1.5 \mathrm{~m}$ above the ground, and deflected the fruit from its path towards the boy's head. Assume that air resistance and her reaction time are negligible. Calculate the minimum speed of the ball?
+\begin{itemize}
+\item[](A) $10 \mathrm{ms}^{-1}$
+\item[](B) $15 \mathrm{ms}^{-1}$
+\item[](C) $20 \mathrm{ms}^{-1}$
+\item[](D) $25 \mathrm{ms}^{-1}$
+\item[](E) $30 \mathrm{ms}^{-1}$
+\end{itemize}
+Ans: \ifpaper A \fi \\[10pt]
+\end{samepage}
+
+\begin{samepage}
+\subsubsection{SJPO 2016 General Round Q11: Region of Reachability}
+A projectile is launched at velocity $v_0$ into an ideal ball istic trajectory from the origin of a coordinate system. Given that: when the launch angle is varied, all the possible points that can be hit by the projectile are exactly contained within a parabola with equation $y=a+b x^2$ where $y$ is the vertical height, $x$ is the horizontal displacement from the origin, while $a$ and $b$ are constants. What could be the expression for $a$ and $b$ ?\\
+ \begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/sjpo2016q11.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[](A) $\quad a=\frac{v_0{ }^2}{2 g}, b=\frac{g}{v_0{ }^2}$
+\item[](B) $\quad a=\frac{v_0{ }^2}{2 g}, b=\frac{g}{2 v_0{ }^2}$
+\item[](C) $\quad a=\frac{v_0{ }^2}{2 g}, b=\frac{2 g}{v_0{ }^2}$
+\item[](D) $\quad a=\frac{v_0{ }^2}{g}, b=-\frac{g}{v_0{ }^2}$
+\item[](E) $\quad a=\frac{v_0{ }^2}{2 g}, b=-\frac{g}{2 v_0{ }^2}$
+\end{itemize}
+Ans: \ifpaper E \fi \\[10pt]
+Extra: Prove that the envelope is a parabola. \url{https://en.wikipedia.org/wiki/Envelope_(mathematics)}
+\end{samepage}
+
+\begin{samepage}
+\subsubsection{SJPO 2014 General Round Q12: Projectile on Slope}
+As shown in the figure below, a ball is thrown out horizontally from a slope. The slope makes an angle $\theta$ with the ground. At the first throw, the ball is ejected with a speed $v_1$ and at the second throw, it is ejected with a speed $v_2$. The angles that the ball made with the slope are measured to be $\alpha_1$ and $\alpha_2$ respectively. If $v_1$ is greater than $v_2$,\\
+ \begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/2014q12.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[](A) $\alpha_1=\alpha_2$
+\item[](B) $\alpha_1>\alpha_2$
+\item[](C) $\alpha_1<\alpha_2$
+\item[](D) $\alpha<\theta$
+\item[](E) It is not possible to infer much as the mass of the ball is not given.
+\end{itemize}
+Ans: \ifpaper A \fi \\[10pt]
+\end{samepage}
+
+\begin{samepage}
+\subsubsection{SJPO 2018 General Round Q18}
+18. A $2 \mathrm{~kg}$ block slides down a smooth roof which is angled at $30^{\circ}$ to the horizontal. When it reaches $\mathrm{A}$, it has a speed of $2.0 \mathrm{~m} / \mathrm{s}$. It leaves the surface of the roof at $\mathrm{B}$ and strikes the ground at a distance $d$ from the wall of the building. What is the distance $d$ ?
+ \begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/2018q18.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[](A) $3.96 \mathrm{~m}$
+\item[](B) $8.66 \mathrm{~m}$
+\item[](C) $8.78 \mathrm{~m}$
+\item[](D) $17.3 \mathrm{~m}$
+\item[](E) $17.8 \mathrm{~m}$
+\end{itemize}
+Ans: \ifpaper C \fi \\[10pt]
+\end{samepage}
+
+% Hitting a slope\\
+% Starting from a height \\
+% Minimum velocity to cross a wall (spot)\\
+% (ODE) With air resistance
+
 \section{Math: Differential Equations}
 When we studied $F(t)=ma(t)$, we noted that as long as we know the function $F(t)$, we can find $a(t)$ and integrate twice to obtain $x(t)$. However, in most systems, $F(t)$ depends on $x(t)$ or $v(t) \equiv \dot{x}(t)$. Examples include 
 \begin{itemize}
@@ -720,7 +786,7 @@ Find $q(t)$ that satisfies the following ($R,C$ are constants).
 $$\frac{dq}{dt} = -\frac{q}{RC}$$ with initial condition $q(t=0) = q_0$. \\Answer: $q(t) = q_0 \exp (-t/RC)$ \\[10pt]
 What if the initial condition was $I(t=0) := \left. \frac{dq}{dt} \right|_{t=0} = I_0$ instead? \\ Answer: $q(t) = {I_0 RC} \exp (-t/RC)$\\[10pt]
 
-\subsection{Simple Harmonic Motion: 2nd Order Differential Equations}
+\subsection{Simple Harmonic Motion ODE}
 In polynomial equations, the largest power $x^n$ is the degree $n$ of the polynomial. In differential equations, the highest derivative $\frac{d^n y}{dx^n}$ is the order of the differential equation. In this section, we cover a very common class of 2nd order differential equations
 $$\frac{d^2 y}{dx^2} = -\omega^2 y$$
 which has solution
@@ -737,8 +803,7 @@ Solution: $$y=y_0 \exp(\sqrt{A}x)$$
 Question: What happens if $A < 0$? \\
 Answer: $\sqrt{A}$ is complex! To be more precise, if $A=-\omega^2$ for a positive real number $\omega$, then 
 $$y=y_0 \exp(\pm i \omega x)$$
-are 2 valid solutions.
-
+are 2 valid solutions.\\[10pt]
 \textbf{A word on linear differential equation: } Equation \ref{eq:shm} is said to be linear, because if I have 2 solutions $f(x)$ and $g(x)$, then adding them together or scaling them is still a valid solution.
 \begin{align}
     \text{Given } \frac{d^2 f}{ dx^2} &= A f(x)\\
@@ -778,8 +843,51 @@ So we want our solution $y(x)$ to be real, i.e. $\text{Im }[y(x)] = 0$. So that 
 which is the general solution we heuristically arrived at previously. \\[10pt]
 Extra: How do we know there are no other functions that solve the ODE? The answer is we can factorise $\left(\frac{d^2}{dx^2} + \omega^2\right) = \left(\frac{d}{dx} - i\omega\right) \left(\frac{d}{dx} + i\omega\right)$ and calculate the kernel of these 2 differential operators.
 
-\subsubsection{Simple Harmonic Motion}
+\subsection{Separable ODE}
+A first order separable differential equation is one of the form 
+$$\frac{dy}{dx} = \frac{f(x)}{g(y)}$$
+One can solve these type of equations in general by rearranging and integrating.
+\begin{align}
+    g(y)\ dy &= f(x)\ dx     \\
+    \int g(y)\ dy &= \int f(x)\ dx
+\end{align}
 
+\subsection{1st Order ODE}
+A 1st Order ODE takes the following general form
+$$\frac{dy}{dx} + P(x) y = Q(x)$$
+The solution is 
+$$y(x) = \frac{\int \left( \exp(\int P(x)\ dx) \right) Q(x)\ dx}{ \exp(\int P(x)\ dx)}$$
+Derivation: We first multiply both sides by a specific function $\mu(x)$ called the \textbf{integrating factor}, which we currently don't know the expression for.
+$$\frac{dy}{dx} \mu(x) + [\mu(x) P(x)] y = \mu(x) Q(x)$$
+The idea is that we want to make use of the product rule 
+\begin{align}
+\frac{d}{dx} [y(x) f(x)] &= \frac{dy}{dx} f(x) + \frac{df}{dx} y(x)\\
+\text{which we compare with LHS}& \quad \  \frac{dy}{dx} \mu(x) + [\mu(x)P(x)]y
+\end{align}
+to rewrite the LHS as a total derivative. So we need to choose $\mu(x)$ to satisfy 
+\begin{align}
+    \mu(x) &= f(x) \\
+    \mu(x) P(x) &= \frac{df}{dx}
+\end{align}
+This is separable, so it's just
+\begin{align}
+    \frac{d\mu(x)}{dx} &= \mu(x) P(x) \\
+    \frac{1}{\mu(x)}\ d\mu(x) &= P(x)\ dx \\
+    \int \frac{1}{\mu(x)}\ d\mu(x) &= \int P(x)\ dx \\
+    \ln |\mu(x)| &= \int P(x)\ dx + C\\
+    \mu(x) &= \pm e^C e^{\int P(x) \ dx}
+\end{align}
+After that, we substitute $\mu(x)$ back into the ODE and integrate both sides to solve for $y(x)$
+\begin{align}
+    \frac{d}{dx} [y(x) \mu(x)] &= \mu(x) Q(x)\\
+    y(x) \mu(x) &= \int \mu(x) Q(x)\ dx\\
+    y(x) &= \frac{\int \left( \exp(\int P(x)\ dx) \right) Q(x)\ dx}{ \exp(\int P(x)\ dx)}
+\end{align}
+Side Note: The constant of integration that appears in the integrating factor $\exp(\int P(x)\ dx)$ will cancel out. This makes sense because scaling integrating factor $\mu(x)$ by a constant $\mu(x) \mapsto \lambda \mu(x), \lambda \in \mathbb R$ shouldn't affect the solution $y(x)$ since the integrating factor was not in the original ODE.
+
+
+
+\section{Physics: Simple Harmonic Motion (Part I)}
 There are a lot of ways Simple Harmonic Motion (SHM) can appear, but one thing that is universal is that the equations of motion always simplify (usually after some approximations) to the form 
 \begin{align}
     \frac{d^2 y}{dt^2} &= -\omega^2 y(t) \\
@@ -789,26 +897,78 @@ where $\omega = 2\pi/T$ will turn out to be the angular frequency of the oscilla
 Side note: The $\phi$ accounts for the $\cos$ solution by R-formula $a \sin \theta + b \cos \theta = \sqrt{a^2 + b^2} \sin(\theta + \arctan \left(\frac{b}{a}\right))$
 
 
-\subsubsection{Spring Mass}
+\subsection{Spring Mass}
 A mass $m$ lies on a frictionless table, attached to an unstretched spring with spring constant $k$. The other end of the spring is fixed to a wall. The mass is displaced from it's equilibrium position by $x_0$ (in a direction perpendicular to the wall) and released. Find the amplitude and period of oscillation.\\[10pt]
-Hooke's Law: The restoring force $F$ of a spring stretched by $\vec{r}$ is $F(\vec{r}) = -k\vec{r}$.\\[10pt]
+Hooke's Law: The restoring force $F$ of a spring stretched by $x$ is $\vec{F}(x) = -kx\ \hat{x}$.\\[10pt]
 Extra: Find the period of oscillation of a mass $m$ hung vertically on a spring with spring constant $k$ in a gravitational field strength $g$.
 
-\subsubsection{Spring Mass (with a Push)}
+\subsection{Spring Mass (with a Push)}
 Same as the above, mass $m$ on frictioness table attached to spring with spring constant $k$ displaced by $x_0$. But this time, instead of a release, it is pushed, giving the mass an initial speed $v_0$ (toward the point of equilibrium). Find the new amplitude of oscillation.\\[10pt]
 This question emphasizes the initial conditions of a differential equation.\\[10pt]
 Extra: What happens if the initial speed $v_0$ was directed away from the point of equilibrium instead? Why do we get the same answer for amplitude? 
 
-\subsubsection{Pendulum}
+\subsection{Pendulum}
 A mass $m$ is hung by an inextensible string of length $l$ in a gravitational field strength $g$. It is displaced by a small angular displacement $\theta_0$ and released. Find the amplitude and period of oscillation.
 
-\subsection{1st Order Differential Equations}
-\subsubsection{Separable}
-\subsubsection{Integrating Factor}
+\subsection{General Pattern for SHM Questions}
+I will compile all the SHM questions later on because SHM spans across all the physics topics (from EM to buoyancy), but in general the pattern is just 
+\begin{itemize}
+    \item[] 1. Equations of Motion (EOM)
+    \item[] 2. Solve for equilibrium
+    \item[] 3. Taylor expand about equilibrium
+    \item[] 4. Match with the SHM equation $\ddot q(t) = -\omega^2 q(t)$
+\end{itemize}
+
+\subsection{Exercises}
+\begin{samepage}
+\subsubsection{SJPO 2015 General Round Q16}
+As shown in the diagram, a pendulum of length $L$ is hung from the ceiling and at a point $P$, a peg is placed. $L^{\prime}$ denotes the shortened length of the pendulum during part of its oscillation. The period of the pendulums oscillation is now
+\begin{wrapfigure}{r}{0.4\textwidth}
+\includegraphics[width=0.9\linewidth]{images/2015q16.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[](A) $2 \pi \sqrt{\frac{L}{g}}$
+\item[](B) $2 \pi \sqrt{\frac{L^{\prime}}{g}}$
+\item[](C) $2 \pi\left[\sqrt{\frac{L}{g}}+\sqrt{\frac{L^{\prime}}{g}}\right]$
+\item[](D) $\pi\left[\sqrt{\frac{L}{g}}+\sqrt{\frac{L^{\prime}}{g}}\right]$
+\item[](E) $\pi \sqrt{\frac{L+L^{\prime}}{g}}$
+\end{itemize}
+Ans: \ifpaper D \fi
+\end{samepage}
+\begin{samepage}
+\subsubsection{SJPO 2018 General Round Q21}
+The bob of a simple pendulum travels $2 \mathrm{~m}$ in one complete oscillation in a time of $2.000 \mathrm{~s}$. Assuming that damping is negligible, when the same pendulum is made to travel $4 \mathrm{~m}$ in one complete oscillation, the time taken is
+\begin{itemize}
+\item[](A) $4.000 \mathrm{~s}$
+\item[](B) More than $2.000 \mathrm{~s}$
+\item[](C) $2.000 \mathrm{~s}$
+\item[](D) Less than $2.000 \mathrm{~s}$
+\item[](E) $1.000 \mathrm{~s}$
+\end{itemize}
+Ans: \ifpaper B \fi 
+\end{samepage}
+\begin{samepage}
+\subsubsection{SJPO 2018 General Round Q22}
+
+\end{samepage}
+\section{Physics: Collisions}
+Collisions between multiple bodies (e.g. dropping a stack of balls) are analysed as a sequence of collisions between 2 bodies at a time. When 2 bodies collide, their \textbf{total momentum is always conserved} / invariant before and after the collision (invariant means doesn't change). Their total energy, however, has 3 possibilities:
+\begin{itemize}
+    \item Total energy conserved (\textbf{elastic})
+    \item Total energy decreased (\textbf{inelastic}) e.g. billiard balls
+    \item Total energy increased (\textbf{superelastic}) e.g. explosion
+\end{itemize}
+\subsection{1D Elastic Collisions}
+\subsection{2D Elastic Collisions}
+\subsection{1D Inelastic Collisions}
+\subsection{Center of Momentum Frame}
+\subsection{Coefficient of Restitution}
+\subsection{Perfectly Inelastic}
 
 \section{Math: Polar Coordinates}
 \section{Physics: Rotational Dynamics}
-
+\section{Physics: Statics}
+Need torque
 \section{Math: Other Coordinates}
 \section{Math: 2D \& 3D Integrals}
 \section{Physics: Moment of Inertia}
@@ -817,9 +977,19 @@ A mass $m$ is hung by an inextensible string of length $l$ in a gravitational fi
 \section{Math: Vector Calculus}
 \section{Physics: Potentials \& Potential Energy}
 \section{Physics: Electromagnetism}
+\section{Physics: AC Circuits}
 
 \section{Math: Differential Equations}
 \subsection{SHM: Driven and Damping}
 \subsection{Laplace Transform}
+
+\section{Physics: Constraining Forces - Normal, Tension, Friction}
+\section{Physics: Pulleys}
+\subsection{Friction - Capstan Equation}
+\section{Physics: DC Circuits}
+\section{Physics: Fluid Mechanics}
+\section{Physics: Waves}
+\section{Physics: Optics}
+\section{Physics: Thermodynamics}
 
 \end{document}
