@@ -977,11 +977,128 @@ Collisions between multiple bodies (e.g. dropping a stack of balls) are analysed
     \item Total energy decreased (\textbf{inelastic}) e.g. billiard balls
     \item Total energy increased (\textbf{superelastic}) e.g. explosion
 \end{itemize}
+\subsection{Momentum Conservation}
+\textbf{Q}: Why is momentum invariant before and after the collision? \\[10pt]
+\textbf{A}: Momentum conservation is due to Newton's 3rd Law. To see this, recall that an object's momentum changes by impulse 
+$$\Delta \vec{p} \text{ from } t_0 \text{ to } t_1 = \int_{t_0}^{t_1} \vec{F}(t)\ dt$$
+By Newton's 3rd Law, when 2 bodies interact, the forces they exert on each other are equal in magnitude and opposite in direction. 
+$$\vec{F}_{\text{A on B}} = -\vec{F}_{\text{B on A}}$$
+Integrating both sides wrt time $t$, one sees that the impulse they experience is also equal in magnitude and opposite in direction.
+$$\Delta \vec{p}_B = - \Delta \vec{p}_A$$
+As such, the sum of their momentum remains unchanged.
+$$\Delta(\vec{p}_A + \vec{p}_B) = \vec{0}$$
+This remains true for all forces that obey N3L, including collisions (normal contact force). 
 \subsection{1D Elastic Collisions}
-\subsection{2D Elastic Collisions}
-\subsection{1D Inelastic Collisions}
+Let the masses be $m_A, m_B$, the initial velocities be $u_A, u_B$ and final velocities be $v_A, v_B$. Conservation of momentum and energies yields
+\begin{align}
+    m_A u_A + m_B u_B &= m_A v_A + m_B v_B \\
+    \frac{1}{2} m_A u_A^2 + \frac{1}{2} m_B u_B^2 &= \frac{1}{2} m_A v_A^2 + \frac{1}{2} m_B v_B^2 
+\end{align}
+Rearranging both equations gives us (respectively)
+\begin{align}
+    m_A (u_A - v_A) &= - m_B (u_B - v_B) \label{eq:com}\\
+    m_A (u_A - v_A) (u_A + v_A) &= - m_B (u_B - v_B) (u_B + v_B) \label{eq:coe}
+\end{align}
+If we divide equation \ref{eq:coe} by \ref{eq:com} we obtain
+\begin{align}
+    u_A + v_A &= u_B + v_B \\
+    \Rightarrow u_A - u_B &= - (v_A - v_B)
+\end{align}
+\begin{samepage}
+This equation is sometimes said verbally as 
+\begin{center}
+    \textbf{velocity of approach = velocity of separation}
+\end{center}
+\end{samepage}
+This is because if object A is positioned to the left of object B (and our choice of axis direction is rightward positive), then a positive $u_A - u_B > 0$ would imply that A is getting closer to B, and $u_A - u_B$ describes how fast the distance between them is decreasing. Hence, $u_A - u_B > 0$ is called the \textbf{velocity of approach}. \\[10pt]
+After the collision, $v_A - v_B = -(u_A - u_B) < 0$ implies that B is getting further and further away from A. $-(v_A - v_B) > 0$ quantifies how fast the distance between them is increasing. Hence, $-(v_A - v_B) > 0$ is called the \textbf{velocity of separation}.\\[10pt]
+Anyway, previously we had one linear equation (momentum) and one quadratic equation (energy). Now we have 2 linear equations (momentum and "rate of approach = separation")
+\begin{align}
+    m_A u_A + m_B u_B &= m_A v_A + m_B v_B \label{eq:com2}\\
+    u_A - u_B &= - (v_A - v_B) \label{eq:voaevos}
+\end{align}
+Linear simultaneous equations are easy to solve, rearrange equation (\ref{eq:voaevos}) and substitute $v_A = v_B - u_A + u_B$ into (\ref{eq:com2}) to obtain
+\begin{align}
+    m_A u_A + m_B u_B &= m_A (v_B - u_A + u_B) + m_B v_B \\
+    &= (m_A + m_B) v_B - m_A u_A + m_A u_B \\
+    v_B &= \frac{2m_A}{m_A + m_B} u_A + \frac{m_B - m_A}{m_A + m_B} u_B 
+\end{align}
+Repeating this with $v_B = u_A - u_B + v_A$ gives us 
+\begin{align}
+    m_A u_A + m_B u_B &= m_A v_A + m_B (u_A - u_B + v_A) \\
+    &= (m_A + m_B) v_A + m_B u_A - m_B u_B \\
+    v_A &= \frac{m_A - m_B}{m_A + m_B} u_A + \frac{2m_B}{m_A + m_B} u_B
+\end{align}
+One sees that the final velocities almost look like they have a nice symmetry to them. You can memorise these formulas but personally I just derive it every time I need it because I don't like memorising.
+\subsubsection{Exercises}
 \subsection{Center of Momentum Frame}
-\subsection{Coefficient of Restitution}
+The Center of Momentum frame (CoM) is very useful because it simplifies the momentum equation greatly. The CoM frame is defined to be the frame in which the total momentum is zero. So, in any dimension,
+\begin{align}
+    m_A \mathbf{u}_{A,CM} + m_B \mathbf{u}_{B,CM} &= m_A \mathbf{v}_{A,CM} + m_B \mathbf{v}_{B,CM} = \mathbf{0} \label{eq:zeromomentum}
+\end{align}
+where the bolded quantities $\mathbf{u}$ emphasise that this is a vector equation. We can show that such a frame exists by proof by construction 
+\begin{align}
+    \mathbf{u}_A &\equiv \mathbf{u}_{CM} + \mathbf{u}_{A,CM} \\
+    \mathbf{u}_B &\equiv \mathbf{u}_{CM} + \mathbf{u}_{B,CM} \\
+    \text{Define/Choose }\mathbf{u}_{CM} &= \frac{m_A \mathbf{u}_A + m_B \mathbf{u}_B}{m_A + m_B} \\
+    m_A \mathbf{u}_{A,CM} + m_B \mathbf{u}_{B,CM} &= m_A (\mathbf{u}_A  - \mathbf{u}_{CM}) + m_B (\mathbf{u}_B - \mathbf{u}_{CM}) \\
+    &= m_A \mathbf{u}_A + m_B \mathbf{u}_B - (m_A + m_B) \mathbf{u}_{CM} \\
+    &= \mathbf{0}
+\end{align}
+Rearranging the zero total momentum equation (\ref{eq:zeromomentum}) yields A's velocities in terms of B's velocities
+\begin{align}
+    \mathbf{u}_{A,CM} &= -\frac{m_B}{m_A} \mathbf{u}_{B,CM} \\
+    \mathbf{v}_{A,CM} &= -\frac{m_B}{m_A} \mathbf{v}_{B,CM} 
+\end{align}
+which can be substituted into the conservation of energy equation to eliminate A's initial and final velocities, leaving us with an equation purely relating B's initial and final velocities
+\begin{align}
+    \frac{1}{2} m_A \mathbf{u}_{A}^2 + \frac{1}{2} m_B \mathbf{u}_{B}^2  &= \frac{1}{2} m_A \mathbf{v}_{A}^2 + \frac{1}{2} m_B \mathbf{v}_{B}^2 \\
+    \Rightarrow \left( \frac{m_B^2}{m_A} + m_B \right) \mathbf{u}_{B,CM}^2 &= \left( \frac{m_B^2}{m_A} + m_B \right) \mathbf{v}_{B,CM}^2 \\
+    \Rightarrow \mathbf{u}_{B,CM}^2 &= \mathbf{v}_{B,CM}^2 
+\end{align}
+\subsubsection{1D Elastic Collision Revisited using CoM Frame}
+The CoM equations become
+\begin{align}
+    m_A u_{A,CM} + m_B u_{B,CM} &= 0 \\
+    m_A v_{A,CM} + m_B v_{B,CM} &= 0 \\
+    u_{B,CM}^2 &= v_{B,CM}^2 
+\end{align}
+If B is to the right of A (and our axis is defined as rightward positive), then $u_{B,CM} < 0$ because B is moving left in the CM frame before the collision. $v_{B,CM} > 0$ because B is moving right in the CM frame after the collision. Hence 
+\begin{align}
+    u_{B,CM}^2 &= v_{B,CM}^2 \\
+    \Rightarrow v_{B,CM} &= -u_{B,CM} \\
+    v_{A,CM} &= -\frac{m_B}{m_A} v_{B,CM} \\ 
+    &= \frac{m_B}{m_A} u_{B,CM} \\
+    &= - u_{A,CM}
+\end{align}
+Wow! What a remarkably neat result. In the CoM frame, the velocities simply flip direction during the collision. Returning to the lab frame, we obtain 
+\begin{align}
+    v_A &= u_{CM} + v_{A,CM} \\
+    &= u_{CM} - u_{A,CM} \\
+    &= u_{CM} - (u_A - u_{CM}) \\
+    &= 2 u_{CM} - u_A \\
+    &= 2 \frac{m_A u_A + m_B u_B}{m_A + m_B} - u_A\\
+    v_A &= \frac{m_A - m_B}{m_A + m_B} u_A + \frac{2m_B}{m_A + m_B} u_B \\
+    v_B &= \frac{2m_A}{m_A + m_B} u_A + \frac{m_B - m_A}{m_A + m_B} u_B
+\end{align}
+which matches our 1D elastic collision result. Calculation wise, one might not see the merits of CoM frame in 1D. But intuition wise, the fact that the velocities just flip during the collision gives us the intuition that the balls are just hitting an imaginary wall at the point of collision. \\[10pt]
+
+The real power of CoM frame comes in when we consider 2D or 3D collisions. The intuition of the objects hitting a wall still holds true, but in 2D the wall is slanted at an angle. We discuss more about this now.
+\subsection{2D Elastic Collisions}
+
+\subsection{1D Inelastic Collisions}
+Conservation of momentum still holds, but some energy is lost in the form of heat and sound. Instead of having an equation from energy, we parameterize the inelastic collision with \textbf{coefficient of restitution} $0\leq e \leq 1$, defined by the ratio of the velocity of separation over the velocity of approach, which is information that needs to be provided by the question. The 2 linear equations are 
+\begin{align}
+    m_A u_A + m_B u_B &= m_A v_A + m_B v_B \\
+    e (u_A - u_B) &= -(v_A - v_B)
+\end{align}
+Solving these 2 simultaneously gives us
+\begin{align}
+    v_A &= \frac{e m_B (u_B - u_A) + m_A u_A + m_B u_B}{m_A + m_B} \\
+    v_B &= \frac{e m_A (u_A - u_B) + m_A u_A + m_B u_B}{m_A + m_B}
+\end{align}
+One can see that substituting $e=1$ recovers the result for elastic collision. In fact, one can kind of see that these equations are even easier to memorize than the elastic ones. 
+\subsubsection{Exercises}
 \subsection{Perfectly Inelastic}
 
 \section{Math: Polar Coordinates}
