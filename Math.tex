@@ -25,9 +25,12 @@
 \paperfalse 
 
 \maketitle
+
+Updated notes are available at \url{https://bit.ly/3E6SuwA}. Please inform me of any errors. Feel free to message me to explain something in greater detail :)
 \tableofcontents
 
 \section{Math: Functions}
+Lecture: \url{https://youtu.be/-Ia9Wv5USaE}\\[10pt]
 Functions are maps from one set to another set. We denote them as $f: A \rightarrow B$ or $f(x) \in B$ where $x\in A$. \\
 \\
 Examples of functions $f: \mathbb R \to \mathbb R$:
@@ -76,6 +79,7 @@ This works if the graph is linear, i.e. $y=mx+c$. But what happens if the graph 
 (Most) functions can be differentiated \textbf{with respect to} their parameters. \textbf{Algebraically}, differentiation involves following a set of rules. \textbf{Geometrically}, differentiation is the slope of the tangent line to the function's graph. 
 
 \subsection{Geometric Intuition}
+Lecture: \url{https://youtu.be/JYnXMoB288Q} \\[10pt]
 \url{https://www.desmos.com/calculator/b6ts3ls1zf} Desmos visualization. Given a function $f(x)$, here's what the derivative $\frac{d}{dx}f = \frac{df}{dx} = f'(x)$ means:
 \begin{itemize}
     \item Draw the graph $y=f(x)$.
@@ -86,19 +90,8 @@ This works if the graph is linear, i.e. $y=mx+c$. But what happens if the graph 
     \item If you chose a different $x=x_1$ value, you would get a different value for gradient, and that would be "derivative of $f$ \textbf{at }$\mathbf{x=x_1}$".
     \item So the derivative of a function $f(x)$ is another function $f'(x)$.
 \end{itemize}
-
-\subsubsection{Finding Maximum / Minimum}
-When the function $f(x)$ has a maximum $x_{\text{max}}$, the derivative at that maximum point is zero $$\left. \frac{df}{dx} \right|_{x_{\text{max}}} = 0$$
-Likewise for minimum.\\[10pt]
-So if the function has $0$ derivative at some $x=x_0$, how do we determine if it's a maximum or minimum point? We can perform the 2nd derivative test.\\
-
-\begin{align}
-    \left. \frac{d^2 f}{dx^2} \right|_{x_0} > 0 &: \text{Minimum}\\
-    \left. \frac{d^2 f}{dx^2} \right|_{x_0} < 0 &: \text{Maximum}\\
-    \left. \frac{d^2 f}{dx^2} \right|_{x_0} = 0 &: \text{Not enough information to conclude}
-\end{align}
-
 \subsection{Algebraic Calculations}
+Lecture: \url{https://youtu.be/QpSQmggia74} \\[10pt]
 From the above geometric explanation, one can calculate the derivative of $f(x) = x^2$ to be $f'(x) = 2x$. This method of differentiation is called "from first principles".
 \begin{align*}
 f^{\prime}(x) & =\lim _{h \rightarrow 0} \frac{f(x+h)-f(x)}{h} \\
@@ -110,6 +103,7 @@ f^{\prime}(x) & =\lim _{h \rightarrow 0} \frac{f(x+h)-f(x)}{h} \\
 & =2 x
 \end{align*}
 
+Lecture: \url{https://youtu.be/Zg_6w0urW5Q} \\[10pt]
 One can use first principles to derive the following rules of differentiation for common functions:
 
 \begin{itemize}
@@ -128,6 +122,19 @@ One can use first principles to derive the following rules of differentiation fo
     \item Chain Rule $$\frac{d}{dx} f(y(x)) = \frac{df}{dy} \frac{dy}{dx}$$
 \end{itemize}
 
+
+\subsubsection{Finding Maximum / Minimum}
+Lecture: \url{https://youtu.be/McI7tyS_BCo} \\[10pt]
+When the function $f(x)$ has a maximum $x_{\text{max}}$, the derivative at that maximum point is zero $$\left. \frac{df}{dx} \right|_{x_{\text{max}}} = 0$$
+Likewise for minimum.\\[10pt]
+So if the function has $0$ derivative at some $x=x_0$, how do we determine if it's a maximum or minimum point? We can perform the 2nd derivative test.\\
+
+\begin{align}
+    \left. \frac{d^2 f}{dx^2} \right|_{x_0} > 0 &: \text{Minimum}\\
+    \left. \frac{d^2 f}{dx^2} \right|_{x_0} < 0 &: \text{Maximum}\\
+    \left. \frac{d^2 f}{dx^2} \right|_{x_0} = 0 &: \text{Not enough information to conclude}
+\end{align}
+
 \subsection{Exercises}
 Try differentiating the following functions with respect to $x$ or $t$. You can check your answer against Wolfram Derivative Calculator \url{https://www.wolframalpha.com/calculators/derivative-calculator/}.
 
@@ -144,13 +151,14 @@ Try differentiating the following functions with respect to $x$ or $t$. You can 
 
 Geometrically, (definite) integration gives you the area under the graph. Algebraically, there are a few techniques for common functions but integration is tricky in general. 
 
-\subsubsection{Indefinite Integration / Antiderivative}
+\subsection{Indefinite Integration / Antiderivative}
+Lecture: \url{https://youtu.be/Nm8WVmlnxN8} \\[10pt]
 Q: If I give you a function $f(x)$ and told you that it's derivative is $f'(x) = 2x + 1$, can you find out what $f(x)$ is? \\
 A: $f(x) = x^2 + x + C$ where $C$ is an arbitrary constant. Why are there multiple answers?\\[10pt]
 Mathematically, we say $$\int 2x + 1\ dx = x^2 + x + C$$
 More generally, $$\int f'(x) dx = f(x) + C$$
 
-\subsubsection{Exercises}
+\subsection{Exercises}
 You can check whether you are correct by putting your answer in the derivative calculator and checking if you get the function to be integrated!
 \begin{itemize}
     \item $\int 5\ dx$ 
@@ -162,7 +170,9 @@ You can check whether you are correct by putting your answer in the derivative c
 
 \textbf{Extra:} Some functions have antiderivatives that cannot be even expressed analytically, such as $$\int e^{-x^2} dx$$
 
-\subsubsection{Definite Integration / Area under graph}
+\subsection{Definite Integration / Area under graph}
+Lecture: \url{https://youtu.be/0IHvAyIaY44}\\[10pt]
+Lecture (Side Note about Signed Area): \url{https://youtu.be/g_tr0sqJxM8}\\[10pt]
 You can calculate the area under a curve by performing a \textbf{definite} integral.
 \begin{align}
     \text{Area under }f'(x)\text{ from }(x=a)\text{ to }(x=b) &= \int_a^b f'(x)\ dx  \\
@@ -174,8 +184,8 @@ Q: Why does the arbitrary constant $C$ not appear in the formula for area under 
 
 A: It cancels out: $[f(b) + C] - [f(a) + C]$. Can you imagine this graphically? 
 
-\subsubsection{Exercises}
-
+\subsection{Exercises}
+Lecture: \url{https://youtu.be/ZlvM1BZRFXo}\\[10pt]
 \begin{itemize}
     \item Energy in Spring
         $$\int_0^x kr\ dr$$
@@ -186,13 +196,14 @@ A: It cancels out: $[f(b) + C] - [f(a) + C]$. Can you imagine this graphically?
 \end{itemize}
 
 \section{Physics: Kinematics}
-
+Lecture: \url{https://youtu.be/c527UZUQM0s} \\[10pt]
 After picking a direction which you define as "increasing x direction" as well as an origin for x, you can start describing 1D motion $x(t)$.\\
 \\
 If you want to describe 2D motion, pick a perpendicular y-axis. \\
 \\
 If you want to describe 3D motion, z-axis is defined using RHR (for the cross product).
 \subsection{Path of Particle / Object}
+Lecture: \url{https://youtu.be/vszG98TSd6Q}\\[10pt]
 Mathematically, paths are functions $\vec{s}(t)$ of a parameter $t$ representing time. 
 \begin{itemize}
     \item In 1D motion, $x(t)$ 
@@ -233,10 +244,11 @@ SUVAT can be visualized as an area of a trapezium in the $v\text{-}t$ graph. [De
 
 \subsection{Exercises}
 \begin{samepage}
-    
-SJPO 2015 General Round Q13: An object is travelling on a straight path and exhibiting a constant acceleration $a$ starts off with an initial velocity $v=2.0 \mathrm{~ms}^{-1}$. It has traversed $4.5 \mathrm{~m}$ in the third second (from $t=2$ to $t=3$), its acceleration $a$ is
+\subsubsection{SJPO 2015 General Round Q13}
+Lecture: \url{https://youtu.be/j9qWyWCTjrM} \\[10pt]
+An object is travelling on a straight path and exhibiting a constant acceleration $a$ starts off with an initial velocity $v=2.0 \mathrm{~ms}^{-1}$. It has traversed $4.5 \mathrm{~m}$ in the third second (from $t=2$ to $t=3$), its acceleration $a$ is
 \begin{itemize}\item[](A) $0.5 \mathrm{~ms}^{-2}$
- \item[](B) $1.0 \mathrm{~ms}^{-2}$
+\item[](B) $1.0 \mathrm{~ms}^{-2}$
 \item[](C) $1.5 \mathrm{~ms}^{-2}$
 \item[](D) $2.0 \mathrm{~ms}^{-2}$
 \item[](E) $2.5 \mathrm{~ms}^{-2}$
@@ -253,6 +265,7 @@ Ans: \ifpaper B \fi
 % Ans:C
 \begin{samepage}
 \subsubsection{SJPO 2016 General Round Q8}
+Lecture: \url{https://youtu.be/Q3ZbXLegdos} \\[10pt]
 A train moving on straight horizontal tracks slows down from $66 \mathrm{~ms}^{-1}$ to $22 \mathrm{~ms}^{-1}$ at a constant rate of $2.0 \mathrm{~ms}^{-2}$. What distance does it travel while slowing down?
 \begin{itemize}
 \item[](A) $490 \mathrm{~m}$
@@ -266,13 +279,16 @@ Ans: \ifpaper D \fi
 % SJPO 2016 General Round Q9 A (Projectile Motion)
 % SJPO 2016 General Round Q11 E (Projectile)
 \begin{samepage}
-\subsubsection{SJPO 2018 General Round Q10} The position of an object moving along a linear track is plotted as a function of time. It started from rest and underwent a positive acceleration for some time, followed by a constant velocity. Which of the following graphs correctly shows this situation?\\
+\subsubsection{SJPO 2018 General Round Q10} 
+Lecture: \url{https://youtu.be/gLHMK0g8JYc} \\[10pt]
+The position of an object moving along a linear track is plotted as a function of time. It started from rest and underwent a positive acceleration for some time, followed by a constant velocity. Which of the following graphs correctly shows this situation?\\
 \includegraphics[width=\linewidth]{2018q10.png}\\
 Ans: \ifpaper E \fi\\
 \end{samepage}
 % SJPO 2018 General Round Q11 B
 % SJPO 2018 General Round Q13 A
 \subsubsection{SJPO 2018 General Round Q16 \& Q17}
+Lecture: \url{https://youtu.be/5M1mQjZJWI4} \\[10pt]
 A car travels along a straight road with the speed shown by the 
 v-t graph. \\ \includegraphics[width=0.5\linewidth]{images/2018q16.png} \\
 \\
@@ -301,6 +317,7 @@ Ans: \ifpaper C \fi\\
 \\
 \begin{samepage}
 \subsubsection{SJPO 2017 General Round Q1} 
+Lecture: \url{https://youtu.be/TW3sIS0lprI} \\[10pt]
 An electron in a vacuum, starting from rest falls $5 \mathrm{~cm}$ near the surface of the earth. Considering only the gravitational force acting on the electron, how long does it take for the electron to travel $5 \mathrm{~cm}$?
 \begin{itemize}
 \item[] (A) $\quad 0.1 \mathrm{~s}$
@@ -314,6 +331,7 @@ Ans: \ifpaper A \fi
 % SJPO 2018 General Round Q18 C
 
 \subsection{1D Dynamics}
+Lecture: \url{https://youtu.be/xWJjy_5M4lA} \\[10pt]
 If we know the acceleration as a function of time $a(t)$, as well as the initial velocity $v(t=0) \equiv v_0$ and position $s(t=0) \equiv s_0$, then we can integrate $a(t)$ twice to get the position as a function of time 
 $$s(t) = \int \left(\int a(t)\ dt\right)\ dt$$
 
@@ -325,6 +343,7 @@ $$F_{\text{net}}(t) = ma(t)$$
 
 
 \subsection{Extra: $v^2 = u^2 + 2as$ Connection with Work Energy Theorem}
+Lecture: \url{https://youtu.be/1Z9V-1STA_Y} \\[10pt]
 $v^2 = u^2 + 2as$ is slightly special because it is related to "work energy theorem" in dynamics. One can derive it by integrating $a(t)$ wrt $s(t)$ instead of $t$ 
 \begin{align}
     \frac{d^2 s}{dt^2} &= a_0 \\
