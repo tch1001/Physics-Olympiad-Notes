@@ -502,7 +502,6 @@ The cross product is used to define
     \item Lorentz Force $\vec{F} = q(\vec{E} + \vec{v}\times \vec{B})$
     \item Poynting Vector $\vec{S}=\frac{1}{\mu_0} \vec{E} \times \vec{B}$
 \end{itemize}
-
 \subsubsection{Derivatives}
 Also done component wise
 $$\frac{d\vec{r}}{dt} = \frac{d}{dt}\left(
@@ -519,7 +518,38 @@ $$\frac{d\vec{r}}{dt} = \frac{d}{dt}\left(
     \end{array} 
     \right)
 $$
-
+\subsection{Basis Vectors}
+We sometimes write a vector as 
+\begin{align}
+    \vec{r} &= \left(
+    \begin{array}{c}  
+         x(t) \\
+         y(t) \\
+         z(t)
+    \end{array} 
+    \right) \\
+    &= x(t) \left(
+    \begin{array}{c}  
+         1 \\
+         0 \\
+         0
+    \end{array} 
+    \right) + y(t) \left(
+    \begin{array}{c}  
+         0 \\
+         1 \\
+         0
+    \end{array} 
+    \right) + z(t) \left(
+    \begin{array}{c}  
+         0 \\
+         0 \\
+         1
+    \end{array} 
+    \right)  \\
+    &\equiv x(t) \hat{i} + y(t) \hat{j}  + z(t) \hat{k} 
+\end{align}
+Common synonyms for $\hat{i}$ are $\hat{x}$ and $\hat{e}_x$. The collection of vectors $\{ \hat i, \hat j, \hat k \}$ are called a set of \textbf{basis vectors}, which means that linear combinations of these vectors make up / span the set of all possible vectors. In particular, this set $\{ \hat i, \hat j, \hat k \}$ is called the \textbf{Cartesian coordinate basis}. In future, we will learn about other coordinate systems and other basis vectors.
 \subsection{Exercises}
 \begin{samepage}
 \subsubsection{SJPO 2015 General Round Q11}
@@ -1082,10 +1112,30 @@ Wow! What a remarkably neat result. In the CoM frame, the velocities simply flip
     v_B &= \frac{2m_A}{m_A + m_B} u_A + \frac{m_B - m_A}{m_A + m_B} u_B
 \end{align}
 which matches our 1D elastic collision result. Calculation wise, one might not see the merits of CoM frame in 1D. But intuition wise, the fact that the velocities just flip during the collision gives us the intuition that the balls are just hitting an imaginary wall at the point of collision. \\[10pt]
-
 The real power of CoM frame comes in when we consider 2D or 3D collisions. The intuition of the objects hitting a wall still holds true, but in 2D the wall is slanted at an angle. We discuss more about this now.
 \subsection{2D Elastic Collisions}
-
+In 2D elastic collisions, there are 4 unknowns $v_{A,x}, v_{A,y}, v_{B,x}, v_{B,y}$ but only 3 equations from momentum and energy conservation.
+\begin{align}
+m_A u_{A,x} + m_B u_{B,x} &= m_A v_{A,x} + m_B v_{B,x} \\
+m_A u_{A,y} + m_B u_{B,y} &= m_A v_{A,y} + m_B v_{B,y} \\
+    \frac{1}{2} m_A (u_{A,x}^2 + u_{A,y}^2) + \frac{1}{2} m_B (u_{B,x}^2 + u_{B,y}^2) 
+ &= \frac{1}{2} m_A (v_{A,x}^2 + v_{A,y}^2) + \frac{1}{2} m_B (v_{B,x}^2 + v_{B,y}^2) 
+\end{align}
+We need 4 equations, but the 4th equation cannot be determined from physics alone. It is a parameter we need to put in by hand, and this parameter can be any (non-trivial) relation between the velocities. An example would be the final angle of velocity of A $\vec{v}_{A}$
+\begin{align}
+    v_{A,y} = v_{A,x} tan \theta_A
+\end{align}
+but really any other constraint could do. Solving these 4 simultaneous equations is possible but extremely tedious. Therefore, it will help alot to consider the CoM frame. From the previous section, we derived the following result
+\begin{align}
+    \mathbf{u}_{A,CM}^2 &= \mathbf{v}_{A,CM}^2 \\ 
+    \mathbf{u}_{B,CM}^2 &= \mathbf{v}_{B,CM}^2 \\ 
+    \mathbf{u}_{A,CM} &= -\frac{m_B}{m_A} \mathbf{u}_{B,CM}\\
+    \mathbf{v}_{A,CM} &= -\frac{m_B}{m_A} \mathbf{v}_{B,CM}
+\end{align}
+In the CoM frame, both objects are bouncing off an imaginary common wall elastically. Conservation of momentum and energy doesn't dictate what the angle of the wall is, we need to specify so by a parameter $\theta$. \\[10pt]
+Extra: This extends to 3D as well! But this time the wall is a 2D plane, and the normal vector of the wall is described by 2 angles $\theta,\phi$.\\[10pt]
+\subsubsection{Exercises}
+In most physics questions, however, we aren't required to solve the general case. Sometimes the CoM frame isn't necessary. Typically these questions are just a test of your simultaneous equation solving skills (that's really most mechanics questions anyway).
 \subsection{1D Inelastic Collisions}
 Conservation of momentum still holds, but some energy is lost in the form of heat and sound. Instead of having an equation from energy, we parameterize the inelastic collision with \textbf{coefficient of restitution} $0\leq e \leq 1$, defined by the ratio of the velocity of separation over the velocity of approach, which is information that needs to be provided by the question. The 2 linear equations are 
 \begin{align}
@@ -1099,10 +1149,43 @@ Solving these 2 simultaneously gives us
 \end{align}
 One can see that substituting $e=1$ recovers the result for elastic collision. In fact, one can kind of see that these equations are even easier to memorize than the elastic ones. 
 \subsubsection{Exercises}
-\subsection{Perfectly Inelastic}
+\subsection{1D Perfectly Inelastic}
+Perfectly inelastic collisions are inelastic collisions where $e=0$. This implies that $v_A = v_B$, which physically means that the 2 bodies stick together after the collision and effectively travel as one. \\[10pt]
+\textbf{Maximum Kinetic Energy Loss} occurs in inelastic collisions. One can see this clearly in the CoM frame, where both objects collide with each other and stop moving. 
+\subsubsection{Exercises}
+\subsection{Accounting for Rotation}
+So far the objects were assumed to be point masses, or solid bodies that only move translationally. In reality we know objects can rotate before and after the collision. Rotational dynamics is what we will cover now.
+\section{Math: Polar Coordinates (2D)}
+We previously described the location of a particle using 2 coordinates $x(t),y(t)$. When it comes to rotational questions, it's often more convenient to describe location using polar coordinates $r(t), \theta(t)$. The conversion between the coordinates are given by
+\begin{align}
+    r &= \sqrt{x^2 + y^2} \\
+    \theta &= \operatorname{atan2} (y,x) \\ 
+    x &= r \cos \theta \\
+    y &= r \sin \theta
+\end{align}
+where $\operatorname{atan2}$ is basically $\arctan (y/x)$ but sensitive to signs.
+\begin{align}
+    \operatorname{atan2} (y, x)= \begin{cases}\arctan \left(\frac{y}{x}\right) & \text { if } x>0 \\ \arctan \left(\frac{y}{x}\right)+\pi & \text { if } x<0 \text { and } y \geq 0 \\ \arctan \left(\frac{y}{x}\right)-\pi & \text { if } x<0 \text { and } y<0 \\ \frac{\pi}{2} & \text { if } x=0 \text { and } y>0 \\ -\frac{\pi}{2} & \text { if } x=0 \text { and } y<0 \\ \text {undefined } & \text { if } x=0 \text { and } y=0 \end{cases} \label{eq:atan2}
+\end{align}
+Side Note: If we used $\theta = \arctan(y/x)$ instead, one might be worried it is unable to distinguish $(x,y)$ and $(-x,-y)$, since both result in the same numerical value for $\theta$. This is a valid mathematical concern. However, for most physics calculations we won't run into issues since we mainly deal with differential forms $ds^2 = dr^2 + r^2 d\theta^2$ and vectors (which are secretly derivatives $\partial/\partial r, \partial/\partial \theta$), both of which are "local objects". Even though the definition uses $\operatorname{atan2}(y,x)$, when performing calculations, we often pretend it is $\arctan(y/x)$ because it results in the same formulas. The reason that it gives the same results is intuitive from the definition (\ref{eq:atan2}), but to be mathematically rigorous, the proof will be annoyingly lengthy.
 
-\section{Math: Polar Coordinates}
+\subsection{Basis Vectors}
+\begin{wrapfigure}{r}{0.35\textwidth}
+\includegraphics[width=0.9\linewidth]{images/polarbasis.png}
+\caption{Basis vectors for polar coordinates}
+\label{fig:polarbasis}
+\end{wrapfigure}
+The basis vectors for polar coordinates are shown in Figure \ref{fig:polarbasis}. To understand why they are defined as such, we should understand the motivation for defining basis vectors and vectors. The motivation is to define velocity. The essence of velocity is to know how an object's coordinates changes after a small amount of time. If a vector is $\vec{v} = 4\hat{e}_x + 3 \hat{e}_y$, it means that after a small amount of time $\Delta t$, the $x$ coordinate changes by $4 \Delta t$, and the $y$ coordinate changes by $3 \Delta t$. This implies that the direction a basis vector (e.g. $\hat{e}_x$) points, is by definition, the direction that the location moves when the coordinate (e.g. $x$) changes.\\[10pt]
+For the cartesian coordinate system, the basis vectors are constant: they point in the same direction wherever we are in space. However, the basis vectors for polar coordinates are \textit{not} constant: they point in different directions depending on where we are in space. This is consequential because it implies that the derivative of the basis vectors are not zero, and this mathematical fact gives rise to fictitious/inertial forces such as centrifugal and Coriolis force!\\[10pt]
+Enough talking, the expression for basis vectors 
+\begin{align}
+    \hat{e}_r &=\quad \cos\theta\ \hat{e}_x + \sin\theta\ \hat{e}_y \\
+    \hat{e}_\theta &= -\sin\theta\ \hat{e}_x + \cos\theta\ \hat{e}_y
+\end{align}
+
+
 \section{Physics: Rotational Dynamics}
+
 \section{Physics: Statics}
 Need torque
 \section{Math: Other Coordinates}
