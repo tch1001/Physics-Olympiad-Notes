@@ -288,8 +288,8 @@ The position of an object moving along a linear track is plotted as a function o
 \includegraphics[width=\linewidth]{2018q10.png}\\
 Ans: \ifpaper E \fi\\
 \end{samepage}
-% SJPO 2018 General Round Q11 B
-% SJPO 2018 General Round Q13 A
+
+
 \subsubsection{SJPO 2018 General Round Q16 \& Q17}
 Lecture: \url{https://youtu.be/5M1mQjZJWI4} \\[10pt]
 A car travels along a straight road with the speed shown by the 
@@ -749,7 +749,7 @@ We now have range as a function of angle $x_{\text{end}}(\theta)$. We can differ
 \subsection{Exercises}
 \begin{samepage}
 \subsubsection{SJPO 2016 General Round Q9}
-\url{https://youtu.be/gBjapzk5Tws}
+\url{https://youtu.be/gBjapzk5Tws}\\[10pt]
 A fruit drops from a tree. A boy, $1.5 \mathrm{~m}$ tall, stands on the flat ground just under the fruit. The fruit was initially $10 \mathrm{~m}$ above the boy's head. A woman standing on the level ground $10 \mathrm{~m}$ from the boy immediately throws a ball from a height of $1.5 \mathrm{~m}$ above the ground, and deflected the fruit from its path towards the boy's head. Assume that air resistance and her reaction time are negligible. Calculate the minimum speed of the ball?
 \begin{itemize}
 \item[](A) $10 \mathrm{ms}^{-1}$
@@ -763,7 +763,7 @@ Ans: \ifpaper A \fi \\[10pt]
 
 \begin{samepage}
 \subsubsection{SJPO 2016 General Round Q11: Region of Reachability}
-\url{https://youtu.be/axU4CSp8UqI}
+\url{https://youtu.be/axU4CSp8UqI}\\[10pt]
 A projectile is launched at velocity $v_0$ into an ideal ball istic trajectory from the origin of a coordinate system. Given that: when the launch angle is varied, all the possible points that can be hit by the projectile are exactly contained within a parabola with equation $y=a+b x^2$ where $y$ is the vertical height, $x$ is the horizontal displacement from the origin, while $a$ and $b$ are constants. What could be the expression for $a$ and $b$ ?\\
  \begin{wrapfigure}{r}{0.4\textwidth} 
 \includegraphics[width=\linewidth]{images/sjpo2016q11.png}
@@ -781,7 +781,7 @@ Extra: Prove that the envelope is a parabola. \url{https://en.wikipedia.org/wiki
 
 \begin{samepage}
 \subsubsection{SJPO 2014 General Round Q12: Projectile on Slope}
-\url{https://youtu.be/l4lq6dXTug0}
+\url{https://youtu.be/l4lq6dXTug0}\\[10pt]
 As shown in the figure below, a ball is thrown out horizontally from a slope. The slope makes an angle $\theta$ with the ground. At the first throw, the ball is ejected with a speed $v_1$ and at the second throw, it is ejected with a speed $v_2$. The angles that the ball made with the slope are measured to be $\alpha_1$ and $\alpha_2$ respectively. If $v_1$ is greater than $v_2$,\\
  \begin{wrapfigure}{r}{0.4\textwidth} 
 \includegraphics[width=\linewidth]{images/2014q12.png}
@@ -796,26 +796,151 @@ As shown in the figure below, a ball is thrown out horizontally from a slope. Th
 Ans: \ifpaper A \fi \\[10pt]
 \end{samepage}
 
-% \begin{samepage}
-% \subsubsection{SJPO 2018 General Round Q18}
-% A $2 \mathrm{~kg}$ block slides down a smooth roof which is angled at $30^{\circ}$ to the horizontal. When it reaches $\mathrm{A}$, it has a speed of $2.0 \mathrm{~m} / \mathrm{s}$. It leaves the surface of the roof at $\mathrm{B}$ and strikes the ground at a distance $d$ from the wall of the building. What is the distance $d$ ?
-%  \begin{wrapfigure}{r}{0.4\textwidth} 
-% \includegraphics[width=\linewidth]{images/2018q18.png}
-% \end{wrapfigure}
-% \begin{itemize}
-% \item[](A) $3.96 \mathrm{~m}$
-% \item[](B) $8.66 \mathrm{~m}$
-% \item[](C) $8.78 \mathrm{~m}$
-% \item[](D) $17.3 \mathrm{~m}$
-% \item[](E) $17.8 \mathrm{~m}$
-% \end{itemize}
-% Ans: \ifpaper C \fi \\[10pt]
-% \end{samepage}
+
 
 % Hitting a slope\\
 % Starting from a height \\
 % Minimum velocity to cross a wall (spot)\\
 % (ODE) With air resistance
+
+\section{Physics: Constraining Forces}
+Constraint forces are generally forces that will \textbf{adjust} their magnitude to \textbf{prevent some form of motion}. For example, normal contact force prevents objects from sinking into each other. Friction prevents rough objects from sliding with respect to each other. And tension in an inextensible string limits the distance between two objects. 
+\subsection{Normal Contact Force}
+Normal contact force $N$ between two rigid bodies \textbf{in contact} is a vector:
+\begin{itemize}
+    \item Direction: Always normal to the surfaces in contact, opposes "sinking"
+    \item Magnitude: can range from $0$ to $\infty$. If magnitude is $0$, the two bodies is about to \textbf{lose contact}.
+\end{itemize}
+Normal contact force obeys N3L.
+\subsection{Friction}
+Frictional force between two rough bodies \textbf{in contact} is a vector: 
+\begin{itemize}
+    \item Direction: Always parallel to the surfaces in contact, opposes sliding
+    \item Magnitude: can range from $|F_{\text{fric}}| \leq \mu_s N$. If friction is maxed out at $\mu_s N$, it will soon be unable to counteract the external forces, and the two bodies will \textbf{start sliding}.
+\end{itemize}
+$\mu_s$ is the static coefficient of friction. \\[10pt]
+When sliding starts, the magnitude will be limited by the kinetic coefficient of friction $\mu_k$ instead of $\mu_s$. Usually $\mu_k < \mu_s$, which is why you will lose control of your car if your tyres skid.
+
+\subsubsection{SJPO 2015 General Round Q12}
+As shown in the figure below, the block with mass $M$ is stationary upon the plank and the angle of the slope $\theta$ is increased. Which of the following is true for the normal force of the block on the wooden plank, $N$ and the frictional force on the plank, $f$? \\
+\begin{wrapfigure}{r}{0.36\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2015q12.png}
+\end{wrapfigure}
+
+
+\begin{itemize}
+\item[] (A) Both $N$ and $f$ increase.
+\item[] (B) Both $N$ and $f$ decrease.
+\item[] (C) $N$ increases and $f$ decreases.
+\item[] (D) $N$ decreases and $f$ increases.
+\item[] (E) The response differs when the value of $M$ is different.
+\end{itemize}
+Ans: \ifpaper D \fi \\[10pt]
+Extra: If the static coefficient of friction is $\mu$, at what angle $\theta_{\text{max}}$ does the block begin slipping?
+
+
+
+\subsubsection{SJPO 2016 General Round Q4}
+A box is pulled using a string up a 0.1 radian slope at constant speed of $2.0 \mathrm{~ms}^{-1}$. The string is cut suddenly and the box comes to a stop after moving up a further distance of $1.0 \mathrm{~m}$. What is the value of the coefficient of friction?
+{
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2016q4.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $\quad 0.00$
+\item[] (B) $\quad 0.10$
+\item[] (C) $\quad 0.20$
+\item[] (D) $\quad 0.30$
+\item[] (E) The situation is impossible.
+\end{itemize}
+}
+Ans: \ifpaper B \fi
+\subsection{Tension}
+Tension in the string connecting two bodies is a vector:
+\begin{itemize}
+    \item Direction: \textbf{Isotropic} and constant anywhere \textbf{along the string}. Parallel and toward the string at \textbf{endpoints of string}.
+    \item Magnitude: can range from $0$ to $\infty$, unless question specifies a limit. If the tension is $0$, the string is loose.
+\end{itemize}
+For a massless string (whether straight or curved on a pulley), tension is equal everywhere along the string (can be easily proven). This is particular useful for pulley questions. \\[10pt]
+We will deal with massive string after talking about "mass distributions" (Topic of Moment of Inertia).\\[10pt]
+Extra: A string on a pulley with friction has an exponential effect in increasing tension. See \url{https://en.wikipedia.org/wiki/Capstan_equation}. We will cover this in future too.
+
+    
+\subsubsection{SJPO 2018 General Round Q6}
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2018q6.png}
+\end{wrapfigure}
+A $4 \mathrm{~kg}$ sphere rests on the smooth parabolic surface which is given by the equation $y=2.5 x^2$. The sphere just touches the surface at $(x, y)=(0.4 \mathrm{~m}, 0.4 \mathrm{~m})$. Determine the mass $m_{\mathrm{B}}$ of block B needed to hold the sphere in equilibrium.
+\begin{itemize}
+\item[] (A) $4.14 \mathrm{~kg}$
+\item[] (B) $3.75 \mathrm{~kg}$
+\item[] (C) $3.58 \mathrm{~kg}$
+\item[] (D) $2.93 \mathrm{~kg}$
+\item[] (E) $2.14 \mathrm{~kg}$
+\end{itemize}
+Ans: \ifpaper C \fi
+\clearpage
+
+\section{Physics: Drag / Air Resistance}
+
+Drag is a force dependent on velocity and the \textbf{geometry} of the object.
+\begin{align}
+    F_{\text{drag}}(v) =\frac{1}{2} \rho v^2 C_D(v) A
+\end{align}
+\begin{itemize}
+    \item $\rho$ is the density of the fluid
+    \item $v$ is velocity of object relative to fluid
+    \item $C_D(v)$ is dimensionless drag coefficient (usually obtained experimentally), which is a function of velocity
+    \item $A$ is cross sectional area
+\end{itemize}
+At low velocities, $C_D(v) \propto 1/v$ approximately, so $F_{\text{drag}}(v) \propto v$ \\[10pt]
+At high velocities, $C_D(v)$ is approximately constant, so $F_{\text{drag}}(v) \propto v^2$. \\[10pt]
+In Physics Olympiad, the question will typically specify. \\[10pt]
+Drag is the reason why falling objects have a terminal velocity
+\subsection{Terminal Velocity}
+(Taking the y-axis as downward positive), the net vertical forces on an object falling is
+\begin{align}
+    ma(t) = F_{\text{net}}(v) = mg - F_{\text{drag}}(v)
+\end{align}
+As $v(t)$ increases over time, drag force increases, causing $a(t)$ to decrease. The resultant motion is that $v(t)$ approaches asymptotically to a constant $v_{\text{terminal}}$, at which $$F_{\text{net}}(v_{\text{terminal}}) = 0$$
+
+\subsection{Exercises}
+\subsubsection{SJPO 2018 General Round Q2}
+A tiny spherical raindrop of diameter $D=0.1 \mathrm{~mm}$ experiences a linear drag force while falling at speed $v$, given by $F_{\text {drag }}=c v$, where $c=1.55 \times 10^{-6} \mathrm{~N} \mathrm{~s} \mathrm{~m}^{-1}$. What is its terminal speed?
+\begin{itemize}
+\item[] (A) $1.7 \mathrm{~mm} / \mathrm{s}$
+\item[] (B) $3.3 \mathrm{~mm} / \mathrm{s}$
+\item[] (C) $8.5 \mathrm{~mm} / \mathrm{s}$
+\item[] (D) $26 \mathrm{~mm} / \mathrm{s}$
+\item[] (E) $33 \mathrm{~mm} / \mathrm{s}$
+\end{itemize}
+Ans: \ifpaper B \fi
+
+\subsubsection{SJPO 2017 General Round Q7}
+An object, \textbf{1}, with mass $m$ and another object, \textbf{2}, with twice the mass $2 m$ are dropped from rest, at the same starting position from the top of a large container and fall in a straight line through motionless viscous liquid. Drag is significant and assume that the two objects would eventually reach the same terminal velocity $v_T$ if the container were tall enough. Consider the case where the objects do not reach terminal velocity at the bottom of the container. Assume that the same type of drag acts on both objects. How does the time taken, $t_1$ and $t_2$, for the objects \textbf{1} and \textbf{2} to reach the bottom compare?\\[10pt]
+{
+ \begin{wrapfigure}{r}{0.5\textwidth} 
+\includegraphics[width=\linewidth]{images/sjpo2016q7.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $t_1=t_2$
+\item[] (B) $t_1<t_2$
+\item[] (C) $t_1>t_2$
+\item[] (D) $t_2<t_1<2 t_2$
+\item[] (E) $t_1<t_2<2 t_1$
+\end{itemize}
+}
+Ans: \ifpaper A \fi
+
+
+\subsection{Extra: Up and Down with Air Resistance}
+In a case \textbf{without air resistance}, if we throw a ball up, suppose it takes $T_1$ seconds to reach the peak from the time it was released, and $T_2$ seconds to fall back down from the peak to the original point of release. One can prove $T_1 = T_2$ easily.\\[10pt]
+In a case \textbf{with air resistance},
+suppose the time to reach the peak is $\tau_1$ and the time to drop down is $\tau_2$. \textbf{Prove rigorously} that $\tau_1 < \tau_2$.\\[10pt]
+\url{https://youtu.be/1uaHkc3TfBU}
+
+\subsection{Extra: Projectile Motion with Drag}
+It is possible to solve for projectile motion exactly, but only after we study differential equations. We postpone this to the future.
 
 \section{Physics: Collisions}
 Collisions between multiple bodies (e.g. dropping a stack of balls) are analysed as a sequence of collisions between 2 bodies at a time. When 2 bodies collide, their \textbf{total momentum is always conserved} / invariant before and after the collision (invariant means doesn't change). Their total energy, however, has 3 possibilities:
@@ -877,7 +1002,18 @@ Repeating this with $v_B = u_A - u_B + v_A$ gives us
     v_A &= \frac{m_A - m_B}{m_A + m_B} u_A + \frac{2m_B}{m_A + m_B} u_B
 \end{align}
 One sees that the final velocities almost look like they have a nice symmetry to them. You can memorise these formulas but personally I just derive it every time I need it because I don't like memorising.
-\subsubsection{Exercises}
+\subsubsection{SJPO 2017 General Round Q40}
+40. A small tennis ball with mass $m$ sits atop a large basketball with mass $M$, with $M \gg m$. The balls are released from rest, with the bottom of the basketball at a height $\mathrm{h}$ above the ground. The diameter of the tennis ball is d and that of the basketball is $D$, with $D \gg d \approx 0$. To what height does the tennis ball bounce above the ground? Assume all collisions are elastic.
+\begin{itemize}
+\item[] (A) $D+h$
+\item[] (B) $D+4 h$
+\item[] (C) $D+8 h$
+\item[] (D) $D+9 h$
+\item[] (E) There is insufficient information.
+\end{itemize}
+Ans: \ifpaper D \fi
+Extra: There is an extension of this to multiple balls in H3 physics \url{https://youtu.be/drVTrXib-7g?t=260}
+
 \subsection{Center of Momentum Frame}
 The Center of Momentum frame (CoM) is very useful because it simplifies the momentum equation greatly. The CoM frame is defined to be the frame in which the total momentum is zero. So, in any dimension,
 \begin{align}
@@ -951,8 +1087,17 @@ but really any other constraint could do. Solving these 4 simultaneous equations
 \end{align}
 In the CoM frame, both objects are bouncing off an imaginary common wall elastically. Conservation of momentum and energy doesn't dictate what the angle of the wall is, we need to specify so by a parameter $\theta$. \\[10pt]
 Extra: This extends to 3D as well! But this time the wall is a 2D plane, and the normal vector of the wall is described by 2 angles $\theta,\phi$.\\[10pt]
-\subsubsection{Exercises}
-In most physics questions, however, we aren't required to solve the general case. Sometimes the CoM frame isn't necessary. Typically these questions are just a test of your simultaneous equation solving skills (that's really most mechanics questions anyway).
+\subsubsection{SJPO 2017 General Round Q42: Max Deflection}
+A mass $M$, with initial speed $V$, collides elastically with a stationary mass $m=M / 2$. Find the maximum angle of deflection of the mass $M$.
+\begin{itemize}
+\item[] (A) $180^{\circ}$
+\item[] (B) $120^{\circ}$
+\item[] (C) $30^{\circ}$
+\item[] (D) 0
+\item[] (E) There is insufficient information to tell.
+\end{itemize}
+Ans: \ifpaper C \fi
+% In most physics questions, however, we aren't required to solve the general case. Sometimes the CoM frame isn't necessary. Typically these questions are just a test of your simultaneous equation solving skills (that's really most mechanics questions anyway).
 \subsection{1D Inelastic Collisions}
 Conservation of momentum still holds, but some energy is lost in the form of heat and sound. Instead of having an equation from energy, we parameterize the inelastic collision with \textbf{coefficient of restitution} $0\leq e \leq 1$, defined by the ratio of the velocity of separation over the velocity of approach, which is information that needs to be provided by the question. The 2 linear equations are 
 \begin{align}
@@ -965,18 +1110,183 @@ Solving these 2 simultaneously gives us
     v_B &= \frac{e m_A (u_A - u_B) + m_A u_A + m_B u_B}{m_A + m_B}
 \end{align}
 One can see that substituting $e=1$ recovers the result for elastic collision. In fact, one can kind of see that these equations are even easier to memorize than the elastic ones. 
-\subsubsection{Exercises}
+\subsubsection{SJPO 2018 General Round Q14}
+Two blocks move towards each other on a smooth table with the velocities as shown. Block A has mass $5 \mathrm{~kg}$ and moves at $2 \mathrm{~m} / \mathrm{s}$ to the right. Block B has mass $2 \mathrm{~kg}$ and moves at $5 \mathrm{~m} / \mathrm{s}$ to the left. The coefficient of restitution $e$ is the ratio of the final relative speed of separation to the initial relative speed of approach of two colliding objects. Take rightwards as positive. If $e=0.5$, what is the velocity of block B after impact?
+\begin{itemize}
+\item[] (A) $-2.5 \mathrm{~m} / \mathrm{s}$
+\item[] (B) $-1.0 \mathrm{~m} / \mathrm{s}$
+\item[] (C) $0 \mathrm{~m} / \mathrm{s}$
+\item[] (D) $ 1.0 \mathrm{~m} / \mathrm{s}$
+\item[] (E) $ 2.5 \mathrm{~m} / \mathrm{s}$
+\end{itemize}
+Ans: \ifpaper E \fi
 \subsection{1D Perfectly Inelastic}
 Perfectly inelastic collisions are inelastic collisions where $e=0$. This implies that $v_A = v_B$, which physically means that the 2 bodies stick together after the collision and effectively travel as one. \\[10pt]
 \textbf{Maximum Kinetic Energy Loss} occurs in inelastic collisions. One can see this clearly in the CoM frame, where both objects collide with each other and stop moving. 
-\subsubsection{Exercises}
+\subsubsection{SJPO 2017 General Round Q49}
+A long, hard train collides with a small fly. Assume the mass of the fly is negligible compared to the mass of the train. The train and the fly were initially moving towards each other with the same magnitude of velocity. When they collide, the train and fly stick to each other and finally travel with the same velocity as each other. Which of the following statements is most true in relation to the above?
+\begin{itemize}
+\item[] (A) During the collision the velocity of the fly changes direction instantaneously to that of the train.
+\item[] (B) During the collision the fly stops moving at some point in time since the velocity changes in direction.
+\item[] (C) Since the velocity of the fly must be zero at some time during the collision and it is attached to the train, then the train also has zero velocity at that time.
+\item[] (D) After the collision the fly must have gained momentum from the train.
+\item[] (E) The train must have exerted a large force on the fly due to its large momentum. The force exerted on the fly is proportional to the momentum of the train.
+\end{itemize}
+Ans: \ifpaper B \fi
+\subsubsection{SJPO 2016 General Round Q24}
+Case 1: A $80 \mathrm{~kg}$ skater with speed $u$ slides towards stationary skater with mass $20 \mathrm{~kg}$. They \textbf{hold hands} when they reach each other and continue as one. \\[10pt]
+Case 2: the $20 \mathrm{~kg}$ skater is moving and the 80 kg skater is stationary; the initial kinetic energy of the systems in both cases are the same. \\[10pt]
+Assume friction is negligible. What is the ratio of the \textbf{change in kinetic energy} (i.e the amount of energy converted to other forms) of the system in case 1 to that in case 2? i.e. (case 1 : case 2)
+\begin{itemize}
+\item[] (A) $4: 1$
+\item[] (B) $2: 1$
+\item[] (C) $1: 1$
+\item[] (D) $1: 2$
+\item[] (E) $1: 4$
+\end{itemize}
+Ans: \ifpaper E \fi
 \subsection{Accounting for Rotation}
 So far the objects were assumed to be point masses, or solid bodies that only move translationally. In reality we know objects can rotate before and after the collision. Rotational dynamics is what we will cover now.
+\clearpage
+\section{Physics: Assorted Practice}
+
+\subsubsection{SJPO 2016 General Round Q1}
+A force is applied to a box to push it across the horizontal floor at a constant speed of $4.0 \mathrm{~m} / \mathrm{s}$. Assume air resistance is negligible. What can you say about the forces acting on the box?
+\begin{itemize}
+\item[] (A) If the force applied to the box is doubled, the constant speed of the box will double to $8.0 \mathrm{~m} / \mathrm{s}$.
+\item[] (B) The magnitude of force applied to keep the box moving at a constant speed must be more than the magnitude of its weight.
+\item[] (C) The force being applied to the box to keep it moving at constant speed makes an action-reaction pair with the frictional force that resists its motion.
+\item[] (D) The magnitude of force applied to keep the box moving at a constant speed must be equal to the magnitude of the frictional forces that resist its motion.
+\item[] (E) The magnitude of force applied to keep the box moving at a constant speed must overcome i.e. be more than the magnitude of the frictional forces that resist its motion.
+\end{itemize}
+Ans: \ifpaper D \fi
+
+\subsubsection{SJPO 2016 General Round Q2}
+If the force applied to the box in the preceding problem is suddenly discontinued, the box will
+\begin{itemize}
+\item[] (A) stop suddenly.
+\item[] (B) continue at a constant velocity.
+\item[] (C) suddenly start slowing to a stop.
+\item[] (D) increase its speed for a very short period of time, then start slowing to a stop.
+\item[] (E) continue at a constant speed for a very short period of time and then slow to a stop.
+\end{itemize}
+Ans: \ifpaper C \fi
+
+
+\subsubsection{SJPO 2016 General Round Q6}
+Carts $\mathrm{A}$ and $\mathrm{B}$ are initially at rest on a frictionless, horizontal surface. A constant force $F_0$ is applied to each cart as it travels from its initial position. The mass of cart $\mathbf{A}$ is more than the mass of cart $\mathbf{B}$. Consider the kinetic energy, $E$, and momentum, $p$, of the boxes at position $\mathrm{X}$, a distance $x_0$ from the initial position. Subscripts A, B denote cart A or B. Which statement below is correct?
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2016q6.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $E_A<E_B, p_A<p_B$
+\item[] (B) $E_A<E_B, p_A=p_B$
+\item[] (C) $E_A>E_B, p_A<p_B$
+\item[] (D) $E_A=E_B, p_A=p_B$
+\item[] (E) $E_A=E_B, p_A>p_B$
+\end{itemize}
+}
+Ans: \ifpaper E \fi
+
+
+\subsubsection{SJPO 2016 General Round Q12}
+The upper end of a rope is fixed to a vertical wall. The upper end makes an angle of 30 degrees with the wall when the lower end is pulled by a horizontal force of $20 \mathrm{~N}$. What is the mass of the rope?
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2016q12.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $1.8 \mathrm{~kg}$
+\item[] (B) $2.0 \mathrm{~kg}$
+\item[] (C) $2.4 \mathrm{~kg}$
+\item[] (D) $3.5 \mathrm{~kg}$
+\item[] (E) $4.1 \mathrm{~kg}$
+\end{itemize}
+}
+Ans: \ifpaper D \fi
+
+\subsubsection{SJPO 2018 General Round Q11}
+% SJPO 2018 General Round Q11 B
+The minimum time $T$ for a car to safely overtake a long trailer is measured from the time the front of the car is level with the rear of the trailer, until the rear of the car is one full car-length ahead of the trailer. The car is $3.5 \mathrm{~m}$ long and the trailer is $15.0 \mathrm{~m}$ long.\\[10pt]
+The graph shows the speed-time graphs of the car and the trailer. What is the minimum time $T$ ?\\
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2018q11.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $\quad 2.16 \mathrm{~s}$
+\item[] (B) $\quad 1.76 \mathrm{~s}$
+\item[] (C) $\quad 1.48 \mathrm{~s}$
+\item[] (D) $\quad 0.88 \mathrm{~s}$
+\item[] (E) $\quad 0.64 \mathrm{~s}$
+\end{itemize}
+Ans: \ifpaper B \fi
+}
+\subsubsection{SJPO 2018 General Round Q12}
+{
+\begin{wrapfigure}{r}{0.4\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2018q12.png}
+\end{wrapfigure}
+A wooden peg is to be pulled out of the ground using two ropes A and B. Rope $\mathrm{A}$ is subject to a force of $600 \mathrm{~N}$ at $60^{\circ}$ to the horizontal. Rope $\mathrm{B}$ is pulled at a fixed angle $\theta$ to the vertical. If the resultant force acting on the post is to be $1600 \mathrm{~N}$ vertically, what should be the force $T$ on rope B?
+\begin{itemize}
+\item[] (A) $1121 \mathrm{~N}$
+\item[] (B) $1334 \mathrm{~N}$
+\item[] (C) $1400 \mathrm{~N}$
+\item[] (D) $1924 \mathrm{~N}$
+\item[] (E) $2040 \mathrm{~N}$
+\end{itemize}
+Ans: \ifpaper A \fi
+}
+
+\subsubsection{SJPO 2018 General Round Q13}
+Travelling with an initial speed of $70 \mathrm{~km} / \mathrm{h}$, a car accelerates at $6000 \mathrm{~km} / \mathrm{h}^2$ along a straight road. How long will it take to reach a speed of $120 \mathrm{~km} / \mathrm{h}$ ?
+\begin{itemize}
+\item[] (A) $30 \mathrm{~s}$
+\item[] (B) $45 \mathrm{~s}$
+\item[] (C) $60 \mathrm{~s}$
+\item[] (D) $70 \mathrm{~s}$
+\item[] (E) $180 \mathrm{~s}$
+\end{itemize}
+Ans: \ifpaper A \fi
+
+\begin{samepage}
+\subsubsection{SJPO 2018 General Round Q18}
+A $2 \mathrm{~kg}$ block slides down a smooth roof which is angled at $30^{\circ}$ to the horizontal. When it reaches $\mathrm{A}$, it has a speed of $2.0 \mathrm{~m} / \mathrm{s}$. It leaves the surface of the roof at $\mathrm{B}$ and strikes the ground at a distance $d$ from the wall of the building. What is the distance $d$ ?
+{
+ \begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/2018q18.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[](A) $3.96 \mathrm{~m}$
+\item[](B) $8.66 \mathrm{~m}$
+\item[](C) $8.78 \mathrm{~m}$
+\item[](D) $17.3 \mathrm{~m}$
+\item[](E) $17.8 \mathrm{~m}$
+\end{itemize}
+}
+Ans: \ifpaper C \fi \\[10pt]
+\end{samepage}
+
+
+
+\section{Physics: Work and Impulse}
+
+\subsubsection{SJPO 2016 General Round Q5}
+A train of mass $7.0 \times 10^4 \mathrm{~kg}$ expends $60 \mathrm{~kW}$ of power to travel down a $2^{\circ}$ incline at a constant velocity of $10 \mathrm{~m} \mathrm{~s}^{-1}$. How much power is required for the same train to travel up the $2^{\circ}$ incline at the same constant velocity of $10 \mathrm{~m} \mathrm{~s}^{-1}$ ?
+\begin{itemize}
+\item[] (A) $540 \mathrm{~kW}$
+\item[] (B) $480 \mathrm{~kW}$
+\item[] (C) $300 \mathrm{~kW}$
+\item[] (D) $240 \mathrm{~kW}$
+\item[] (E) $60 \mathrm{~kW}$
+\end{itemize}
+Ans:  \ifpaper A \fi
 \section{Math: Differential Equations}
 When we studied $F(t)=ma(t)$, we noted that as long as we know the function $F(t)$, we can find $a(t)$ and integrate twice to obtain $x(t)$. However, in most systems, $F(t)$ depends on $x(t)$ or $v(t) \equiv \dot{x}(t)$. Examples include 
 \begin{itemize}
     \item Spring Mass $F(x(t)) = -kx(t)$
-    \item Gravitation $F(\vec{r}(t)) = -\frac{GMm}{|\vec{r(t)}|^2} \hat{r}$
+    \item Gravitation $F(\vec{r}(t)) = -\frac{GMm}{|\vec{r}(t)|^2} \hat{r}$
     \item Drag $F(v(t)) = \frac{1}{2} \rho v(t)^2 C_D A$
     \item Lorentz Force $\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})$
 \end{itemize}
@@ -1185,6 +1495,16 @@ Proof:
     \vec{v} &= \dot{r}\ \hat{e}_r + r \dot{\theta}\ \hat{e}_\theta \label{eq:vpolar}
 \end{align}
 There are other ways to prove the above, but the above is simplest.
+\subsubsection{SJPO 2015 General Round Q4}
+Gears A, B, C are aligned side by side in such a way that rotating gear A causes gear $\mathrm{B}$ to rotate which in turn causes gear $\mathrm{C}$ to rotate. Gear A has 40 number of teeth and is rotating at angular speed of $50 \mathrm{rev} / \mathrm{s}$. The radius of gear B is $20 \%$ of gear $\mathrm{C}$ and gear $\mathrm{C}$ is rotating at $40 \%$ angular speed of gear $\mathrm{A}$. All the gears have the same tooth and groove size. How many teeth does gear B have?
+\begin{itemize}
+\item[] (A) 10
+\item[] (B) 20
+\item[] (C) 40
+\item[] (D) 50
+\item[] (E) 80
+\end{itemize}
+Ans: \ifpaper B \fi
 \subsection{Acceleration in Polar Coordinates}
 Acceleration is the derivative of velocity (Eq \ref{eq:vpolar}) wrt time, which can be shown to be equal to 
 \begin{align}
@@ -1233,15 +1553,51 @@ Often, the radial coordinate function $r(t)$ is constant. Examples include: pend
     F_r &= -r {\dot\theta}^2 \\
     F_\theta &= r\ddot\theta
 \end{align}
+\subsubsection{SJPO 2015 General Round Q1}
+Two identical masses, $\mathrm{A}$ and $\mathrm{B}$, are tied to strings and placed on a horizontal frictionless disc as in the figure below. The two masses are then set to move about the centre of the disc with the same angular velocity $\omega$. Given that the tension of the string connecting mass $\mathrm{A}$ to the center of the disc is $T$, determine the tension of the string connecting mass $\mathrm{B}$ to mass $\mathrm{A}$.
+\begin{itemize}
+\item[] (A) $T / 4$
+\item[] (B) $3 T / 4$
+\item[] (C) $T$
+\item[] (D) $3 T$
+\item[] (E) $4 T$
+\end{itemize}
+Ans: \ifpaper B \fi
+\subsubsection{SJPO 2018 General Round Q7}
+A bug is just about to slip on a circular turntable of radius $R$ rotating at constant angular velocity. The bug is halfway between the centre and the edge and the coefficient of static friction is $1 / 4$. What is the acceleration of the bug?
+\begin{itemize}
+\item[] (A) $3 g$
+\item[] (B) $2 g$
+\item[] (C) $3 g / 2$
+\item[] (D) $g / 2$
+\item[] (E) $g / 4$
+\end{itemize}
+Ans: \ifpaper E \fi
 
+\subsubsection{SJPO 2016 General Round Q14}
+A ball with mass $m$ is hung from the ceiling with a massless string of length $l$ as shown in the diagram. It moves in uniform circular motion with angular velocity $\omega$. What is the magnitude of tension in the string? \\
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2016q14.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $m \omega^2 l$
+\item[] (B) $m \omega^2 l \cos \theta$
+\item[] (C) $m \omega^2 l / \cos \theta$
+\item[] (D) $m \omega^2 l \sin \theta$
+\item[] (E) $m \omega^2 l / \sin \theta$
+\end{itemize}
+}
+Ans: \ifpaper A \fi
+
+\newpage
 \subsection{Example: Pendulum}
-A mass $m$ is hung by an inextensible string of length $l$ in a gravitational field strength $g$. It is displaced by a small angular displacement $\theta_0$ and released. Find the amplitude and period of oscillation.
-
-
-\subsubsection{Exercises}
+A mass $m$ is hung by an inextensible string of length $l$ in a gravitational field strength $g$. It is displaced by a small angular displacement $\theta_0$ and released. Find the amplitude and period of oscillation.\\[10pt]
+Ans: \\[50pt]
 \begin{samepage}
-\paragraph{SJPO 2015 General Round Q16}
-As shown in the diagram, a pendulum of length $L$ is hung from the ceiling and at a point $P$, a peg is placed. $L^{\prime}$ denotes the shortened length of the pendulum during part of its oscillation. The period of the pendulums oscillation is now
+\subsubsection{SJPO 2015 General Round Q16}
+As shown in the diagram, a pendulum of length $L$ is hung from the ceiling and at a point $P$, a peg is placed. $L^{\prime}$ denotes the shortened length of the pendulum during part of its oscillation. The period of the pendulums oscillation is now \\
+{
 \begin{wrapfigure}{r}{0.4\textwidth}
 \includegraphics[width=0.9\linewidth]{images/2015q16.png}
 \end{wrapfigure}
@@ -1253,9 +1609,11 @@ As shown in the diagram, a pendulum of length $L$ is hung from the ceiling and a
 \item[](E) $\pi \sqrt{\frac{L+L^{\prime}}{g}}$
 \end{itemize}
 Ans: \ifpaper D \fi
+}
 \end{samepage}
+
 \begin{samepage}
-\paragraph{SJPO 2018 General Round Q21}
+\subsubsection{SJPO 2018 General Round Q21}
 The bob of a simple pendulum travels $2 \mathrm{~m}$ in one complete oscillation in a time of $2.000 \mathrm{~s}$. Assuming that damping is negligible, when the same pendulum is made to travel $4 \mathrm{~m}$ in one complete oscillation, the time taken is
 \begin{itemize}
 \item[](A) $4.000 \mathrm{~s}$
@@ -1266,31 +1624,107 @@ The bob of a simple pendulum travels $2 \mathrm{~m}$ in one complete oscillation
 \end{itemize}
 Ans: \ifpaper B \fi 
 \end{samepage}
-\begin{samepage}
-\paragraph{SJPO 2018 General Round Q22}
-
-\end{samepage}
 
 
 \section{Physics: Rotational Dynamics}
-So far we have been dealing with point masses. But in reality most objects take up some volume. 
-
-Before we talk about \textit{continuous} mass distributions, let's derive everything using discrete masses first. If there is a mass $m$ 
-
+So far we have been dealing with point masses. But in reality most objects take up some volume. \\[10pt]
+Before we talk about \textit{continuous} mass distributions, let's derive everything using discrete masses first. If there is a mass $m$ distance $r$ away from the origin, rotating about an axis passing through the origin with angular velocity $\omega$.
 We usually model these \textbf{rigid body} objects as a uniform mass density over some volume. It is made up of many small masses $dm = \rho dV$, where $dm$ is called an infinitesimal mass element and $dV = dx\ dy\ dz$ is an infinitesimal volume element. If we integral $dm$ over volume $\mathcal{V}$ the object occupies, we get the mass
 \begin{align}
     \int_{\mathcal V} dm = m
 \end{align}
 
+\subsubsection{SJPO 2018 General Round Q4}
+A sphere rolls without slipping down a rough inclined plane. The gain in rotational kinetic energy is due directly to the work done by
+\begin{itemize}
+\item[](A) Static friction
+\item[](B) Kinetic friction
+\item[](C) Weight
+\item[](D) Normal contact force
+\item[](E) Air resistance
+\end{itemize}
+
 \section{Physics: Statics}
 Need torque
+\section{Physics: Springs}
+\subsubsection{SJPO 2018 General Round Q19}
+Two adventurous Physics students, each weighing $60 \mathrm{~kg}$, jump off a $43 \mathrm{~m}$ high bridge on a Bungee cord. The length of the cord is such that the students together will just touch the water and rebound. While Bungee cords become softer (more elastic) with increasing extension, for our calculations we can approximate the cord as having a constant stiffness of $k=330 \mathrm{~N} / \mathrm{m}$, and we can ignore the height of the students and where the cord is tied on their body. What is the unstretched length of the cord?
+\begin{itemize}
+\item[] (A) $10.0 \mathrm{~m}$
+\item[] (B) $17.5 \mathrm{~m}$
+\item[] (C) $25.5 \mathrm{~m}$
+\item[] (D) $32.5 \mathrm{~m}$
+\item[] (E) $40.0 \mathrm{~m}$
+\end{itemize}
+\subsubsection{SJPO 2016 General Round Q13}
+An ideal uniform spring of mass $m \mathrm{~kg}$, unstretched length $L \mathrm{~m}$ and spring constant $k\  \mathrm{Nm}^{-1}$ stretches by an extension of $x \mathrm{~m}$ when hung vertically. Which statement below is correct? (You may want to know that the sum of $\mathrm{N}$ terms in an arithmetic progression from 1 to $\mathrm{N}$ is $\frac{N(N+1)}{2}$)
+\begin{itemize}
+\item[] (A) The top half of the spring with mass $\frac{m}{2} \mathrm{~kg}$ has an extension $\frac{x}{2} \mathrm{~m}$.
+\item[] (B) The top half of the spring with length $\frac{L+x}{2} \mathrm{~m}$ supports $\frac{m g}{2} \mathrm{~N}$.
+\item[] (C) The top half of the spring with mass $\frac{m}{2} \mathrm{~kg}$ has a spring constant of $\frac{k}{2} \mathrm{Nm}^{-1}$.
+\item[] (D) The extension of the whole spring is $\frac{m g}{k} \mathrm{~m}$
+\item[] (E) The length of the whole spring is $L+\frac{m g}{2 k} \mathrm{~m}$
+\end{itemize}
+Ans: \ifpaper E \fi
+
 \section{Math: Other Coordinates}
 \section{Math: 2D \& 3D Integrals}
+\clearpage
+\section{Physics: Center of Mass}
+\subsubsection{SJPO 2018 General Round Q5}
+A thin wire is bent into the form of a three-sided shape as shown below. Each segment has equal length $l$. The height of the centre of mass from the bottom of the shape is \\
+{
+\begin{wrapfigure}{r}{0.3\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2018q5.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $l / 2$
+\item[] (B) $2 l / 3$
+\item[] (C) $l / 3$
+\item[] (D) $l / 4$
+\item[] (E) $2 l / 5$
+\end{itemize}
+}
+
+\subsubsection{SJPO 2018 General Round Q20}
+A dog weighing $10 \mathrm{~kg}$ is standing on a flatboat so that he is $20 \mathrm{~m}$ from the shore. The boat weighs $40 \mathrm{~kg}$ and has uniform mass distribution. The dog walks $8.0 \mathrm{~m}$ on the boat towards the shore and stops. For this calculation, one can assume no friction or drag between the boat and the water. How far is the dog from the shore now? \\
+{
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2018q20.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $12.0 \mathrm{~m}$
+\item[] (B) $13.6 \mathrm{~m}$
+\item[] (C) $14.0 \mathrm{~m}$
+\item[] (D) $16.8 \mathrm{~m}$
+\item[] (E) $29.8 \mathrm{~m}$
+\end{itemize}
+}
+\clearpage
+
+
 \section{Physics: Moment of Inertia}
 \section{Physics: Electrostatics}
 
 \section{Math: Vector Calculus}
+\clearpage
 \section{Physics: Potentials \& Potential Energy}
+\subsubsection{SJPO 2018 General Round Q1}
+The figure shows the potential energy $V(x)$ as a function of molecular separation $x$ for a diatomic molecule of reduced mass $\mu$.
+If $V(x)=V_0\left(1-e^{-\left(x-x_0\right)/\delta}\right)^2-V_0$, the vibrational frequency $f$ at the equilibrium position is
+(Hint: This series expansion may be useful. $e^x \approx 1+x+\frac{x^2}{2 !}$ ) \\
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2016q4.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $\frac{2 V_0}{\mu \delta}$
+\item[] (B) $\frac{V_0}{2 \pi^2 \mu \delta}$
+\item[] (C) $\sqrt{\frac{2 V_0}{\mu \delta^2}}$
+\item[] (D) $\frac{1}{2 \pi} \sqrt{\frac{2 V_0}{\mu \delta^2}}$
+\item[] (E) $\frac{1}{2 \pi} \sqrt{\frac{V_0}{\mu \delta^2}}$
+\end{itemize}
+Ans: \ifpaper D \fi
+\clearpage
 \section{Physics: Electromagnetism}
 \section{Physics: AC Circuits}
 
@@ -1306,5 +1740,15 @@ Need torque
 \section{Physics: Waves}
 \section{Physics: Optics}
 \section{Physics: Thermodynamics}
+\section{Physics: Non-Inertial Reference Frame}
+\subsubsection{SJPO 2018 General Round Q3}
+A plumb line is held steady while being carried in a moving train. The mass of the plumb bob is $m$, and the train is accelerating in the forward direction at $0.5 g$. What is the tension in the string?
+\begin{itemize}
+\item[] (A) $0.5 mg$
+\item[] (B) $1.12 mg$
+\item[] (C) $1.22 mg$
+\item[] (D) $2 mg$
+\item[] (E) Cannot be determined from the given information.
+\end{itemize}
 
 \end{document}
