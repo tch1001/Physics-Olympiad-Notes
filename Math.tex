@@ -603,6 +603,7 @@ Newton's 3rd law
 $$\vec{F}_{\text{A on B}}(t) = -\vec{F}_{\text{B on A}}(t)$$
 
 \subsection{Momentum \& Impulse}
+\label{sec:momimp}
 \url{https://youtu.be/TiOSscc8TKw}
 Change in a particle's momentum is equal to the impulse it experiences. \\[10pt]
 Newton's 2nd law: Let $\vec{F}(t)$ be the net force on a particle, then
@@ -865,7 +866,23 @@ For a massless string (whether straight or curved on a pulley), tension is equal
 We will deal with massive string after talking about "mass distributions" (Topic of Moment of Inertia).\\[10pt]
 Extra: A string on a pulley with friction has an exponential effect in increasing tension. See \url{https://en.wikipedia.org/wiki/Capstan_equation}. We will cover this in future too.
 
-    
+\subsubsection{SJPO 2014 General Round Q41}
+A block of mass $m$ is attached to a horizontal inextensible string and is moving upwards as shown in the figute below. Breaking strength of the string is $4 \mathrm{mg}$. The maximum positive and negative accelerations that the block can have are
+{
+\begin{wrapfigure}{r}{0.4\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2014q41.png}
+\end{wrapfigure}
+
+\begin{itemize}
+\item[] (A) $4 \mathrm{~g}$ and $3 \mathrm{~g}$ respectively.
+\item[] (B) $4 \mathrm{~g}$ and g respectively.
+\item[] (C) $3 g$ and $4 \mathrm{~g}$ respectively.
+\item[] (D) $3 \mathrm{~g}$ and g respectively.
+\item[] (E) $3 \mathrm{~g}$ and $3 \mathrm{~g}$ respectively.
+\end{itemize}
+}
+Ans: \ifpaper D \fi
+\clearpage
 \subsubsection{SJPO 2018 General Round Q6}
 \begin{wrapfigure}{r}{0.5\textwidth}
 \includegraphics[width=1.0\linewidth]{images/sjpo2018q6.png}
@@ -941,13 +958,13 @@ suppose the time to reach the peak is $\tau_1$ and the time to drop down is $\ta
 
 \subsection{Extra: Projectile Motion with Drag}
 It is possible to solve for projectile motion exactly, but only after we study differential equations. We postpone this to the future.
-
+\newpage
 \section{Physics: Collisions}
-Collisions between multiple bodies (e.g. dropping a stack of balls) are analysed as a sequence of collisions between 2 bodies at a time. When 2 bodies collide, their \textbf{total momentum is always conserved} / invariant before and after the collision (invariant means doesn't change). Their total energy, however, has 3 possibilities:
+Collisions between multiple bodies (e.g. dropping a stack of balls) are analysed as a sequence of collisions between 2 bodies at a time. When 2 bodies collide, their \textbf{total momentum is always conserved} / invariant before and after the collision (invariant means doesn't change). Their total \textbf{kinetic} energy, however, has 3 possibilities:
 \begin{itemize}
-    \item Total energy conserved (\textbf{elastic})
-    \item Total energy decreased (\textbf{inelastic}) e.g. billiard balls
-    \item Total energy increased (\textbf{superelastic}) e.g. compressed spring, explosion
+    \item Total KE conserved (\textbf{elastic})
+    \item Total KE decreased (\textbf{inelastic}) e.g. billiard balls
+    \item Total KE increased (\textbf{superelastic}) e.g. compressed spring, explosion
 \end{itemize}
 \subsection{Momentum Conservation}
 \textbf{Q}: Why is momentum invariant before and after the collision? \\[10pt]
@@ -1030,10 +1047,12 @@ where the bolded quantities $\mathbf{u}$ emphasise that this is a vector equatio
 \end{align}
 Rearranging the zero total momentum equation (\ref{eq:zeromomentum}) yields A's velocities in terms of B's velocities
 \begin{align}
-    \mathbf{u}_{A,CM} &= -\frac{m_B}{m_A} \mathbf{u}_{B,CM} \\
-    \mathbf{v}_{A,CM} &= -\frac{m_B}{m_A} \mathbf{v}_{B,CM} 
+    \mathbf{u}_{A,CM} &= -\frac{m_B}{m_A} \mathbf{u}_{B,CM} \label{eq:meow1}\\
+    \mathbf{v}_{A,CM} &= -\frac{m_B}{m_A} \mathbf{v}_{B,CM} \label{eq:meow2}
 \end{align}
-which can be substituted into the conservation of energy equation to eliminate A's initial and final velocities, leaving us with an equation purely relating B's initial and final velocities
+
+\subsubsection{Elastic Collision in CoM Frame}
+Equations (\ref{eq:meow1}) and (\ref{eq:meow2}) can be substituted into the conservation of KE equation to eliminate A's initial and final velocities, leaving us with an equation purely relating B's initial and final velocities
 \begin{align}
     \frac{1}{2} m_A \mathbf{u}_{A}^2 + \frac{1}{2} m_B \mathbf{u}_{B}^2  &= \frac{1}{2} m_A \mathbf{v}_{A}^2 + \frac{1}{2} m_B \mathbf{v}_{B}^2 \\
     \Rightarrow \left( \frac{m_B^2}{m_A} + m_B \right) \mathbf{u}_{B,CM}^2 &= \left( \frac{m_B^2}{m_A} + m_B \right) \mathbf{v}_{B,CM}^2 \\
@@ -1145,10 +1164,24 @@ Assume friction is negligible. What is the ratio of the \textbf{change in kineti
 \item[] (E) $1: 4$
 \end{itemize}
 Ans: \ifpaper E \fi
+\subsection{2D Inelastic Collision}
+The geometric intuition is more or less the same for 2D elastic. The only difference is that the final velocities will be scaled down.
+
 \subsection{Accounting for Rotation}
 So far the objects were assumed to be point masses, or solid bodies that only move translationally. In reality we know objects can rotate before and after the collision. Rotational dynamics is what we will cover now.
 \clearpage
 \section{Physics: Assorted Practice}
+
+\subsubsection{SJPO 2014 General Round Q40}
+Two projectiles of same mass are fired from the ground and they land at the same horizontal level. Ratio of their minimum kinetic energies is 4:1 and the ratio of maximum heights attained by them is also 4:1. Find the ratio of their horizontal ranges.
+\begin{itemize}
+\item[](A) $16: 1$
+\item[](B) $4: 1$
+\item[](C) $8: 1$
+\item[](D) $2: 1$
+\item[](E) None of the above
+\end{itemize}
+Ans: \ifpaper B \fi
 
 \subsubsection{SJPO 2016 General Round Q1}
 A force is applied to a box to push it across the horizontal floor at a constant speed of $4.0 \mathrm{~m} / \mathrm{s}$. Assume air resistance is negligible. What can you say about the forces acting on the box?
@@ -1270,7 +1303,8 @@ Ans: \ifpaper C \fi \\[10pt]
 
 
 
-\section{Physics: Work and Impulse}
+\section{Physics: Work and Impulse Topical Practice}
+Read section \ref{sec:momimp} for an explanation of Work and Impulse.
 
 \subsubsection{SJPO 2016 General Round Q5}
 A train of mass $7.0 \times 10^4 \mathrm{~kg}$ expends $60 \mathrm{~kW}$ of power to travel down a $2^{\circ}$ incline at a constant velocity of $10 \mathrm{~m} \mathrm{~s}^{-1}$. How much power is required for the same train to travel up the $2^{\circ}$ incline at the same constant velocity of $10 \mathrm{~m} \mathrm{~s}^{-1}$ ?
@@ -1282,6 +1316,17 @@ A train of mass $7.0 \times 10^4 \mathrm{~kg}$ expends $60 \mathrm{~kW}$ of powe
 \item[] (E) $60 \mathrm{~kW}$
 \end{itemize}
 Ans:  \ifpaper A \fi
+
+\subsubsection{SJPO 2014 General Round Q42}
+A uniform chain of length $L$ and mass $m$ is lying on a smooth table. One third of its length is hanging vertically down over the edge of the table and the remaining two third is on the table. If $g$ is the acceleration due to gravity, what is the work $W$ required to pull the hanging part onto the table?
+\begin{itemize}
+\item[] (A) $m g L$
+\item[] (B) $m g L / 3$
+\item[] (C) $m g L / 6$
+\item[] (D) $m g L / 9$
+\item[] (E) $m g L / 18$
+\end{itemize}
+
 \section{Math: Differential Equations}
 When we studied $F(t)=ma(t)$, we noted that as long as we know the function $F(t)$, we can find $a(t)$ and integrate twice to obtain $x(t)$. However, in most systems, $F(t)$ depends on $x(t)$ or $v(t) \equiv \dot{x}(t)$. Examples include 
 \begin{itemize}
@@ -1736,11 +1781,44 @@ Ans: \ifpaper D \fi
 \section{Physics: Pulleys}
 \subsection{Friction - Capstan Equation}
 \section{Physics: DC Circuits}
+\section{Physics: Effective Resistance}
+\subsection{Equipotential Method}
+\subsection{Recursive}
+\subsubsection{SJPO 2014 General Round Q35}
+As shown in the following figure, each resister has a resistance of $R$. What is the effective resistance between point $a$ and $b$ ?
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2016q4.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $(1+\sqrt{3}) R$
+\item[] (B) $(1+\sqrt{5}) R$
+\item[] (C) $(1+\sqrt{5}) R / 2$
+\item[] (D) $(1+\sqrt{3}) R / 2$
+\item[] (E) $R$
+\end{itemize}
+Ans: \ifpaper A \fi 
+\subsection{Injecting Current}
+\subsection{Extra: Circuit Laplacian}
 \section{Physics: Fluid Mechanics}
 \section{Physics: Waves}
 \section{Physics: Optics}
 \section{Physics: Thermodynamics}
 \section{Physics: Non-Inertial Reference Frame}
+
+\subsubsection{SJPO 2014 General Round Q34}
+A candle is lighted in a gas jar as shown below. If the jar swings in a circle about O at a constant speed, in which direction will the flame of the candle point?
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2014q34.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) Forward, in the direction of motion.
+\item[] (B) Backward, opposite to its velocity.
+\item[] (C) Still vertically upwards.
+\item[] (D) Inward, points towards $\mathrm{O}$.
+\item[] (E) Outwards, away from O.
+\end{itemize}
+Ans: \ifpaper D \fi
+
 \subsubsection{SJPO 2018 General Round Q3}
 A plumb line is held steady while being carried in a moving train. The mass of the plumb bob is $m$, and the train is accelerating in the forward direction at $0.5 g$. What is the tension in the string?
 \begin{itemize}
@@ -1750,5 +1828,7 @@ A plumb line is held steady while being carried in a moving train. The mass of t
 \item[] (D) $2 mg$
 \item[] (E) Cannot be determined from the given information.
 \end{itemize}
+
+
 
 \end{document}
