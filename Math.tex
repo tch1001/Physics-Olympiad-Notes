@@ -967,6 +967,7 @@ Collisions between multiple bodies (e.g. dropping a stack of balls) are analysed
     \item Total KE increased (\textbf{superelastic}) e.g. compressed spring, explosion
 \end{itemize}
 \subsection{Momentum Conservation}
+\url{https://youtu.be/nJlILp1fBwI}\\
 \textbf{Q}: Why is momentum invariant before and after the collision? \\[10pt]
 \textbf{A}: Momentum conservation is due to Newton's 3rd Law. To see this, recall that an object's momentum changes by impulse 
 $$\Delta \vec{p} \text{ from } t_0 \text{ to } t_1 = \int_{t_0}^{t_1} \vec{F}(t)\ dt$$
@@ -978,6 +979,7 @@ As such, the sum of their momentum remains unchanged.
 $$\Delta(\vec{p}_A + \vec{p}_B) = \vec{0}$$
 This remains true for all forces that obey N3L, including collisions (normal contact force). 
 \subsection{1D Elastic Collisions}
+\url{https://youtu.be/iwPXjULdcuc}\\
 Let the masses be $m_A, m_B$, the initial velocities be $u_A, u_B$ and final velocities be $v_A, v_B$. Conservation of momentum and energies yields
 \begin{align}
     m_A u_A + m_B u_B &= m_A v_A + m_B v_B \\
@@ -1020,6 +1022,7 @@ Repeating this with $v_B = u_A - u_B + v_A$ gives us
 \end{align}
 One sees that the final velocities almost look like they have a nice symmetry to them. You can memorise these formulas but personally I just derive it every time I need it because I don't like memorising.
 \subsubsection{SJPO 2017 General Round Q40}
+\url{https://youtu.be/IVkbicUsFrg}\\
 40. A small tennis ball with mass $m$ sits atop a large basketball with mass $M$, with $M \gg m$. The balls are released from rest, with the bottom of the basketball at a height $\mathrm{h}$ above the ground. The diameter of the tennis ball is d and that of the basketball is $D$, with $D \gg d \approx 0$. To what height does the tennis ball bounce above the ground? Assume all collisions are elastic.
 \begin{itemize}
 \item[] (A) $D+h$
@@ -1032,6 +1035,7 @@ Ans: \ifpaper D \fi
 Extra: There is an extension of this to multiple balls in H3 physics \url{https://youtu.be/drVTrXib-7g?t=260}
 
 \subsection{Center of Momentum Frame}
+\url{https://youtu.be/Z28XlyN7WJ8}\\
 The Center of Momentum frame (CoM) is very useful because it simplifies the momentum equation greatly. The CoM frame is defined to be the frame in which the total momentum is zero. So, in any dimension,
 \begin{align}
     m_A \mathbf{u}_{A,CM} + m_B \mathbf{u}_{B,CM} &= m_A \mathbf{v}_{A,CM} + m_B \mathbf{v}_{B,CM} = \mathbf{0} \label{eq:zeromomentum}
@@ -1059,6 +1063,7 @@ Equations (\ref{eq:meow1}) and (\ref{eq:meow2}) can be substituted into the cons
     \Rightarrow \mathbf{u}_{B,CM}^2 &= \mathbf{v}_{B,CM}^2 
 \end{align}
 \subsubsection{1D Elastic Collision Revisited using CoM Frame}
+\url{https://youtu.be/gwpOOmzETX8}\\
 The CoM equations become
 \begin{align}
     m_A u_{A,CM} + m_B u_{B,CM} &= 0 \\
@@ -1086,6 +1091,7 @@ Wow! What a remarkably neat result. In the CoM frame, the velocities simply flip
 which matches our 1D elastic collision result. Calculation wise, one might not see the merits of CoM frame in 1D. But intuition wise, the fact that the velocities just flip during the collision gives us the intuition that the balls are just hitting an imaginary wall at the point of collision. \\[10pt]
 The real power of CoM frame comes in when we consider 2D or 3D collisions. The intuition of the objects hitting a wall still holds true, but in 2D the wall is slanted at an angle. We discuss more about this now.
 \subsection{2D Elastic Collisions}
+\url{https://youtu.be/gLXGk68VLS8}\\
 In 2D elastic collisions, there are 4 unknowns $v_{A,x}, v_{A,y}, v_{B,x}, v_{B,y}$ but only 3 equations from momentum and energy conservation.
 \begin{align}
 m_A u_{A,x} + m_B u_{B,x} &= m_A v_{A,x} + m_B v_{B,x} \\
@@ -1107,6 +1113,7 @@ but really any other constraint could do. Solving these 4 simultaneous equations
 In the CoM frame, both objects are bouncing off an imaginary common wall elastically. Conservation of momentum and energy doesn't dictate what the angle of the wall is, we need to specify so by a parameter $\theta$. \\[10pt]
 Extra: This extends to 3D as well! But this time the wall is a 2D plane, and the normal vector of the wall is described by 2 angles $\theta,\phi$.\\[10pt]
 \subsubsection{SJPO 2017 General Round Q42: Max Deflection}
+\url{https://youtu.be/1EJF4RLk6HE}\\
 A mass $M$, with initial speed $V$, collides elastically with a stationary mass $m=M / 2$. Find the maximum angle of deflection of the mass $M$.
 \begin{itemize}
 \item[] (A) $180^{\circ}$
