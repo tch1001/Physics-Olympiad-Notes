@@ -1234,9 +1234,9 @@ Carts $\mathrm{A}$ and $\mathrm{B}$ are initially at rest on a frictionless, hor
 }
 Ans: \ifpaper E \fi
 
-
+\newpage \clearpage
 \subsubsection{SJPO 2016 General Round Q12}
-The upper end of a rope is fixed to a vertical wall. The upper end makes an angle of 30 degrees with the wall when the lower end is pulled by a horizontal force of $20 \mathrm{~N}$. What is the mass of the rope?
+The upper end of a rope is fixed to a vertical wall. The upper end makes an angle of 30 degrees with the wall when the lower end is pulled by a horizontal force of $20 \mathrm{~N}$. What is the mass of the rope? \\
 {
 \begin{wrapfigure}{r}{0.5\textwidth}
 \includegraphics[width=1.0\linewidth]{images/sjpo2016q12.png}
@@ -1268,6 +1268,7 @@ The graph shows the speed-time graphs of the car and the trailer. What is the mi
 \end{itemize}
 Ans: \ifpaper B \fi
 }
+\newpage \clearpage
 \subsubsection{SJPO 2018 General Round Q12}
 {
 \begin{wrapfigure}{r}{0.4\textwidth}
@@ -1296,8 +1297,9 @@ Travelling with an initial speed of $70 \mathrm{~km} / \mathrm{h}$, a car accele
 Ans: \ifpaper A \fi
 
 \begin{samepage}
+\newpage \clearpage
 \subsubsection{SJPO 2018 General Round Q18}
-A $2 \mathrm{~kg}$ block slides down a smooth roof which is angled at $30^{\circ}$ to the horizontal. When it reaches $\mathrm{A}$, it has a speed of $2.0 \mathrm{~m} / \mathrm{s}$. It leaves the surface of the roof at $\mathrm{B}$ and strikes the ground at a distance $d$ from the wall of the building. What is the distance $d$ ?
+A $2 \mathrm{~kg}$ block slides down a smooth roof which is angled at $30^{\circ}$ to the horizontal. When it reaches $\mathrm{A}$, it has a speed of $2.0 \mathrm{~m} / \mathrm{s}$. It leaves the surface of the roof at $\mathrm{B}$ and strikes the ground at a distance $d$ from the wall of the building. What is the distance $d$ ? \\
 {
  \begin{wrapfigure}{r}{0.4\textwidth} 
 \includegraphics[width=\linewidth]{images/2018q18.png}
@@ -1338,7 +1340,7 @@ A uniform chain of length $L$ and mass $m$ is lying on a smooth table. One third
 \item[] (D) $m g L / 9$
 \item[] (E) $m g L / 18$
 \end{itemize}
-
+\newpage \clearpage
 \section{Math: Differential Equations}
 When we studied $F(t)=ma(t)$, we noted that as long as we know the function $F(t)$, we can find $a(t)$ and integrate twice to obtain $x(t)$. However, in most systems, $F(t)$ depends on $x(t)$ or $v(t) \equiv \dot{x}(t)$. Examples include 
 \begin{itemize}
@@ -1521,7 +1523,7 @@ Enough talking, the expression for basis vectors
     \hat{e}_r &=\quad \cos\theta\ \hat{e}_x + \sin\theta\ \hat{e}_y \\
     \hat{e}_\theta &= -\sin\theta\ \hat{e}_x + \cos\theta\ \hat{e}_y
 \end{align}
-
+% \begin{samepage}
 \subsection{Velocity in Polar Coordinates}
 The velocity vector can be decomposed into the basis vectors as follows
 \begin{align}
@@ -1551,7 +1553,9 @@ Proof:
     \end{array}\right) \\
     \vec{v} &= \dot{r}\ \hat{e}_r + r \dot{\theta}\ \hat{e}_\theta \label{eq:vpolar}
 \end{align}
-There are other ways to prove the above, but the above is simplest.
+There are other ways to prove the above, but the above is simplest. 
+% \end{samepage}
+% \begin{samepage}
 \subsubsection{SJPO 2015 General Round Q4}
 Gears A, B, C are aligned side by side in such a way that rotating gear A causes gear $\mathrm{B}$ to rotate which in turn causes gear $\mathrm{C}$ to rotate. Gear A has 40 number of teeth and is rotating at angular speed of $50 \mathrm{rev} / \mathrm{s}$. The radius of gear B is $20 \%$ of gear $\mathrm{C}$ and gear $\mathrm{C}$ is rotating at $40 \%$ angular speed of gear $\mathrm{A}$. All the gears have the same tooth and groove size. How many teeth does gear B have?
 \begin{itemize}
@@ -1562,6 +1566,7 @@ Gears A, B, C are aligned side by side in such a way that rotating gear A causes
 \item[] (E) 80
 \end{itemize}
 Ans: \ifpaper B \fi
+% \end{samepage}
 \subsection{Acceleration in Polar Coordinates}
 Acceleration is the derivative of velocity (Eq \ref{eq:vpolar}) wrt time, which can be shown to be equal to 
 \begin{align}
@@ -1685,10 +1690,43 @@ Ans: \ifpaper B \fi
 
 \section{Physics: Rotational Dynamics}
 So far we have been dealing with point masses. But in reality most objects take up some volume. \\[10pt]
-Before we talk about \textit{continuous} mass distributions, let's derive everything using discrete masses first. If there is a mass $m$ distance $r$ away from the origin, rotating about an axis passing through the origin with angular velocity $\omega$.
-We usually model these \textbf{rigid body} objects as a uniform mass density over some volume. It is made up of many small masses $dm = \rho dV$, where $dm$ is called an infinitesimal mass element and $dV = dx\ dy\ dz$ is an infinitesimal volume element. If we integral $dm$ over volume $\mathcal{V}$ the object occupies, we get the mass
+Before we talk about \textit{continuous} mass distributions, let's derive everything using discrete masses first. \\[10pt]
+\underline{\textbf{One mass $m$ at radius $r$}}: \\[2pt]
+Suppose there is a mass $m$ distance $r$ away from the origin, rotating about an axis passing through the origin with angular velocity $\omega$. \\[10pt]
+Qn: What is its magnitude of the velocity? \\[0pt]
+Ans: The magnitude of the velocity of the mass is $|\vec{v}| = r\omega$. \\[10pt]
+Qn: What is the direction of the velocity? \\[0pt]
+Ans: Tangential to the imaginary circle of radius $r$. \\[10pt]
+Qn: What is its kinetic energy (KE)? \\[0pt]
+Ans: The KE is $\frac{1}{2} m |\vec{v}|^2 = \frac{1}{2} (mr^2) \omega^2$.\\[10pt]
+We expressed KE in the form of $\frac{1}{2} I \omega^2$ because this form generalises to other mass distributions. \\[10pt]
+\underline{\textbf{Two masses $m/2$ at same radius $r$}}: \\[2pt] Suppose we split the $m$ into half, and put the 2 masses (each of mass $m/2$) at coordinates $(0,r)$ and $(0,-r)$. They rotate about the origin at angular velocity $\omega$. \\[10pt]
+Qn: What are their velocities? \\[0pt]
+Ans: Both velocities' magnitudes are $|\vec{v}_1| = |\vec{v}_2| = r\omega$. Both velocities' directions are tangent to the circle of radius $r$, but point in opposite directions. \\[10pt]
+Qn: What is the total KE? \\[0pt]
+Ans: The total KE is $$\frac{1}{2} \left(\frac{m}{2}\right) |\vec{v}_1|^2 + \frac{1}{2} \left(\frac{m}{2}\right) |\vec{v}_2|^2 = \frac{1}{2} \left[ \left(\frac{m}{2} \right) r^2 + \left( \frac{m}{2}\right) r^2 \right] \omega^2 $$
+\underline{\textbf{Two masses $m/2$ at different radii $r,2r$}}: \\[2pt]
+Suppose we have two masses, each of mass $m/2$. We place them at coordinates $(0,r)$ and $(0,2r)$. They rotate about the origin at angular velocity $\omega$.\\[10pt]
+Qn: What are their velocities? \\[0pt]
+Ans: For the mass at $(0,r)$, the velocity is $|\vec{v}_1| = r\omega$ in the leftward direction. For the mass at $(0,2r)$, the velocity is $|\vec{v}_2| = 2r\omega$ in the leftward direction. \\[10pt]
+Qn: What is the total KE? \\[0pt]
+Ans: The total KE is 
+\begin{align}
+\frac{1}{2} \left(\frac{m}{2}\right) |\vec{v}_1|^2 + \frac{1}{2} \left(\frac{m}{2}\right) |\vec{v}_2|^2 = \frac{1}{2} \left[ \left(\frac{m}{2} \right) r^2 + \left( \frac{m}{2}\right) (2r)^2 \right] \omega^2 \notag 
+\end{align}
+\underline{\textbf{General Collection of Discrete Masses}}: \\[2pt] For a general collection of masses $\{m_1,m_2,...\}$ located at distances $\{r_1, r_2, ...\}$ from the origin, as long as they are rotating about the origin with the \textbf{same angular velocity} $\omega$. We can "pre-calculate" the quantity 
+\begin{align}
+I = \sum_i m_i r_i^2  \label{eq:mom}    
+\end{align}
+and use this quantity in the calculation of kinetic energy $$K.E. = \frac{1}{2} I \omega^2 $$
+We call $I$ the \textbf{Moment of Inertia}. It is used all over rotational physics, such as in the calculation of angular momentum, precession (gyroscopes). It is \textbf{analogous to mass in translational dynamics} (we will see this soon).\\[10pt]
+\underline{\textbf{General Mass Distribution}}: \\[2pt] Physicists model \textbf{rigid body} objects as a uniform mass density over some volume. It is made up of many small masses $dm = \rho dV$, where $dm$ is called an infinitesimal mass element and $dV = dx\ dy\ dz$ is an infinitesimal volume element. If we integral $dm$ over volume $\mathcal{V}$ the object occupies, we get the mass
 \begin{align}
     \int_{\mathcal V} dm = m
+\end{align}
+To find $I$ for a general mass distribution, we turn the sum into an integral in Equation \ref{eq:mom}. So we have
+\begin{align}
+    I = \int_{\mathcal V} r^2 dm 
 \end{align}
 
 \subsubsection{SJPO 2018 General Round Q4}
