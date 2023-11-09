@@ -1,0 +1,492 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\graphicspath{ {./images} }
+
+
+\title{Algebra and Kinematics (Part 1)}
+\author{
+    Tan Chien Hao\\
+    \texttt{www.tchlabs.net}\\
+    \texttt{Telegram @tch1001}
+    % new collaborators add your name and contact here!
+}
+
+\date{\today}
+\begin{document}
+\newif\ifpaper
+
+% TOGGLE ANSWER HERE
+\paperfalse 
+
+\maketitle
+\section{Basic Algebra}
+Syllabus (E Math N1-N3,N6-N7): \url{https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/olevel/2022syllabus/4048_y22_sy.pdf} \\[20pt]
+We use letters to represent unknown quantities. \\[10pt]
+\subsection{Variables as Unknowns}
+(Forming expressions) Alice has $x$ apples. Bob has 5 times the number of apples Alice has. Charlie has 3 \textbf{more} apples than Bob. How many apples does Charlie have? 
+\begin{itemize}
+    \item[] (a) $x$
+    \item[] (b) $5x$
+    \item[] (c) $5x+3$
+    \item[] (d) $3x$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Forming expressions) Alice has $y$ apples. Bob has 2 times the number of apples Alice has. Charlie has 3 \textbf{less} apples than Bob. How many apples does Charlie have? 
+\begin{itemize}
+    \item[] (a) $5y$
+    \item[] (b) $2y-3$
+    \item[] (c) $2y+3$
+    \item[] (d) $y$
+\end{itemize} \hrulefill \\[10pt]
+(Substitution) Alice has $A$ apples. Bob has $10-A$ apples. If Alice has $3$ apples, how many apples does Bob have? 
+\begin{itemize}
+    \item[] (a) $5$
+    \item[] (b) $10$
+    \item[] (c) $3$
+    \item[] (d) $7$
+\end{itemize} \hrulefill \\[10pt]
+(Substitution) If $x=5$, what is $3x-4$?
+\begin{itemize}
+    \item[] (a) $11$
+    \item[] (b) $3$
+    \item[] (c) $5$
+    \item[] (d) $-1$
+\end{itemize} \hrulefill \\[10pt]
+(Arithmetic: Working Backwards) Alice has $x$ apples. Bob has $2$ times the apples Alice has. Charlie has $10$ less apples than Bob. Given that Charlie has $20$ apples, how many apples does Alice have? 
+\begin{itemize}
+    \item[](a) $20$
+    \item[](b) $30$
+    \item[](c) $15$
+    \item[](d) $40$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Arithmetic: Working Backwards) If $2x-3 = 5$, what is $x$?
+\begin{itemize}
+    \item[] (a) $3$
+    \item[] (b) $4$
+    \item[] (c) $5$
+    \item[] (d) $6$
+\end{itemize} \hrulefill \\[10pt]
+(Distributive Law) Alice has $x$ apples. Bob has 3 more apples than Alice. Charlie has 2 times the apples Bob has. How many apples does Charlie have? 
+\begin{itemize}
+    \item[] (a) $3x+2$
+    \item[] (b) $2x+6$
+    \item[] (c) $2x+3$
+    \item[] (d) $3x+6$
+\end{itemize} \hrulefill \\[10pt]
+(Distributive Law) $2(x+3)+4 =\ ?$
+\begin{itemize}
+    \item[] (a) $2x+7$
+    \item[] (b) $x+10$
+    \item[] (c) $2x+10$
+    \item[] (d) $x+9$
+\end{itemize} \hrulefill \\[10pt]
+(Adding Like Terms) Alice has $x$ apples. Bob has $2x$ apples. How many apples do they have in total? 
+\begin{itemize}
+    \item[](a) $3x$
+    \item[](b) $2x$
+    \item[](c) $x$
+    \item[](d) $2x^2$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Adding Like Terms) $2x+4x-2 = \ ?$
+\begin{itemize}
+    \item[](a) $6x-2$
+    \item[](b) $2x+2$
+    \item[](c) $4x+2$
+    \item[](d) $2x-2$
+\end{itemize} \hrulefill \\[10pt]
+(More variables) Alice has $3x$ apples. Bob has $3y$ apples. How many apples do they have in total? 
+\begin{itemize}
+    \item[](a) $3x+3y$
+    \item[](b) $3x-3y$
+    \item[](c) $9xy$
+    \item[](d) $3xy$
+\end{itemize} \hrulefill \\[10pt]
+(More variables) $2x+3y+4x+5y = \ ?$
+\begin{itemize}
+    \item[](a) $6x+8y$
+    \item[](b) $2x+5y$
+    \item[](c) $5x+9y$
+    \item[](d) $14xy$
+\end{itemize} \hrulefill \\[10pt]
+(Like terms) $2x+5-x+2 = \ ?$
+\begin{itemize}
+\item[] (a) $x+7$
+\item[] (b) $3x+7$
+\item[] (c) $x-7$
+\item[] (d) $3x-7$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Like terms, Distributive Law) $3(x+5) - 5(x-1) = \ ?$
+\begin{itemize}
+    \item[] (a) $8x + 10$
+    \item[] (b) $2x + 2$
+    \item[] (c) $-8x + 1$
+    \item[] (d) $-2x+20$
+\end{itemize} \hrulefill \\[10pt]
+(Like terms, Distributive Law) $2x + 3y + 2(x+y) = \ ?$
+\begin{itemize}
+    \item[](a) $4x + 5y$
+    \item[](b) $2x + 3y + 2$
+    \item[](c) $4x + 6y$
+    \item[](d) $7xy$
+\end{itemize} \hrulefill \\[10pt]
+(Distribute Minus Signs) $3-(1+2) = \ ?$
+\begin{itemize}
+\item[] (a) $0$
+\item[] (b) $1$
+\item[] (c) $2$
+\item[] (d) $3$
+\end{itemize} \hrulefill \\[10pt]
+(Distribute Minus Signs) $2x - (x+y) = \ ?$
+\begin{itemize}
+\item[](a) $x-y$
+\item[](b) $x+y$
+\item[](c) $3x+y$
+\item[](d) $3x-y$
+\end{itemize} \hrulefill \\[10pt]
+(Distribute Minus Signs) $5x - 2(x+3) = \ ?$
+\begin{itemize}
+\item[] (a) $3x-6$
+\item[] (b) $3x+6$
+\item[] (c) $3x+3$
+\item[] (d) $3x-3$
+\end{itemize} \hrulefill \\[10pt]
+\subsection{Multiplication}
+(Recap) Alice has $x$ apples. Bob has $5$ times more apples than Alice. How many apples does Bob have? 
+\begin{itemize}
+\item[] (a) $5x$
+\item[] (b) $x$
+\item[] (c) $5$
+\item[] (d) $x+5$
+\end{itemize} \hrulefill \\[10pt]
+(Multiplication) Alice has $x$ apples. Bob has $y$ times more apples than Alice. How many apples does Bob have? 
+\begin{itemize}
+\item[](a)$xy$
+\item[](b)$x$
+\item[](c)$y$
+\item[](d)$x+y$
+\end{itemize} \hrulefill \\[10pt]
+(Commutative Property) If $x,y$ are numbers, is $xy = yx$ true? 
+\begin{itemize}
+\item[](a) True
+\item[](b) False
+\end{itemize} \hrulefill \\[10pt]
+Fun fact: this isn't true for \textbf{matrices}.  \\[10pt]
+(Distributive Property) $x+y(x+4) = \ ?$ Choose any correct answer.
+\begin{itemize}
+\item[](a) $x+yx+4y$
+\item[](b) $x+xy+4$
+\item[](c) $x+y+4$
+\item[](d) $xy+4$
+\end{itemize} \hrulefill \\[10pt]
+
+\subsection{Polynomials}
+(Squaring) Alice has $A$ apples, Bob has $A$ times more apples than Alice. How many apples does Bob have? Choose any correct answer.
+\begin{itemize}
+\item[] (a) $A^2$
+\item[] (b) $A$
+\item[] (c) $A+A$
+\item[] (d) $2A$
+\end{itemize} \hrulefill \\[10pt]
+(Power) $A\times A \times A = \ ?$
+\begin{itemize}
+\item[](a) $1$
+\item[](b) $A$
+\item[](c) $A^2$
+\item[](d) $A^3$
+\end{itemize} \hrulefill \\[10pt]
+(Power Laws) $A^2 \times A^3 = \ ?$
+\begin{itemize}
+\item[] (a)$A^2$
+\item[] (b)$A^3$
+\item[] (c)$A^5$
+\item[] (d)$A^6$
+\end{itemize} \hrulefill \\[10pt]
+(Power Laws) $A^n \times A^m = \ ?$
+\begin{itemize}
+\item[] (a) $A^{n+m}$
+\item[] (b) $A^n + A^m$
+\item[] (c) $A^{nm}$
+\item[] (d) $A(n+m)$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Adding Different Powers) $x^2 + x = \ ?$
+\begin{itemize}
+\item[] (a) $x^2 + x $
+\item[] (b) $x^3$
+\item[] (c) $2x^2$
+\item[] (d) $x^2$
+\end{itemize} \hrulefill \\[10pt]
+(Adding Like Terms) $x^2 + 3x + 3x^2 - x = \ ?$
+\begin{itemize}
+\item[] (a) $6x^2$ 
+\item[] (b) $4x^2 + 4x$
+\item[] (c) $4x^2 + 2x$
+\item[] (d) $0$
+\end{itemize} \hrulefill \\[10pt]
+(Distributive Property) $x (x + 1) = \ ?$
+\begin{itemize}
+\item[] (a) $2x + 1$
+\item[] (b) $x^2 + x$
+\item[] (c) $x^2  +1$
+\item[] (d) $2x^2 $
+\end{itemize} \hrulefill \\[10pt]
+(Distributive Property) $(x+1) (x+2) = \ ?$
+\begin{itemize}
+\item[](a) $4x^2$
+\item[](b) $2x^2 + 3x + 2$
+\item[](c) $x^2 + x + 2$
+\item[](d) $x^2 + 3x + 2$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Zero Power) $x^0 = \ ?$
+\begin{itemize}
+\item[](a) $0$
+\item[](b) $1$
+\item[](c) $x$
+\item[](d) $-x$
+\end{itemize} \hrulefill \\[10pt]
+$(5y^2)(y^2) = \ ?$
+\begin{itemize}
+\item[](a) $5y^2$
+\item[](b) $10y^2$
+\item[](c) $5y^4$
+\item[](d) $20y$
+\end{itemize} \hrulefill \\[10pt]
+(More Variables) $(3xy)(2yz) = \ ?$
+\begin{itemize}
+\item[](a) $6xy^2z$
+\item[](b) $6xyz$
+\item[](c) $5xyz$
+\item[](d) $5xy^2z$
+\end{itemize} \hrulefill \\[10pt]
+
+\subsection{Popular Identities}
+(Squaring) $(a+b)^2 = (a+b)(a+b) = \ ?$ 
+\begin{itemize}
+\item[](a) $a^2 + 2ab + b^2$
+\item[](b) $a^2 + b^2 $
+\item[](c) $a^2 + ab + b^2$
+\item[](d) $a^2 b^2$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Squaring) $(a-b)^2 = (a-b)(a-b) = \ ?$ 
+\begin{itemize}
+\item[](a) $a^2 - ab + b^2$
+\item[](b) $a^2 - b^2 $
+\item[](c) $a^2 b^2$
+\item[](d) $a^2 - 2ab + b^2$
+\end{itemize} \hrulefill \\[10pt]
+(Distributive Law) $(a-b)(a+b) = \ ?$
+\begin{itemize}
+\item[](a) $a-b$
+\item[](b) $a^2  +b^2$
+\item[](c) $0$
+\item[](d) $a^2 - b^2$
+\end{itemize} \hrulefill \\[10pt]
+(Distributive Law) $102 \times 98 = \ ?$ Don't use a calculator.
+\begin{itemize}
+\item[](a) $9998$
+\item[](b) $10298$
+\item[](c) $9996$
+\item[](d) $98102$
+\end{itemize} \hrulefill \\[10pt]
+
+\subsection{Division}
+(Division) What is $5 \times 5 \times 5 \div (5 \times 5) = \ ?$
+\begin{itemize}
+\item[](a) $25$
+\item[](b) $125$
+\item[](c) $5$
+\item[](d) $1$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Division) What is $A^2 \div A = \ ?$ 
+\begin{itemize}
+\item[](a) $A$
+\item[](b) $A^2$
+\item[](c) $A^2 + A$
+\item[](d) $1$
+\end{itemize} \hrulefill \\[10pt]
+(Division) What is $$\frac{A^n}{A^m} = \ ?$$
+\begin{itemize}
+\item[](a) $A^{nm}$
+\item[](b) $A^{n+m}$
+\item[](c) $A^{n-m}$
+\item[](d) $A$
+\end{itemize} \hrulefill \\[10pt]
+(Negative Power) What is $$\frac{1}{x^3} = \ ?$$
+\begin{itemize}
+\item[](a) $x^3$
+\item[](b) $0$
+\item[](c) $-x^3$
+\item[](d) $x^{-3}$
+\end{itemize} \hrulefill \\[10pt]
+(Different Variables) What is $$\frac{xy^2z}{xy} = \ ?$$
+\begin{itemize}
+\item[](a) $yz$ 
+\item[](b) $1$
+\item[](c) $z$
+\item[](d) $xyz$
+\end{itemize} \hrulefill \\[10pt]
+(Flipping Fraction) $$x \div \frac{1}{y} = \ ?$$ 
+\begin{itemize}
+\item[](a) $$x+y$$ 
+\item[](b) $$\frac{x}{y}$$
+\item[](c) $$xy$$
+\item[](d) $$\frac{1}{xy}$$
+\end{itemize} \hrulefill \\[10pt]
+(Combining Fraction) $$\frac{x}{y} \times \frac{xy}{z} = \ ?$$
+\begin{itemize}
+\item[](a) $$\frac{x^2}{z}$$
+\item[](b) $$\frac{x^2y}{z}$$
+\item[](c) $$\frac{x}{z}$$
+\item[](d) $$\frac{x}{yz}$$
+\end{itemize} \hrulefill \\[10pt]
+\newpage
+\noindent (Flipping Fraction) $$\frac{5xy}{2z} \div \frac{2x}{y} = \ ?$$
+\begin{itemize}
+\item[](a) $$\frac{xy}{5z}$$
+\item[](b) $$\frac{5x^2}{z}$$
+\item[](c) $$\frac{5xy}{z}$$
+\item[](d) $$\frac{5y^2}{4z} $$
+\end{itemize} \hrulefill \\[10pt]
+(Adding Fractions) $$\frac{1}{x} + \frac{1}{y} = \ ?$$
+\begin{itemize}
+\item[](a) $$\frac{2}{xy}$$
+\item[](b) $$\frac{1}{x+y}$$
+\item[](c) $$\frac{x+y}{xy}$$
+\item[](d) $$\frac{2}{x+y}$$
+\end{itemize} \hrulefill \\[10pt]
+\section{Solving Linear Equations}
+Guideline: Do something to both sides of the equation until you get the variable alone.\\[20pt]
+$5x-2 = 2$. What is $x$?
+\begin{itemize}
+\item[](a) $2/5$
+\item[](b) $0$
+\item[](c) $4/5$
+\item[](d) $4$
+\end{itemize} \hrulefill \\[10pt]
+(Fractions)
+$$\frac{x-1}{3} = 2$$
+What is $x$?
+\begin{itemize}
+\item[](a) $1$
+\item[](b) $3$
+\item[](c) $7$
+\item[](d) $2$
+\end{itemize} \hrulefill \\[10pt]
+(Rearranging)
+$$\frac{3x}{5} - 2 = x$$
+What is $x$?
+\begin{itemize}
+\item[](a) $2$
+\item[](b) $15$
+\item[](c) $-5$
+\item[](d) $-3$
+\end{itemize} \hrulefill \\[10pt]\newpage
+\noindent
+(Rearranging)
+$$\frac{x}{2} = \frac{5x}{4} + 1$$
+What is $x$?
+\begin{itemize}
+\item[](a) $2$
+\item[](b) $-5$
+\item[](c) $32$
+\item[](d) $-4$
+\end{itemize} \hrulefill \\[10pt]
+\section{Rearranging linear equations}
+(Rearranging)
+Given $y=x+3$. Express $x$ in terms of $y$.
+\begin{itemize}
+\item[](a) $x=y-3$
+\item[](b) $x=y+3$
+\item[](c) $x=3y$
+\item[](d) $x=y/3$
+\end{itemize} \hrulefill \\[10pt]
+(Fractions) Given $$\frac{1}{1+y} = x$$ Express $y$ in terms of $x$.
+\begin{itemize}
+\item[](a) $$y = x+1$$
+\item[](b) $$y = \frac{1}{x+1}$$
+\item[](c) $$y = \frac{1}{1-x}$$
+\item[](d) $$y = \frac{1}{x} - 1$$
+\end{itemize} \hrulefill \\[10pt]
+(Factorisation) Given $$\frac{y+2}{y+1} = x$$ Express $y$ in terms of $x$.
+\begin{itemize}
+\item[](a) $$y = \frac{x+2}{x+1}$$
+\item[](b) $$y = \frac{x+1}{x+2}$$
+\item[](c) $$y = \frac{x-2}{1-x}$$
+\item[](d) $$y = x^2 + 3x$$
+\end{itemize} \hrulefill \\[10pt]
+(Factorisation) Given $$\frac{y+1}{y+5} = 3x$$ Express $y$ in terms of $x$.
+\begin{itemize}
+\item[](a) $$y = \frac{x+5}{4x-1}$$
+\item[](b) $$y = \frac{15x-1}{1-3x}$$
+\item[](c) $$y = \frac{5x-2}{3-x}$$
+\item[](d) $$y = \frac{x+3}{x-15}$$
+\end{itemize} \hrulefill \\[10pt]
+\section{Physics: 1D Kinematics}
+In physics, 
+\begin{itemize}
+    \item $s$ is displacement 
+    \item $u$ is \textbf{initial} velocity 
+    \item $v$ is \textbf{final} velocity
+    \item $a$ is acceleration
+    \item $t$ is time
+\end{itemize}
+The difference between displacement and distance is that displacement cares about \textbf{direction}. Distance is always positive. Displacement can be positive or negative. \\[10pt]
+Likewise, velocity is speed but with direction. Speed is always positive. Velocity can be positive or negative. \\[10pt]
+There are 5 rules relating these variables. We call them \textbf{SUVAT rules}. Today we will learn 2 of them.
+\begin{align}
+    v &= u + at \\
+    s &= \frac{u+v}{2} t 
+\end{align}
+\subsection{$v = u + at$ practices}
+\subsubsection{Q1}
+A car is moving with initial velocity $u=5 \text{ m/s}$. It accelerates with an acceleration of $a = 2\text{ m/s}^2$ for $3\text{ s}$. What is it's final velocity $v$? \\[50pt]
+\subsubsection{Q2}
+A car is moving with initial velocity $u=10 \text{ ms}^{-1}$. It accelerates with an acceleration of $a = -2\text{ ms}^{-2}$ for $2\text{ s}$. What is it's final velocity $v$? \\[50pt]
+\subsubsection{Q3}
+A car is moving \textbf{right} with initial speed of $5 \text{ m/s}$. It accelerates \textbf{leftward} at $2\text{ m/s}^2$ for $10\text{ s}$. What is it's final velocity? \\[50pt]
+\subsubsection{Q4}
+A car starts out \textbf{stationary}. It accelerates \textbf{rightward} at $2\text{ m/s}^2$ for $5\text{ s}$. What is it's final velocity? \\[50pt]
+\subsubsection{Q5}
+A car starts with an initial velocity of $u=2 \text{ m/s}$. It accelerates at $a=5\text{ m/s}^2$ for some time $t$ and ends up with a final velocity of $v=12 \text{ m/s}$. What is $t$? \\[50pt]
+\subsubsection{Q6}
+A car starts with an initial velocity of $u=2 \text{ m/s}$. It accelerates at $a=-5\text{ m/s}^2$ for some time $t$ and ends up with a final velocity of $v=-18 \text{ m/s}$. What is $t$? \\[50pt]
+\subsubsection{Q7}
+A car starts out moving \textbf{leftward} at $10 \text{ m/s}$. It accelerates \textbf{rightward} at $2\text{ m/s}^2$ for some time $t$ and ends up \textbf{stationary}. What is $t$? \\[50pt]
+\subsubsection{Q8}
+A car accelerates from $u=4\text{ m/s}$ to $v=20\text{ m/s}$ over $5\text{ s}$. What is it's acceleration $a$? \\[50pt]
+\subsubsection{Q9}
+A car accelerates from $u=20\text{ m/s}$ to $v=10\text{ m/s}$ over $2\text{ s}$. What is it's acceleration $a$? \\[50pt]
+\subsubsection{Q10 (SJPO 2018 General Round Q13)}
+Travelling with an initial speed of $70 \mathrm{~km} / \mathrm{h}$, a car accelerates at $6000 \mathrm{~km} / \mathrm{h}^2$ along a straight road. How long will it take to reach a speed of $120 \mathrm{~km} / \mathrm{h}$ ?
+\begin{itemize}
+\item[] (A) $30 \mathrm{~s}$
+\item[] (B) $45 \mathrm{~s}$
+\item[] (C) $60 \mathrm{~s}$
+\item[] (D) $70 \mathrm{~s}$
+\item[] (E) $180 \mathrm{~s}$
+\end{itemize}
+Ans: \ifpaper A \fi
+\newpage
+\subsection{$s = (u+v)t/2$ practices}
+Extra fun fact: This is actually the area of a trapezium under the v-t graph. 
+\subsubsection{Q11}
+A car accelerates at constant acceleration from $u=2\text{ ms}^{-1}$ to $v=12\text{ ms}^{-1}$ over $t=10\text{ s}$. What is it's displacement $s$?\\[50pt]
+
+\subsubsection{Q12}
+A car accelerates at constant acceleration from $u=2\text{ ms}^{-1}$ to $v=-4\text{ ms}^{-1}$ over $2\text{ s}$. What is it's displacement $s$?\\[50pt]
+
+\subsubsection{Q13}
+A car accelerates at constant acceleration from $u=-10\text{ ms}^{-1}$ to $v=10\text{ ms}^{-1}$ over $20\text{ s}$. What is it's displacement $s$?\\[50pt]
+\end{document}

@@ -1,0 +1,188 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\graphicspath{ {./images} }
+
+
+\title{Introduction to Differentiation}
+\author{
+    Tan Chien Hao\\
+    \texttt{www.tchlabs.net}\\
+    \texttt{Telegram @tch1001}
+    % new collaborators add your name and contact here!
+}
+
+\date{\today}
+\begin{document}
+\newif\ifpaper
+
+% TOGGLE ANSWER HERE
+\paperfalse 
+
+\maketitle
+\section{Slope}
+Let's recap the idea of a slope of a line.\\[10pt]
+Q1: What is the slope of $y=5 x+3$ ?
+\begin{itemize}
+\item[](a) $3$
+\item[](b) $0$
+\item[](c) $5$
+\item[](d) $x$
+\end{itemize}
+Q2: What is the slope of $y=-x$ ?
+\begin{itemize}
+\item[](a) $-x$
+\item[](b) $-1$
+\item[](c) $0$
+\item[](d) $1$
+\end{itemize}
+Q3: What is the slope of $y(x)=m x+c$ ?
+\begin{itemize}
+\item[](a) $1$
+\item[](b) $x$
+\item[](c) $c$
+\item[](d) $m$
+\end{itemize}
+Q4: What is the slope of $y(c)=m x+c$, where $x$ and $m$ are constants ?
+\begin{itemize}
+\item[](a) 1
+\item[](b) $x$
+\item[](c) $c$
+\item[](d) $m$
+\end{itemize}
+Q5: What is the slope of $y(m)=m x+c$, where $x$ and $c$ are constants ?
+\begin{itemize}
+\item[](a) 1
+\item[](b) $x$
+\item[](c) $c$
+\item[](d) $m$
+\end{itemize}
+Q6: What is the slope of $4 x+2 y=3$ ?
+\begin{itemize}
+\item[](a) $-2$
+\item[](b) $ 2$
+\item[](c) $ 4$
+\item[](d) $ 3$
+\end{itemize}
+\url{https://www.desmos.com/calculator/b6ts3ls1zf} \\
+Desmos visualization of slope of $x^2$. \\[10pt]
+Q7: What is the slope of $y(x)=x^2 ?$ 
+\begin{itemize}
+\item[] (a) $1$
+\item[] (b) $x$
+\item[] (c) $2 x$
+\item[] (d) $x^2$
+\end{itemize}
+Q8: What is the slope of $y(x)=x^2$ at $x=2$ ?
+\begin{itemize}
+\item[] (a) 1
+\item[] (b) 2
+\item[] (c) 4
+\item[] (d) 0
+\end{itemize}
+Q9: What is the slope of $y(x)=x^2$ at $x=3$ ?
+\begin{itemize}
+\item[] (a) 1
+\item[] (b) 3
+\item[] (c) 6
+\item[] (d) 9
+\end{itemize}
+Q10: Evaluate the following
+$$
+\frac{d}{d x} x^2=?
+$$
+\begin{itemize}
+\item[] (a) $2 x$
+\item[] (b) $x^2$
+\item[] (c) $x$
+\item[] (d) $0$
+\end{itemize}
+\section{Differentiation Rules}
+Polynomial Rule : $$\frac{d}{d x} x^n=n x^{n-1}$$\\[20pt]
+Q11: What is the slope of $y(x)=x^2$ ?
+\begin{itemize}
+\item[] (a) $1$
+\item[] (b) $x$
+\item[] (c) $2 x$
+\item[] (d) $x^2$
+\end{itemize}
+Q12: What is the slope of $y(x)=x^3 $?
+\begin{itemize}
+\item[] (a) $1$
+\item[] (b) $3 x$
+\item[] (c) $3 x^2$
+\item[] (d) $x^3$
+\end{itemize}
+Q13: What is the slope of $y(x)=x^4 $?
+\begin{itemize}
+\item[] (a) $4$
+\item[] (b) $4 x$
+\item[] (c) $4 x^2$
+\item[] (d) $4 x^3$
+\end{itemize}
+Q14: What is the slope of $y(x)=\frac{1}{x} $?
+\begin{itemize}
+\item[] (a) $\frac{1}{x}$
+\item[] (b) $-\frac{1}{x^2}$
+\item[] (c) $-\frac{1}{x}$
+\item[] (d) $0$
+\end{itemize}
+Q15: What is the slope of $y(x)=\frac{1}{x^2} $?
+\begin{itemize}
+\item[](a) $\frac{1}{x^2}$
+\item[](b) $-\frac{2}{x^3}$
+\item[](c) $-\frac{1}{x}$
+\item[](d) $0$
+\end{itemize}
+Linearity Rule: 
+$$\frac{d}{d x}[f(x)+g(x)]=\frac{d f}{d x}+\frac{d g}{d x}$$\\[10pt]
+Q16: What is the slope of $h(x)=x^2+5 x $?
+\begin{itemize}
+\item[] (a) $2 x+5$
+\item[] (b) $2 x$
+\item[] (c) $5$
+\item[] (d) $10 x$
+\end{itemize}
+Q17: What is the slope of $h(x)=2 x+1$ ?
+\begin{itemize}
+\item[] (a) $1$
+\item[] (b) $2 x$
+\item[] (c) $2$
+\item[] (d) $0$
+\end{itemize}
+Chain Rule: 
+$$\frac{d f}{d x}=\frac{d f}{d y} \frac{d y}{d x}$$
+Q18: What is the slope of $h(x)=(x+1)^2$ ?
+\begin{itemize}
+\item[] (a) $2 x+1$
+\item[] (b) $2(x+1)$
+\item[] (c) $x^2+1$
+\item[] (d) $2 x$
+\end{itemize}
+Q19: What is the slope of $h(x)=(x+1)^5$ ?
+\begin{itemize}
+\item[] (a) $5 x+1$
+\item[] (b) $5(x+1)$
+\item[] (c) $5(x+1)^4$
+\item[] (d) $x+6$
+\end{itemize}
+Q20: What is the slope of $h(x)=\left(x^2+1\right)^2$?
+\begin{itemize}
+\item[] (a) $2\left(x^2+1\right)$
+\item[] (b) $2\left(x^2+1\right)(2 x)$
+\item[] (c) $2 x$
+\item[] (d) $4 x^3$
+\end{itemize}
+Q21: What is the slope of $h(x)=\left(\frac{1}{x}+x\right)^3 ?$
+\begin{itemize}
+\item[] (a) $$3\left(\frac{1}{x}+x\right)^2\left(-\frac{1}{x^2}+1\right)$$
+\item[] (b) $$\left(\frac{3}{x^2}+1\right)^2$$
+\item[] (c) $$3\left(-\frac{1}{x^2}+1\right)^2$$
+\item[] (d) $$3 x+1$$
+\end{itemize}
+\end{document}

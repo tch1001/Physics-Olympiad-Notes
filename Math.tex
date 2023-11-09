@@ -247,6 +247,17 @@ SUVAT can be visualized as an area of a trapezium in the $v\text{-}t$ graph. [De
 
 \subsection{Exercises}
 \begin{samepage}
+\subsubsection{SJPO 2018 General Round Q13}
+Travelling with an initial speed of $70 \mathrm{~km} / \mathrm{h}$, a car accelerates at $6000 \mathrm{~km} / \mathrm{h}^2$ along a straight road. How long will it take to reach a speed of $120 \mathrm{~km} / \mathrm{h}$ ?
+\begin{itemize}
+\item[] (A) $30 \mathrm{~s}$
+\item[] (B) $45 \mathrm{~s}$
+\item[] (C) $60 \mathrm{~s}$
+\item[] (D) $70 \mathrm{~s}$
+\item[] (E) $180 \mathrm{~s}$
+\end{itemize}
+Ans: \ifpaper A \fi
+
 \subsubsection{SJPO 2015 General Round Q13}
 Lecture: \url{https://youtu.be/j9qWyWCTjrM} \\[10pt]
 An object is travelling on a straight path and exhibiting a constant acceleration $a$ starts off with an initial velocity $v=2.0 \mathrm{~ms}^{-1}$. It has traversed $4.5 \mathrm{~m}$ in the third second (from $t=2$ to $t=3$), its acceleration $a$ is
@@ -805,6 +816,7 @@ Ans: \ifpaper A \fi \\[10pt]
 % (ODE) With air resistance
 
 \section{Physics: Constraining Forces}
+\label{sec:fnt}
 Constraint forces are generally forces that will \textbf{adjust} their magnitude to \textbf{prevent some form of motion}. For example, normal contact force prevents objects from sinking into each other. Friction prevents rough objects from sliding with respect to each other. And tension in an inextensible string limits the distance between two objects. 
 \subsection{Normal Contact Force}
 Normal contact force $N$ between two rigid bodies \textbf{in contact} is a vector:
@@ -1321,6 +1333,7 @@ Ans: \ifpaper C \fi \\[10pt]
 Read section \ref{sec:momimp} for an explanation of Work and Impulse.
 
 \subsubsection{SJPO 2016 General Round Q5}
+\url{https://youtu.be/BVb7U9s4s6s}
 A train of mass $7.0 \times 10^4 \mathrm{~kg}$ expends $60 \mathrm{~kW}$ of power to travel down a $2^{\circ}$ incline at a constant velocity of $10 \mathrm{~m} \mathrm{~s}^{-1}$. How much power is required for the same train to travel up the $2^{\circ}$ incline at the same constant velocity of $10 \mathrm{~m} \mathrm{~s}^{-1}$ ?
 \begin{itemize}
 \item[] (A) $540 \mathrm{~kW}$
@@ -1340,6 +1353,8 @@ A uniform chain of length $L$ and mass $m$ is lying on a smooth table. One third
 \item[] (D) $m g L / 9$
 \item[] (E) $m g L / 18$
 \end{itemize}
+Ans: \ifpaper E \fi
+
 \newpage \clearpage
 \section{Math: Differential Equations}
 When we studied $F(t)=ma(t)$, we noted that as long as we know the function $F(t)$, we can find $a(t)$ and integrate twice to obtain $x(t)$. However, in most systems, $F(t)$ depends on $x(t)$ or $v(t) \equiv \dot{x}(t)$. Examples include 
@@ -1557,7 +1572,7 @@ There are other ways to prove the above, but the above is simplest.
 % \end{samepage}
 % \begin{samepage}
 \subsubsection{SJPO 2015 General Round Q4}
-Gears A, B, C are aligned side by side in such a way that rotating gear A causes gear $\mathrm{B}$ to rotate which in turn causes gear $\mathrm{C}$ to rotate. Gear A has 40 number of teeth and is rotating at angular speed of $50 \mathrm{rev} / \mathrm{s}$. The radius of gear B is $20 \%$ of gear $\mathrm{C}$ and gear $\mathrm{C}$ is rotating at $40 \%$ angular speed of gear $\mathrm{A}$. All the gears have the same tooth and groove size. How many teeth does gear B have?
+Gears A, B, C are aligned side by side in such a way that rotating gear A causes gear $\mathrm{B}$ to rotate which in turn causes gear $\mathrm{C}$ to rotate. Gear A has 40 teeth and is rotating at angular speed of $50 \mathrm{rev} / \mathrm{s}$. The radius of gear B is $20 \%$ of gear $\mathrm{C}$ and gear $\mathrm{C}$ is rotating at $40 \%$ angular speed of gear $\mathrm{A}$. All the gears have the same tooth and groove size. How many teeth does gear B have?
 \begin{itemize}
 \item[] (A) 10
 \item[] (B) 20
@@ -1602,7 +1617,7 @@ Then we simply apply chain rule
     &= (\ddot{r} - r{\dot\theta}^2)\ \hat{e}_r + (r\ddot\theta + 2\dot r \dot \theta)\ \hat{e}_\theta
 \end{align}
 
-\section{Physics: Rotational Kinematics in 2D (Polar)}
+\section{Physics: Centripetal Force and Acceleration}
 Newton's 2nd law is just
 \begin{align}
     F_r\ \hat{e}_r + F_\theta\ \hat{e}_\theta = \vec{F}_{net} & = m \vec{a} = m \left[(\ddot{r} - r{\dot\theta}^2)\ \hat{e}_r + (r\ddot\theta + 2\dot r \dot \theta)\ \hat{e}_\theta \right]\\
@@ -1610,13 +1625,19 @@ Newton's 2nd law is just
     \text{and } F_\theta &= m (r\ddot\theta + 2 \dot r \dot \theta)  
 \end{align}
 \subsection{Centripetal Acceleration}
+\url{https://youtu.be/_noiaP-pKmU}\\
 Often, the radial coordinate function $r(t)$ is constant. Examples include: pendulum, point mass sliding down hemisphere, planet in orbit, cup on rotating Chinese table. When $\dot r = 0$, Newton's 2nd law simplifies to
 \begin{align}
-    F_r &= -r {\dot\theta}^2 \\
-    F_\theta &= r\ddot\theta
+    F_r &= -mr {\dot\theta}^2 \\
+    F_\theta &= mr\ddot\theta
 \end{align}
 \subsubsection{SJPO 2015 General Round Q1}
-Two identical masses, $\mathrm{A}$ and $\mathrm{B}$, are tied to strings and placed on a horizontal frictionless disc as in the figure below. The two masses are then set to move about the centre of the disc with the same angular velocity $\omega$. Given that the tension of the string connecting mass $\mathrm{A}$ to the center of the disc is $T$, determine the tension of the string connecting mass $\mathrm{B}$ to mass $\mathrm{A}$.
+\url{https://youtu.be/WG41FvYPYkQ}\\
+Two identical masses, $\mathrm{A}$ and $\mathrm{B}$, are tied to strings and placed on a horizontal frictionless disc as in the figure below. The two masses are then set to move about the centre of the disc with the same angular velocity $\omega$. Given that the tension of the string connecting mass $\mathrm{A}$ to the center of the disc is $T$, determine the tension of the string connecting mass $\mathrm{B}$ to mass $\mathrm{A}$. \\
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2015q1.png}
+\end{wrapfigure}
 \begin{itemize}
 \item[] (A) $T / 4$
 \item[] (B) $3 T / 4$
@@ -1624,8 +1645,10 @@ Two identical masses, $\mathrm{A}$ and $\mathrm{B}$, are tied to strings and pla
 \item[] (D) $3 T$
 \item[] (E) $4 T$
 \end{itemize}
+}
 Ans: \ifpaper B \fi
 \subsubsection{SJPO 2018 General Round Q7}
+\url{https://youtu.be/V-DVhjbQa5o}\\
 A bug is just about to slip on a circular turntable of radius $R$ rotating at constant angular velocity. The bug is halfway between the centre and the edge and the coefficient of static friction is $1 / 4$. What is the acceleration of the bug?
 \begin{itemize}
 \item[] (A) $3 g$
@@ -1636,8 +1659,9 @@ A bug is just about to slip on a circular turntable of radius $R$ rotating at co
 \end{itemize}
 Ans: \ifpaper E \fi
 
-\subsubsection{SJPO 2016 General Round Q14}
-A ball with mass $m$ is hung from the ceiling with a massless string of length $l$ as shown in the diagram. It moves in uniform circular motion with angular velocity $\omega$. What is the magnitude of tension in the string? \\
+\subsubsection{SJPO 2016 General Round Q14 \& Q15}
+\url{https://youtu.be/VI1WY_f8QL0}\\
+\textbf{Q14}: A ball with mass $m$ is hung from the ceiling with a massless string of length $l$ as shown in the diagram. It moves in uniform circular motion with angular velocity $\omega$. What is the magnitude of tension in the string? \\
 {
 \begin{wrapfigure}{r}{0.5\textwidth}
 \includegraphics[width=1.0\linewidth]{images/sjpo2016q14.png}
@@ -1650,18 +1674,44 @@ A ball with mass $m$ is hung from the ceiling with a massless string of length $
 \item[] (E) $m \omega^2 l / \sin \theta$
 \end{itemize}
 }
-Ans: \ifpaper A \fi
-
+Ans: \ifpaper A \fi\\[30pt]
+\textbf{Q15}: \url{https://youtu.be/j_T73abVdBs} \\
+For the same situation as in the above question, with $m=0.20 \mathrm{~kg}, l=0.80 \mathrm{~m}$. What is the angular velocity in order for the string to maintain a constant angle of $\theta=25^{\circ}$ to the vertical?
+\begin{itemize}
+\item[](A) $0.59 \mathrm{rad} \mathrm{s}^{-1}$
+\item[](B) $1.2 \mathrm{rad} \mathrm{s}^{-1}$
+\item[](C) $3.5 \mathrm{rad} \mathrm{s}^{-1}$
+\item[](D) $3.7 \mathrm{rad} \mathrm{s}^{-1}$
+\item[](E) $5.4 \mathrm{rad} \mathrm{s}^{-1}$
+\end{itemize}
+Ans: \ifpaper D \fi 
 \newpage
+\subsubsection{SJPO 2016 General Round Q17}
+\url{https://youtu.be/-UeWL4MssRA}\\
+A $360 \mathrm{~kg}$ roller coaster car is initially at rest at a height of $120 \mathrm{~m}$ above the ground. It goes to the ground and does a circular loop of radius $r$. Assume that friction and energy losses are negligible, the car is small and is not attached to the track. What is the maximum radius $r$ so that the roller coaster does not leave the track? \\ 
+{
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2016q17.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $120 \mathrm{~m}$
+\item[] (B) $60 \mathrm{~m}$
+\item[] (C) $48 \mathrm{~m}$
+\item[] (D) $42 \mathrm{~m}$
+\item[] (E) $36 \mathrm{~m}$
+\end{itemize}
+}
+Ans: \ifpaper C \fi
 \subsection{Example: Pendulum}
 A mass $m$ is hung by an inextensible string of length $l$ in a gravitational field strength $g$. It is displaced by a small angular displacement $\theta_0$ and released. Find the amplitude and period of oscillation.\\[10pt]
-Ans: \\[50pt]
+Ans: \\[100pt]
+\newpage \clearpage
 \begin{samepage}
 \subsubsection{SJPO 2015 General Round Q16}
 As shown in the diagram, a pendulum of length $L$ is hung from the ceiling and at a point $P$, a peg is placed. $L^{\prime}$ denotes the shortened length of the pendulum during part of its oscillation. The period of the pendulums oscillation is now \\
 {
 \begin{wrapfigure}{r}{0.4\textwidth}
-\includegraphics[width=0.9\linewidth]{images/2015q16.png}
+\includegraphics[width=1.0\linewidth]{images/2015q16.png}
 \end{wrapfigure}
 \begin{itemize}
 \item[](A) $2 \pi \sqrt{\frac{L}{g}}$
@@ -1670,8 +1720,8 @@ As shown in the diagram, a pendulum of length $L$ is hung from the ceiling and a
 \item[](D) $\pi\left[\sqrt{\frac{L}{g}}+\sqrt{\frac{L^{\prime}}{g}}\right]$
 \item[](E) $\pi \sqrt{\frac{L+L^{\prime}}{g}}$
 \end{itemize}
-Ans: \ifpaper D \fi
 }
+\noindent Ans: \ifpaper D \fi
 \end{samepage}
 
 \begin{samepage}
@@ -1687,8 +1737,49 @@ The bob of a simple pendulum travels $2 \mathrm{~m}$ in one complete oscillation
 Ans: \ifpaper B \fi 
 \end{samepage}
 
-
+\newpage \clearpage
 \section{Physics: Rotational Dynamics}
+\subsection{SUVAT for Rotational Kinematics}
+We know that for 1D kinematics
+\begin{align}
+    a = \frac{dv}{dt} = \frac{d^2 s}{dt^2}
+\end{align}
+leads to the SUVAT rules
+\begin{align}
+v(t)&=u+a t  \\
+s(t)&=u t+\frac{1}{2} a t^2 \\
+ v(s)^2&=u^2+2 a s  \\
+ s(t)&=\frac{v(t)+u}{2} t \\
+ s(t)&=v(t) t-\frac{1}{2} a t^2 
+\end{align}
+It hence comes as no surprise that since
+\begin{align}
+    \alpha = \frac{d\omega}{dt} = \frac{d^2 \theta}{dt^2}
+\end{align}
+we have analogous "SUVAT" rules for rotational motion
+\begin{align}
+\omega(t)&=\omega_0+\alpha t \\
+\theta (t)&=\omega_0 t+\frac{1}{2} \alpha t^2 \\
+ \omega(\theta )^2&=\omega_0^2+2 
+ \alpha \theta  \\
+ \theta (t)&=\frac{\omega(t)+\omega_0}{2} t \\
+ \theta (t)&=\omega(t) t-\frac{1}{2} 
+ \alpha t^2 
+\end{align}\\[0pt]
+That's cool! But what about dynamics? What is mass, force, momentum, kinetic energy, analogous to? \\[10pt]
+We will now show that the analogy is as follows
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+  Translational & Rotational \\ \hline \hline
+  Mass $m$ & Moment of Inertia $I$ \\ \hline
+  Force $F$ & Torque $\tau$ \\ \hline
+  Momentum $mv$ & Angular Momentum  $I\omega$\\\hline
+  Kinetic Energy $\frac{1}{2}mv^2$ & Kinetic Energy $\frac{1}{2} I \omega^2$ \\\hline
+\end{tabular}
+\end{center}
+
+\subsection{Moment of Inertia}
 So far we have been dealing with point masses. But in reality most objects take up some volume. \\[10pt]
 Before we talk about \textit{continuous} mass distributions, let's derive everything using discrete masses first. \\[10pt]
 \underline{\textbf{One mass $m$ at radius $r$}}: \\[2pt]
@@ -1719,7 +1810,7 @@ Ans: The total KE is
 I = \sum_i m_i r_i^2  \label{eq:mom}    
 \end{align}
 and use this quantity in the calculation of kinetic energy $$K.E. = \frac{1}{2} I \omega^2 $$
-We call $I$ the \textbf{Moment of Inertia}. It is used all over rotational physics, such as in the calculation of angular momentum, precession (gyroscopes). It is \textbf{analogous to mass in translational dynamics} (we will see this soon).\\[10pt]
+We call $I$ the \textbf{Moment of Inertia}. It is used all over rotational physics, such as in the calculation of angular momentum, precession (gyroscopes). It is \textbf{analogous to mass} in translational dynamics (we will see this soon).\\[10pt]
 \underline{\textbf{General Mass Distribution}}: \\[2pt] Physicists model \textbf{rigid body} objects as a uniform mass density over some volume. It is made up of many small masses $dm = \rho dV$, where $dm$ is called an infinitesimal mass element and $dV = dx\ dy\ dz$ is an infinitesimal volume element. If we integral $dm$ over volume $\mathcal{V}$ the object occupies, we get the mass
 \begin{align}
     \int_{\mathcal V} dm = m
@@ -1728,7 +1819,169 @@ To find $I$ for a general mass distribution, we turn the sum into an integral in
 \begin{align}
     I = \int_{\mathcal V} r^2 dm 
 \end{align}
+where $r$ is the \textbf{distance} of the infinitesimal mass $dm$ \textbf{from the axis of rotation}.
+\newpage \clearpage
+\noindent Listed above is a list of moment of inertia of common objects. Calculating them involves 2D integrals, which we postpone to a future chapter. 
+\begin{figure}[t]
+    \centering
+\includegraphics[width=1.0\linewidth]{images/commonmoi.png}\\
+\caption{Source: Hyperphysics}
+\end{figure}
 
+\subsubsection{SJPO 2018 General Round Q9}
+The moment of inertia of a solid sphere of mass $M$ and radius $a$, about an axis passing through its centre, is $(2 / 5) M a^2$. The mass of a solid uniform octant (one-eighth) of a sphere of radius $a$, is $m$. The moment of inertia about an axis along one of the straight edges (e.g. $z$ axis) is\\
+\begin{wrapfigure}{r}{0.3\textwidth}
+\includegraphics[width=1.0\linewidth]{images/sjpo2018q9.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[](A) $\frac{4}{3} m a^2$
+\item[](B) $\frac{2}{5} m a^2$
+\item[](C) $\frac{3}{8} m a^2$
+\item[](D) $\frac{1}{8} m a^2$
+\item[](E) $\frac{1}{20} m a^2$
+\end{itemize}
+Ans: \ifpaper B \fi 
+\newpage \clearpage
+\subsection{Angular Momentum and Torque (in 3D)}
+Angular momentum $\vec{L}(t)$ of a point particle at $\vec{r}(t)$ with momentum $\vec{p}(t)$ \textbf{about the origin} is defined as 
+\begin{align}
+    \vec{L}(t) &\equiv \vec{r}(t) \times \vec{p}
+\end{align}
+Similar to how $\vec{F} = d\vec{p}/dt$, if we differentiate $\vec{L}$ wrt time, we arrive at the definition for torque $\vec{\tau}$
+\begin{align}
+    \vec{\tau}(t) &\equiv \frac{d\vec{L}}{dt}  \\
+    &=\vec{r} \times \frac{\mathrm{d} \vec{p}}{\mathrm{d} t}+\frac{\mathrm{d} \vec{r}}{\mathrm{d} t} \times \vec{p}\\
+&=\vec{r} \times \vec{F}+\vec{v} \times \vec{p}\\
+&=\vec{r} \times \vec{F}\\
+\end{align}
+Extra: The definition of angular momentum can be motivated from Lagrangian mechanics as a conserved quantity from rotational invariance.
+\subsubsection{Conceptual Emphasis}
+I want to re-emphasise on some important conceptual points:
+\begin{itemize}
+    \item Angular velocity $\omega(t) = d\theta/dt$ is a \textbf{scalar}. It is defined about an \textbf{axis of rotation} $\mathbf{\hat{e}}_{\text{rot}}$.
+    \item Torque $\vec{\tau} =\vec{r} \times \vec{F}$ is a \textbf{vector}. \\ Its value depends on our \textbf{choice of origin} (which affects the value of $\vec{r}$).
+    \item Angular momentum $\vec{L} = \vec{r} \times \vec{p}$ is a \textbf{vector}. \\ Its value depends on our \textbf{choice of origin} (which affects the value of $\vec{r}$).
+\end{itemize}
+Extra: Sometimes (mostly used in 3D) we package $\omega \text{ \& } \mathbf{e}_{\text{rot}}$ into a single angular velocity \textbf{vector} $\vec{\omega} = \omega \mathbf{\hat{e}}_{\text{rot}}$, which makes it a vector. \\[10pt]
+Extra: If the axis of rotation changing over time (such as a wheel), one can consider the instantaneous axis of rotation \url{https://en.wikipedia.org/wiki/Instant_centre_of_rotation}.
+\subsubsection{Angular Momentum in terms of $I$}
+For a point particle at $(r,0,0)$ rotating about z-axis with angular velocity $\omega$, 
+\begin{align}
+    L_z &= r p \\
+    &= r mv \\
+    &= r m \omega r \\ 
+    &= mr^2 \omega
+\end{align}
+In general, for a rigid body that is rotating about one of its \textbf{principal axis of rotation} (an advanced concept you don't need to worry about now) with angular velocity $\vec{\omega}$, it's angular momentum is
+\begin{align}
+    \vec{L} = I \vec{\omega}
+\end{align}
+where $I$ (a scalar) is the moment of inertia about that axis of rotation. \\[10pt]
+Extra: If the rigid body is not rotating about a principal axis of rotation, then $\vec{L} = \mathbf{I} \vec{\omega}$ where $\mathbf{I}$ is the \textbf{inertia tensor} \url{https://en.wikipedia.org/wiki/Moment_of_inertia#Inertia_tensor}
+\newpage
+\subsection{Angular Momentum and Torque (in 2D)}
+\label{sec:torque}
+The exact "vector nature" of $\vec{L},\vec{\tau},\vec{\omega}$ is quite complicated and will be discussed in future. For now we are mostly concerned with the magnitude of $\vec{L}$. Specifically, for the following section, we will only consider scenarios where torque is parallel to angular momentum, so the direction of angular momentum remains constant. So we use the same symbols without the arrow above to denote the magnitude.
+\begin{align}
+    L \equiv |\vec{L}| \\
+    \omega \equiv |\vec{\omega}| \\
+    {\tau} \equiv |\vec{\tau}|
+\end{align}
+In other words, for now you can forget the vector nature of these quantities and just work with the following 
+\begin{align}
+    L &= I\omega \\
+    \tau = rF \sin \theta_{rF} &= \frac{dL}{dt} = I\alpha \\
+    I \text{ can be obtained } & \text{from the list of MOIs}
+\end{align}
+
+
+\subsubsection{Physical Intuition} 
+Intuition for torque causing angular momentum to change in 2D: 
+\begin{itemize}
+    \item If force is at $\theta_{rF} = 90^\circ$ with respect to the origin, maximal torque.
+    \item If force is at $\theta_{rF} = 0^\circ$ with respect to the origin, no torque. More on this in \ref{chap:centralforce}.
+    \item Momentum $\vec{p}$ vs angular momentum $L_z$. Example: uniform circular motion of 1 and 2 particles in the x-y plane.
+\end{itemize}
+Intuition for angular momentum in 2D:
+\begin{itemize}
+    \item Spinning ice skater \url{https://youtu.be/FmnkQ2ytlO8}
+    \item Guy spinning on chair \url{https://youtu.be/M6PuutIm5h4}
+\end{itemize}
+
+\subsubsection{SJPO 2016 General Round Q16}
+The diagram below shows 3 pendulums of length $\mathrm{L}$. The first uses a point mass $\mathrm{m}$ suspended from a string of length $\mathrm{L}$; the second uses a sphere with radius $\mathrm{R}$ and mass $\mathrm{m}$ suspended such that the centre of mass of the sphere is length $L$ away from the pivot point; the last uses a rigid rod of length $L$ and mass $\mathrm{m}$ pivoted at its end. Which of the following statements correctly describes the periods of these 3 pendulums?\\
+\noindent Hint: Moment of inertia of the 3 setups are $I_1=I_2>I_3$ \\
+{
+\begin{wrapfigure}{r}{0.5\textwidth} 
+\includegraphics[width=\linewidth]{images/sjpo2016q16.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) Period of $1=2>3$
+\item[] (B) Period of $2>1>3$
+\item[] (C) Period of $2>3>1$
+\item[] (D) Period of $3>1>2$
+\item[] (E) Period of $3>2>1$
+\end{itemize}
+}
+\subsubsection{Qn: Taylor Example 3.3}
+A uniform circular turntable (mass $M$, radius $R$, center $O$) is at rest in the x-y plane and is mounted on a frictionless axle, which lies along the vertical $z$ axis. I throw a lump of putty (mass $m$) with speed $v$ toward the edge of the turntable, so it approaches along a line that passes within a distance $b$ of $O$, as shown in Figure \ref{fig:taylor3.3}. When the putty hits the turntable, it sticks to the edge, and the two rotate together with angular velocity $\omega$. Find $\omega$. \\
+{
+\begin{wrapfigure}{r}{0.6\textwidth} 
+\includegraphics[width=\linewidth]{images/taylor3.3.png}
+\label{fig:taylor3.3}
+\caption{A lump of putty of mass $m$ is thrown with velocity $\mathbf{v}$ at a stationary turntable. The putty's line of approach passes within the distance $b$ of the table's center $O$.}
+\end{wrapfigure}\\[200pt]
+}
+\noindent Ans: $\omega = \frac{m}{m+M/2} \frac{vb}{R^2}$
+\subsection{Central Forces Conserve Angular Momentum}
+\label{chap:centralforce}
+\subsubsection{2D Explanation}
+Looking at $\tau = rF \sin \theta_{rF}$, we see that if the applied force is pointing to or away from the origin, then it doesn't cause any increased rotation (intuition). Mathematically, $\theta_{rF}=0^\circ\text{ or } 180^\circ$. For better intuition, consider a ball on a string going in constant-radius circular motion on a frictionless x-y plane. The ball maintains it's angular velocity. 
+\subsubsection{3D/Vector Explanation}
+Torque $\vec{\tau} = \vec{r} \times \vec{F}$ is the cross product between position $\vec{r}$ and force $\vec{F}$. If the force is parallel or anti-parallel to the position (pointing away or towards the origin), then torque is zero, since $\vec{\tau} = \vec{r} \times k\vec{r} = \vec{0}$. This means \textbf{angular momentum is conserved}, since ${d\vec{L}}/dt = \vec{\tau} = \vec{0}$.
+\subsubsection{Qn: Taylor Problem 3.25}
+A particle of mass $m$ is moving on a frictionless horizontal table and is attached to a massless string, whose other end passes through a hole in the table, where I am holding it. Initially the particle is moving in a circle of radius $r_0$ with angular velocity $\omega_0$, but I now pull the string down through the hole until a length $r$ remains between the hole and the particle. What is the particle's angular velocity now?\\[10pt]
+Ans: $\omega = \omega_0 (r/r_0)^2 $
+
+\subsubsection{Qn: Morin Problem 7.8 (Wrapping around a pole)}
+A puck of mass $m$ sliding on frictionless ice is attached by a horizontal string of length $\ell$ to a thin vertical pole of radius $R$. The puck initially travels in (essentially) a circle around the pole at speed $v_0$. The string wraps around the pole, and the puck gets drawn in and eventually hits the pole. What quantity is conserved during this motion? What is the puck's speed right before it hits the pole?\\[5pt]
+Remark: Discuss the questionable assumptions of this problem.\\[5pt]
+Ans: $v_0 \ell / R$
+
+
+\subsection{Rotational Kinetic Energy}
+As motivated previously, the kinetic energy of an object with angular velocity $\omega$ (about some axis of rotation) and moment of inertia $I$ (about the \textbf{same} axis of rotation) is $$K.E. = \frac{1}{2} I \omega^2$$
+
+\subsubsection{Qn: Morin Problem 8.26 (Swinging stick)}
+A uniform stick of length $L$ is pivoted at its bottom end and is initially held vertical. It is given an infinitesimal kick, and it swings down around the pivot. After three-quarters of a turn (in the horizontal position shown in Figure \ref{fig:morin8.26}), the pivot is somehow vaporized, and the stick flies freely up in the air. What is the angular velocity of the stock when the pivot is vaporized? 
+\begin{wrapfigure}{r}{0.3\textwidth} 
+\includegraphics[width=\linewidth]{images/morin8.26.png}
+\label{fig:morin8.26}
+\end{wrapfigure}\\
+Ans: $\omega = \sqrt{3g/L}$\\[5pt]
+Extra Qn: What is the maximum height of the center of the stick in the resulting motion? At what angle is the stick tilted when the center reaches this maximum height? \\[5pt]
+Ans: $3L/8$
+\newpage\clearpage 
+\section{Physics: Statics}
+Now that we have covered friction, normal contact force, and tension (Section \ref{sec:fnt}) and Torque (Section \ref{sec:torque}), we can now learn some olympiad tricks to solve statics questions!
+\subsection{Balancing Torque (Intersection of 3 Lines)}
+
+
+\section{Assorted Questions II}
+\subsubsection{SJPO 2016 General Round Q25}
+A circular disc with an axle of diameter $2 \mathrm{~cm}$, is attached with strings to the ceiling. The disc is rotated so that the strings wind up along the axle so that the disc is raised up to the ceiling. The string is long such that that when the disc is released from rest, its center of mass falls $2.0 \mathrm{~m}$. The disc does not slip from the string. Assume that the axle is massless and the disc has all of its $5 \mathrm{~kg}$ mass at radius $3 \mathrm{~cm}$. Estimate the acceleration of the center of mass of the disc near the bottom of the fall. \\
+{
+\begin{wrapfigure}{r}{0.6\textwidth} 
+\includegraphics[width=\linewidth]{images/sjpo2016q25.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[](A) $g$
+\item[](B) $2 g / 3$
+\item[](C) $g / 3$
+\item[](D) $g / 5$
+\item[](E) $g / 10$
+\end{itemize}
+}
 \subsubsection{SJPO 2018 General Round Q4}
 A sphere rolls without slipping down a rough inclined plane. The gain in rotational kinetic energy is due directly to the work done by
 \begin{itemize}
@@ -1738,9 +1991,9 @@ A sphere rolls without slipping down a rough inclined plane. The gain in rotatio
 \item[](D) Normal contact force
 \item[](E) Air resistance
 \end{itemize}
-
-\section{Physics: Statics}
-Need torque
+\subsubsection{Taylor Problem 3.5}
+Consider an elastic collision between two \textbf{equal mass} bodies, one of which is initially at rest. Let their velocities be $\mathbf{v}_1$ and $\mathbf{v}_2=0$ before the collision, and $\mathbf{v}_1^{\prime}$ and $\mathbf{v}_2^{\prime}$ after. Show that $\mathbf{v}_1^{\prime} \cdot \mathbf{v}_2^{\prime}=0$. \\[10pt]
+Extra: This result was important in the history of atomic and nuclear physics: That two bodies emerged from a collision traveling on perpendicular paths was strongly suggestive that they had equal mass and had undergone an elastic collision.
 \section{Physics: Springs}
 \subsubsection{SJPO 2018 General Round Q19}
 Two adventurous Physics students, each weighing $60 \mathrm{~kg}$, jump off a $43 \mathrm{~m}$ high bridge on a Bungee cord. The length of the cord is such that the students together will just touch the water and rebound. While Bungee cords become softer (more elastic) with increasing extension, for our calculations we can approximate the cord as having a constant stiffness of $k=330 \mathrm{~N} / \mathrm{m}$, and we can ignore the height of the students and where the cord is tied on their body. What is the unstretched length of the cord?
@@ -1799,6 +2052,11 @@ A dog weighing $10 \mathrm{~kg}$ is standing on a flatboat so that he is $20 \ma
 
 
 \section{Physics: Moment of Inertia}
+Examples: uniform rod, uniform disc, shell, solid sphere, rectangular plate, griffiths textbook exercises.
+
+\subsubsection{SPhO 2020 Q1}
+A cylindrical rod has a radius of 1.0 cm and length 1.0 m. It is made up of two sections, each of length 0.5 m. The material of one section is zinc and that of the other section is copper. The end of the rod made of zinc is pivoted to a fixed point O. The rod is first held so that it is horizontal and then released. Determine the angular velocity of the rod when it is in the vertical position. (Densities: zinc: 7135 kg $\text{m}^{-3}$; copper: 8940 kg $\text{m}^{-3}$) [10]\\
+\noindent Ans: $0.91258 \text{ kg m}^2$
 \section{Physics: Electrostatics}
 
 \section{Math: Vector Calculus}
@@ -1829,6 +2087,14 @@ Ans: \ifpaper D \fi
 
 \section{Physics: Constraining Forces - Normal, Tension, Friction}
 \section{Physics: Pulleys}
+\subsubsection{Qn: Morin Problem 8.1 (Massive pulley)}
+Consider the Atwood's machine shown in Figure \ref{fig:morin8.1}. The masses are $m$ and $2 m$, and the pulley is a uniform disk of mass $m$ and radius $r$. The string is massless and does not slip with respect to the pulley. Find the acceleration of the masses. Use conservation of energy. \\
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=1.0\linewidth]{images/morin8.1.png}
+\label{fig:morin8.1}
+\end{wrapfigure}
+Ans: $2g/7$
+
 \subsection{Friction - Capstan Equation}
 \section{Physics: DC Circuits}
 \section{Physics: Effective Resistance}

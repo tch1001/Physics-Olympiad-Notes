@@ -1,0 +1,373 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\graphicspath{ {./images} }
+
+
+\title{Quadratic Equations and Kinematics (Part 2)}
+\author{
+    Tan Chien Hao\\
+    \texttt{www.tchlabs.net}\\
+    \texttt{Telegram @tch1001}
+    % new collaborators add your name and contact here!
+}
+
+\date{\today}
+\begin{document}
+\newif\ifpaper
+
+% TOGGLE ANSWER HERE
+\paperfalse 
+
+\maketitle
+\section{Recap: Kinematics}
+Recap the following questions
+\begin{itemize}
+\item[] 1. What are the 2 formulas we learned last week? 
+\item[] 2. What do $s,u,v,a,t$ mean? 
+\item[] 3. What is the difference between displacement and distance?
+\item[] 4. What is the difference between velocity and speed?
+\item[] 5. What is the difference between vectors and scalars? 
+\end{itemize}
+\clearpage
+
+\subsection{Previous Week's Homework}
+\subsubsection{Q6}
+A car starts with an initial velocity of $u=2 \text{ m/s}$. It accelerates at $a=-5\text{ m/s}^2$ for some time $t$ and ends up with a final velocity of $v=-18 \text{ m/s}$. What is $t$? \\[50pt]
+\subsubsection{Q7}
+A car starts out moving \textbf{leftward} at $10 \text{ m/s}$. It accelerates \textbf{rightward} at $2\text{ m/s}^2$ for some time $t$ and ends up \textbf{stationary}. What is $t$? \\[50pt]
+\subsubsection{Q8}
+A car accelerates from $u=4\text{ m/s}$ to $v=20\text{ m/s}$ over $5\text{ s}$. What is it's acceleration $a$? \\[50pt]
+\subsubsection{Q9}
+A car accelerates from $u=20\text{ m/s}$ to $v=10\text{ m/s}$ over $2\text{ s}$. What is it's acceleration $a$? \\[50pt]
+\subsubsection{Q12}
+A car accelerates at constant acceleration from $u=2\text{ ms}^{-1}$ to $v=-4\text{ ms}^{-1}$ over $2\text{ s}$. What is it's displacement $s$?\\[50pt]
+\subsection{Revision Pop Quiz}
+Submit your answers to the google form I provide in the chat.\\[20pt]
+
+\noindent \textbf{Q1-4}: Substitute the following values into $v=u+at$, and solve for the unknown.
+\subsubsection{Q1: Unknown $v$}
+\begin{align}
+\text{Initial velocity } u&=30 \text{ m/s}\\
+\text{Acceleration }a&=3 \text{ m/s}^2\\
+\text{Duration }t&=2 \text{ s}
+\end{align}
+What is final velocity $v$ in m/s? 
+\subsubsection{Q2: Unknown $u$}
+\begin{align}
+\text{Final velocity } v&=-10 \text{ m/s}\\
+\text{Acceleration }a&=10 \text{ m/s}^2\\
+\text{Duration }t&=2 \text{ s}
+\end{align}
+What is initial velocity $u$ in m/s? 
+\subsubsection{Q3: Unknown $a$}
+\begin{align}
+\text{Initial velocity } u&=4 \text{ m/s}\\
+\text{Final velocity }v&=40 \text{ m/s}\\
+\text{Duration }t&=3 \text{ s}
+\end{align}
+What is acceleration $a$ in $\text{m/s}^2$? 
+\subsubsection{Q4: Unknown $t$}
+\begin{align}
+\text{Initial velocity } u&=-30 \text{ m/s}\\
+\text{Final velocity }v&=30 \text{ m/s}\\
+\text{Acceleration }a&=6 \text{ m/s}^2
+\end{align}
+What is duration $t$ in $\text{s}$? \clearpage
+\noindent \textbf{Q5-10}: The following questions will test your interpretation of physical \textbf{keywords}. It is important to know how to convert English to Math.
+\subsubsection{Q5}
+I want to accelerate from an initial velocity of $u=2\text{ m/s}$ to a final velocity of $v=56\text{ m/s}$ within $t=9\text{ s}$. What is the required acceleration $a$? \\[50pt]
+\subsubsection{Q6}
+I accelerate from an initial velocity of $u=-10\text{ m/s}$ to a final velocity of $v=30\text{ m/s}$ at an acceleration of $a=4\text{ m/s}^2$. How much time $t$ do I need? \\[50pt]
+
+\subsubsection{Q7}
+I start from an unknown velocity and accelerate at $3\text{ m/s}^2$ for $2\text{ s}$, reaching a final velocity of $v=15\text{ m/s}$. What was my initial velocity $u$? \\[50pt]
+
+\subsubsection{Q8}
+I am driving a van \textbf{forward} at $5 \text{ m/s}$, when I see a red light and hit the breaks. After $2\text{ s}$, I come to a \textbf{stop}. What is my acceleration during braking (taking forward as positive)? \\[50pt]
+
+\subsubsection{Q9}
+A ball is dropped \textbf{from rest} and falls \textbf{downward} for $5\text{ s}$ at an acceleration of $10\text{ m/s}^2$. What is it's \textbf{final velocity} after $5 \text{ s}$ (taking downward as positive)?\\[50pt]
+
+\subsubsection{Q10}
+I am on an unknown moon, I throw a ball \textbf{upwards} with an initial speed of $3\text{ m/s}$. After $9 \text{ s}$, it is travelling \text{downwards} at a final speed of $15\text{ m/s}$. What is the magnitude of acceleration on this moon?\\[50pt]
+
+\clearpage
+\section{Quadratic Equations: Kahoot Intro}
+(Solutions) If $3x+1 = -2$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[] (a) $x=-2$ is the only possible value
+\item[] (b) $x=3$ is the only possible value
+\item[] (c) $x=-1$ or $x=1$
+\item[] (d) $x=-1$ is the only possible value
+\end{itemize}\hrulefill \\[10pt]
+(Solutions) If $x^2 = 49$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=7$ is the only possible value
+\item[](b) $x=49$ is the only possible value
+\item[](c) $x=-7$ or $x=7$
+\item[](d) $x=-49$ is the only possible value
+\end{itemize}\hrulefill \\[10pt]
+(Solutions) If $x^2 = 25$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=-25$ is the only possible value
+\item[](b) $x=25$ is the only possible value
+\item[](c) $x=5$ is the only possible value
+\item[](d) $x=-5$ or $x=5$
+\end{itemize}\hrulefill \\[10pt]
+(Solutions) If $(x-1)^2 = 25$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=-4$ or $x=6$
+\item[](b) $x=6$ is the only possible value
+\item[](c) $x=-5$ or $x=5$
+\item[](d) $x=4$ is the only possible value
+\end{itemize}\hrulefill \\[10pt]
+\clearpage
+\noindent (Solutions) If $x^2 - 2x - 24 = 0$ (same equation as above, just \textbf{expanded}), what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=-4$ or $x=6$
+\item[](b) $x=6$ is the only possible value
+\item[](c) $x=-5$ or $x=5$
+\item[](d) $x=4$ is the only possible value
+\end{itemize}\hrulefill \\[10pt]
+(Solutions) If $(x+4)(x-6) = 0$ (same equation as above, just \textbf{factorised}), what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=-4$ or $x=6$
+\item[](b) $x=6$ is the only possible value
+\item[](c) $x=-5$ or $x=5$
+\item[](d) $x=4$ is the only possible value
+\end{itemize}\hrulefill \\[10pt]
+(Solutions) If $(x+2)(x-3) = 0$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=2$ or $x=3$ 
+\item[](b) $x=2$ or $x=-3$
+\item[](c) $x=0$
+\item[](d) $x=-2$ or $x=3$
+\end{itemize}\hrulefill \\[10pt]
+(Factorisation) If $(x-a)(x-b) = 0$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=ab$
+\item[](b) $x=a$ or $x=b$
+\item[](c) $x=a+b$
+\item[](d) $x=a+b$ or $x=ab$
+\end{itemize}\hrulefill \\[10pt]
+\clearpage
+\noindent (Vieta Formula) What is the expanded form of $(x-a)(x-b)$?
+\begin{itemize}
+\item[](a) $x^2 - ax + b$
+\item[](b) $x^2 - (a+b)x + ab$
+\item[](c) $x^2 + a + b$
+\item[](d) $(a+b)x^2 + x + ab$
+\end{itemize}\hrulefill \\[10pt]
+(Factorisation) If $(2x+4)(x-10) = 0$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=-4$ or $x=10$
+\item[](b) $x=2$ or $x=10$
+\item[](c) $x=-2$ or $x=10$
+\item[](d) $x=240$
+\end{itemize}\hrulefill \\[10pt]
+(Factorisation) If $6x^2 + 3x - 3 = (2x-1)(3x+3) = 0$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=1/2$ or $x=-1$
+\item[](b) $x=1$ or $x=-3$
+\item[](c) $x=2$ or $x=3$
+\item[](d) $x=2$
+\end{itemize}\hrulefill \\[10pt]
+(Factorisation) If $x^2 - 3x + 2 = 0$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=-3$ or $x=2$
+\item[](b) $x=1$ or $x=2$
+\item[](c) $x=2$ or $x=-3$
+\item[](d) $x=2$ or $x=3$
+\end{itemize}\hrulefill \\[10pt]
+\clearpage
+\noindent (Repeated Roots) If $x^2 + 6x + 9 = 0$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=3$ 
+\item[](b) $x=-3$ 
+\item[](c) $x=6$ or $x=-9$
+\item[](d) $x=6$ or $x=9$
+\end{itemize}\hrulefill \\[10pt]
+(No Real Roots) If $x^2 = -1$, what are the possible value(s) of $x$?
+\begin{itemize}
+\item[](a) $x=1$ 
+\item[](b) $x=-1$ 
+\item[](c) $x=-1$ or $x=1$
+\item[](d) No real solutions
+\end{itemize}
+\clearpage \newpage
+\section{Quadratic Equations: Lecture}
+Quadratic equations are equations involving up to a $x^2$ term. A general quadratic equation takes the following \textbf{general form}
+$$ax^2 + bx + c = 0$$
+where $a,b,c$ are called \textbf{coefficients} of $x^2,x,1$, respectively.\\[10pt]
+When you see a quadratic equation in the wild, it might not be of this form. To convert it to the \textbf{general form}, you can \textbf{expand} and move all terms to \textbf{one side}. Let's try a few examples!
+\begin{itemize}
+    \item $x^2 + 10x = 5$
+    \item $x^2 = -x^2 + 18$
+    \item $(x+1)(x+2) = 3$
+    \item $(2x-3)(x-1) = 3x^2 - 10$
+\end{itemize}
+\subsection{Number of Real Solutions}
+As we saw previously, quadratic equations can have $0,1,\text{or }2$ real solutions. \\[0pt]Here are some examples:
+\begin{itemize}
+    \item $x^2 + 2x = 0$ has 2 real solutions
+    \item $x^2 + 2x + 1 = 0$ has 1 real solution
+    \item $x^2 + 2x + 2 = 0$ has no real solutions
+\end{itemize}
+In general, one can determine how many solutions the quadratic equation has by looking at its \textbf{discriminant}
+$$\Delta = b^2 - 4ac$$
+The number of solutions depend on whether the discriminant $\Delta$ is positive, zero, or negative
+\begin{itemize}
+    \item $\Delta > 0$: 2 real solutions
+    \item $\Delta = 0$: 1 real solution
+    \item $\Delta < 0$: no real solutions
+\end{itemize}
+\subsection{Quadratic Formula}
+What are the solutions? They are given by the \textbf{quadratic formula}.
+\begin{align}
+    x = \frac{-b + \sqrt{\Delta}}{2a} \qquad &\text{or} \qquad x = \frac{-b - \sqrt{\Delta}}{2a} \\[10pt]
+    x = \frac{-b + \sqrt{b^2 - 4ac}}{2a} \qquad &\text{or} \qquad x = \frac{-b - \sqrt{b^2 - 4ac}}{2a}\\[10pt]
+    \text{or written more compactly}\qquad  &  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{align}
+\subsection{Exercises}
+Solve the following quadratic equations if there are real solutions, otherwise answer "No real solutions".
+\begin{itemize}
+\item[] (a) $x^2 - x - 2 = 0$\\[50pt]
+\item[] (b) $x^2 - 5x + 6 = 0$\\[50pt]
+\item[] (c) $x^2 + 2x + 1  = 0$\\[50pt]
+\item[] (d) $x^2 - 6x + 9 = 0$\\[50pt]
+\item[] (e) $x^2 + 2x = 0$\\[50pt]
+\item[] (f) $x^2 - x - 1 = 0$\\[50pt]
+\item[] (g) $3x^2 + 8x + 3 = 0$\\[50pt]
+\item[] (h) $2x^2 + 3x - 20 = 0$\\[50pt]
+\item[] (i) $10x^2 + 2x - 3 = 0$\\[50pt]
+\item[] (j) $-10x^2 + 3x + 20 = 0$\\[50pt]
+\item[] (k) $2x^2 = (3x + 2)(x-2)$\\[50pt]
+\item[] (l) $(x-2)(x+2) = (x-3)(2x+4)$\\[50pt]
+\item[] (m) $(2x + 1)(x + 4) + 3 = (x+2)^2 + 2$\\[50pt]
+\item[] (n) $x^2 + \alpha x + \beta = 0$, where $\alpha,\beta$ are constants\\[50pt]
+\item[] (o) $t^2 - 10t + 24 = 0$, solve for $t$. \\[50pt]
+\item[] (p) $-10t^2 + A x + B = 0$, where $A,B$ are constants\\[50pt]
+\item[] (q) $x^2 + y^2 = 5$, where $y$ is a constant\\[50pt]
+\item[] (r) $x^2 - 2y^2 = 1$, where $y$ is a constant\\[50pt]
+\end{itemize}
+\clearpage
+\section{Physics: 1D Kinematics (Part 2)}
+In physics, 
+\begin{itemize}
+    \item $s$ is displacement 
+    \item $u$ is \textbf{initial} velocity 
+    \item $v$ is \textbf{final} velocity
+    \item $a$ is acceleration
+    \item $t$ is time
+\end{itemize}
+Recall we have learned 2 formulas so far from the first chapter. 
+\begin{align}
+    v &= u + at \label{eq:vuat2} \\
+    s &= \frac{u+v}{2} t \label{eq:suvt2}
+\end{align}
+Now that we have understood how to solve quadratic equations, we can learn the other 3.
+\begin{align}
+s & =u t+\frac{1}{2} a t^2 \label{eq:suat2} \\
+v^2 & =u^2+2 a s \label{eq:vuas2} \\
+s & =v t-\frac{1}{2} a t^2 \label{eq:svat2}
+\end{align}
+Derivation for each of them:
+\begin{itemize}
+    \item We can derive Equation (\ref{eq:suat2}) by substituting Equation (\ref{eq:vuat2}) into Equation (\ref{eq:suvt2}). 
+    \item We can derive Equation (\ref{eq:svat2}) by rearranging Equation (\ref{eq:vuat2}) such that $u=v-at$ and substituting that into Equation (\ref{eq:suvt2}). 
+    \item We can derive Equation (\ref{eq:vuas2}) by squaring Equation (\ref{eq:vuat2}) and using Equation (\ref{eq:suat2}) to simplify.
+\end{itemize}
+\noindent Extra: A better derivation will be shown after we talk about calculus and graphs.
+\clearpage
+\subsection{$s=ut + \frac{1}{2} at^2$ Exercises}
+\subsubsection{Q1: Unknown $s$}
+\begin{align}
+\text{Initial velocity } u&=10 \text{ m/s}\\
+\text{Acceleration }a&=-9 \text{ m/s}^2\\
+\text{Duration }t&=2 \text{ s}
+\end{align}
+What is the displacement $s$?
+\subsubsection{Q2: Unknown $u$}
+\begin{align}
+\text{Displacement } s&=50 \text{ m}\\
+\text{Acceleration }a&=10 \text{ m/s}^2\\
+\text{Duration }t&=4 \text{ s}
+\end{align}
+What is the initial velocity $u$ in $\text{m/s}$?
+\subsubsection{Q3: Unknown $a$}
+\begin{align}
+\text{Initial velocity } u&=10 \text{ m/s}\\
+\text{Displacement }s&=200 \text{ m}\\
+\text{Duration }t&=3 \text{ s}
+\end{align}
+What is the acceleration $a$ in $\text{m/s}^2$?
+\subsubsection{Q4: Unknown $t$}
+\begin{align}
+\text{Initial velocity } u&=10 \text{ m/s}\\
+\text{Displacement }s&=200 \text{ m}\\
+\text{Acceleration }a&=20 \text{ m/s}^2
+\end{align}
+What is the duration $t$? (Reject the negative value for $t$)
+\subsubsection{Q5}
+I throw a ball downward with an initial velocity of $4 \text{ m/s}$. It accelerates downwards under gravity at $9.81 \text{ m/s}^2$. It takes $2 \text{ s}$ for the ball to hit the ground. How far did the ball travel? 
+\subsubsection{Q6}
+A car starts out at an unknown initial velocity and accelerating rightward at $1 \text{ m/s}^2$. After $4$ s, the car has moved $100$ m. What was the car's initial velocity? 
+\subsubsection{Q7}
+Armstrong is on an unknown planet, which he wishes to test the gravitational acceleration for. He releases a coin with \textbf{zero initial speed} from a height of $100$ m, and measures the duration it takes to hit the floor to be $4$ s. What is the magnitude of gravitational acceleration on the unknown planet (in $\text{m/s}^2$)?
+\subsubsection{Q8}
+A ball is thrown upward with an initial velocity of $20\text{ m/s}$. If the gravitational acceleration is $9.81\text{ m/s}^2$ downwards. How long does it take to reach the ground again? 
+\subsection{$v^2 = u^2 + 2as$ Exercises}
+\subsubsection{Q1: Unknown $v$}
+\begin{align}
+\text{Initial velocity } u&=3 \text{ m/s}\\
+\text{Displacement }s&=5 \text{ m}\\
+\text{Acceleration }a&=10 \text{ m/s}^2
+\end{align}
+What are possible value(s) for the final velocity $v$? 
+\subsubsection{Q2: Unknown $u$}
+\begin{align}
+\text{Final velocity } v&=10 \text{ m/s}\\
+\text{Displacement }s&=30 \text{ m}\\
+\text{Acceleration }a&=3 \text{ m/s}^2
+\end{align}
+What are possible value(s) for the initial velocity $u$? 
+\subsubsection{Q3: Unknown $a$}
+\begin{align}
+\text{Initial velocity } u&=4 \text{ m/s}\\
+\text{Final velocity }v&=5 \text{ m/s}\\
+\text{Displacement }s&=1 \text{ m}
+\end{align}
+What is the acceleration $a$?
+\subsubsection{Q4: Unknown $s$}
+\begin{align}
+\text{Initial velocity } u&=12 \text{ m/s}\\
+\text{Final velocity }v&=13 \text{ m/s}\\
+\text{Acceleration }a&=0.5 \text{ m/s}^2
+\end{align}
+What is the displacement $s$?
+\subsubsection{Q5}
+A ball is dropped \textbf{from rest}. It accelerates downwards under gravity at $9.81 \text{ m/s}^2$ and falls $20$ m before hitting the ground. What is the velocity when the ball hits the ground? 
+\subsubsection{Q6}
+An object is released with an unknown initial \textbf{vertical} velocity (direction could be \textbf{upwards or downwards}). It falls with a gravitational acceleration of $9.81 \text{ m/s}^2$ before hitting the ground at $20$ m/s. What are the possible value(s) for the initial velocity? (Extra: Why are there 2 possible values?)
+\subsubsection{Q7}
+Armstrong is on an unknown planet again, which he wants to measure the acceleration for. He drops a pen with zero initial velocity from a height of $100$ m. The pen hits the ground with a velocity of $4$ m/s. What is the gravitational acceleration on this planet? 
+\subsubsection{Q8}
+A car accelerates at $2 \text{m/s}^2$ from $1$ m/s to $5$ m/s. How far does it travel during while accelerating? 
+\subsection{$s=vt - \frac{1}{2} at^2$ Exercises}
+\subsubsection{Q1: Unknown $s$}
+\begin{align}
+\text{Final velocity } v&=50 \text{ m/s}\\
+\text{Acceleration }a&=10 \text{ m/s}^2\\
+\text{Duration } t&= 2 \text{ s}
+\end{align}
+What is the displacement $s$?
+\subsubsection{Q2}
+A car starts out at an unknown initial velocity and starts accelerating at $2 \text{ m/s}^2$. After $30\text{ s}$, it reaches a final velocity of $32$ m/s. How far did it travel during this time period? 
+
+\end{document}
