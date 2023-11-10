@@ -835,6 +835,7 @@ $\mu_s$ is the static coefficient of friction. \\[10pt]
 When sliding starts, the magnitude will be limited by the kinetic coefficient of friction $\mu_k$ instead of $\mu_s$. Usually $\mu_k < \mu_s$, which is why you will lose control of your car if your tyres skid.
 
 \subsubsection{SJPO 2015 General Round Q12}
+\label{sec:sjpo2015q12sec_static}
 As shown in the figure below, the block with mass $M$ is stationary upon the plank and the angle of the slope $\theta$ is increased. Which of the following is true for the normal force of the block on the wooden plank, $N$ and the frictional force on the plank, $f$? \\
 \begin{wrapfigure}{r}{0.36\textwidth}
 \includegraphics[width=1.0\linewidth]{images/sjpo2015q12.png}
@@ -896,6 +897,7 @@ A block of mass $m$ is attached to a horizontal inextensible string and is movin
 Ans: \ifpaper D \fi
 \clearpage
 \subsubsection{SJPO 2018 General Round Q6}
+\label{sec:sjpo2018q6sec_static}
 \begin{wrapfigure}{r}{0.5\textwidth}
 \includegraphics[width=1.0\linewidth]{images/sjpo2018q6.png}
 \end{wrapfigure}
@@ -1282,6 +1284,7 @@ Ans: \ifpaper B \fi
 }
 \newpage \clearpage
 \subsubsection{SJPO 2018 General Round Q12}
+\label{sec:sjpo2018q12sec_static}
 {
 \begin{wrapfigure}{r}{0.4\textwidth}
 \includegraphics[width=1.0\linewidth]{images/sjpo2018q12.png}
@@ -1893,13 +1896,34 @@ In other words, for now you can forget the vector nature of these quantities and
     \tau = rF \sin \theta_{rF} &= \frac{dL}{dt} = I\alpha \\
     I \text{ can be obtained } & \text{from the list of MOIs}
 \end{align}
-
-
+\subsubsection{Using $r_\perp F$ vs $r F_\perp$}
+There are 2 ways to visualise $\tau = rF \sin \theta_{rF}$\\[0pt]
+{
+\begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/lineofaction.png}
+\\[20pt]
+\includegraphics[width=\linewidth]{images/fperp.png}
+\end{wrapfigure}
+\\[20pt]Projecting the origin $O$ onto the \textbf{line of action} of the force, $r_\perp$ is the shortest distance from $O$ to the line of action.
+\begin{align*}
+|\vec{\tau}| & =|\vec{r} \times \vec{F}| \\
+& =|r F \sin \theta_{rF}| \\
+& =r_{\perp} F \\
+\end{align*}\\[10pt]
+Projecting the tip of the force vector onto the extended $\vec{r}$ vector (aka "$OR$ produced"), $F_\perp$ is the shortest distance from the tip to $OR$ produced.
+\begin{align*}
+|\vec{\tau}| & =|\vec{r} \times \vec{F}| \\
+& =|r F \sin \theta_{rF}| \\
+& =r F_{\perp} \\
+\end{align*}
+}
+\clearpage
 \subsubsection{Physical Intuition} 
 Intuition for torque causing angular momentum to change in 2D: 
 \begin{itemize}
-    \item If force is at $\theta_{rF} = 90^\circ$ with respect to the origin, maximal torque.
-    \item If force is at $\theta_{rF} = 0^\circ$ with respect to the origin, no torque. More on this in \ref{chap:centralforce}.
+    \item If force is at $\theta_{rF} = 90^\circ$, maximal torque in the \textbf{CCW} direction ($\vec{L}$ pointing \textbf{out} of the page).
+    \item If force is at $\theta_{rF} = 0^\circ$, no torque. More on this in \ref{chap:centralforce}.
+    \item If force is at $\theta_{rF} = -90^\circ$, maximal torque in the \textbf{CW} direction ($\vec{L}$ pointing \textbf{into} the page).
     \item Momentum $\vec{p}$ vs angular momentum $L_z$. Example: uniform circular motion of 1 and 2 particles in the x-y plane.
 \end{itemize}
 Intuition for angular momentum in 2D:
@@ -1907,7 +1931,8 @@ Intuition for angular momentum in 2D:
     \item Spinning ice skater \url{https://youtu.be/FmnkQ2ytlO8}
     \item Guy spinning on chair \url{https://youtu.be/M6PuutIm5h4}
 \end{itemize}
-
+\subsubsection{Example: Oscillation of General Object}
+Qn: If you pin a laminar with moment of inertia $I$ such that it can freely rotate about its pivot, and the center of mass is distance $L$ away from the pivot, show that the angular frequency of oscillations is given by $$\omega = \sqrt{\frac{mgL}{I}}$$
 \subsubsection{SJPO 2016 General Round Q16}
 The diagram below shows 3 pendulums of length $\mathrm{L}$. The first uses a point mass $\mathrm{m}$ suspended from a string of length $\mathrm{L}$; the second uses a sphere with radius $\mathrm{R}$ and mass $\mathrm{m}$ suspended such that the centre of mass of the sphere is length $L$ away from the pivot point; the last uses a rigid rod of length $L$ and mass $\mathrm{m}$ pivoted at its end. Which of the following statements correctly describes the periods of these 3 pendulums?\\
 \noindent Hint: Moment of inertia of the 3 setups are $I_1=I_2>I_3$ \\
@@ -1923,6 +1948,7 @@ The diagram below shows 3 pendulums of length $\mathrm{L}$. The first uses a poi
 \item[] (E) Period of $3>2>1$
 \end{itemize}
 }
+Ans: \ifpaper A \fi
 \subsubsection{Qn: Taylor Example 3.3}
 A uniform circular turntable (mass $M$, radius $R$, center $O$) is at rest in the x-y plane and is mounted on a frictionless axle, which lies along the vertical $z$ axis. I throw a lump of putty (mass $m$) with speed $v$ toward the edge of the turntable, so it approaches along a line that passes within a distance $b$ of $O$, as shown in Figure \ref{fig:taylor3.3}. When the putty hits the turntable, it sticks to the edge, and the two rotate together with angular velocity $\omega$. Find $\omega$. \\
 {
@@ -1940,8 +1966,9 @@ Looking at $\tau = rF \sin \theta_{rF}$, we see that if the applied force is poi
 \subsubsection{3D/Vector Explanation}
 Torque $\vec{\tau} = \vec{r} \times \vec{F}$ is the cross product between position $\vec{r}$ and force $\vec{F}$. If the force is parallel or anti-parallel to the position (pointing away or towards the origin), then torque is zero, since $\vec{\tau} = \vec{r} \times k\vec{r} = \vec{0}$. This means \textbf{angular momentum is conserved}, since ${d\vec{L}}/dt = \vec{\tau} = \vec{0}$.
 \subsubsection{Qn: Taylor Problem 3.25}
-A particle of mass $m$ is moving on a frictionless horizontal table and is attached to a massless string, whose other end passes through a hole in the table, where I am holding it. Initially the particle is moving in a circle of radius $r_0$ with angular velocity $\omega_0$, but I now pull the string down through the hole until a length $r$ remains between the hole and the particle. What is the particle's angular velocity now?\\[10pt]
-Ans: $\omega = \omega_0 (r/r_0)^2 $
+A particle of mass $m$ is moving on a frictionless horizontal table and is attached to a massless string, whose other end passes through a hole in the table, where I am holding it. Initially the particle is moving in a circle of radius $r_0$ with angular velocity $\omega_0$, but I now \textbf{slowly} pull the string down through the hole until a length $r$ remains between the hole and the particle. What is the particle's angular velocity now?\\[10pt]
+Ans: $\omega = \omega_0 (r_0/r)^2 $ \\[10pt]
+Extra: Does the kinetic energy increase? Does work energy theorem apply? 
 
 \subsubsection{Qn: Morin Problem 7.8 (Wrapping around a pole)}
 A puck of mass $m$ sliding on frictionless ice is attached by a horizontal string of length $\ell$ to a thin vertical pole of radius $R$. The puck initially travels in (essentially) a circle around the pole at speed $v_0$. The string wraps around the pole, and the puck gets drawn in and eventually hits the pole. What quantity is conserved during this motion? What is the puck's speed right before it hits the pole?\\[5pt]
@@ -1963,15 +1990,93 @@ Extra Qn: What is the maximum height of the center of the stick in the resulting
 Ans: $3L/8$
 \newpage\clearpage 
 \section{Physics: Statics}
-Now that we have covered friction, normal contact force, and tension (Section \ref{sec:fnt}) and Torque (Section \ref{sec:torque}), we can now learn some olympiad tricks to solve statics questions!
-\subsection{Balancing Torque (Intersection of 3 Lines)}
+Now that we have covered friction, normal contact force, and tension (Section \ref{sec:fnt}) and Torque (Section \ref{sec:torque}), we can now learn some olympiad tricks to solve statics questions!\\[10pt]
+We know already that in static equilibrium (nothing moving rotationally and translationally), net torque and net force must be 0. In general it's possible to write out all the equations. But sometimes we can use shortcuts.
+\subsection{Balancing Translational Forces}
+Translationally, net force must be zero. i.e. $$\sum_i F_{i,x} = \sum_i F_{i,y} = \sum_i F_{i,z} = 0$$
+It will be useful to know how to solve simultaneous linear equations of 3 variables in your scientific calculator. \\[10pt]
+Extra: Or know how to take the inverse of a 3x3 matrix in your graphing calculator.
+\subsubsection{Qns from previous sections}
+Revise the following questions
+\begin{itemize}
+    \item SJPO 2015 Q12 (Section \ref{sec:sjpo2015q12sec_static})
+    \item SJPO 2018 Q6 (Section \ref{sec:sjpo2018q6sec_static})
+    \item SJPO 2018 Q12 (Section \ref{sec:sjpo2018q12sec_static})
+\end{itemize}
+\clearpage
+\subsubsection{Qn: Engineering Statics Example 3.5.3 (Balloon)}
+The following 4 forces $\vec A, \vec B, \vec C, \vec D$ balance out (i.e. $\vec{A} + \vec{B} + \vec{C} + \vec{D} = \vec{0}$). Given that $\vec D = 900\ \hat{y}$, gridlines are $1 \text{ m}$ spacing, and the point has height $3\text{ m}$, find $|\vec A|, |\vec B|, |\vec C|$. \\
+{
+\begin{wrapfigure}{r}{0.6\textwidth} 
+\includegraphics[width=\linewidth]{images/staticsballoon.png}
+\label{fig:staticsballoon}
+\end{wrapfigure}
+Ans: 
+\begin{align*}
+    |\vec{A}| &= 463.57 \\ 
+    |\vec{B}| &= 402.04 \\ 
+    |\vec{C}| &= 309.05 
+\end{align*}
+\\[400pt]
+}
+\subsubsection{Qn: Engineering Statics Example 3.5.4 (Skycam)}
+A skycam with weight of $\vec{W}$ is supported by tension in 3 cables $\vec{A}, \vec{B}, \vec{C}$ as shown in Figure \ref{fig:staticsskycam}. Given that the mass of the skycam is $20\text{ kg}$, what is the magnitude of the tension in each of the 3 cables? \\
+\begin{wrapfigure}{r}{0.6\textwidth} 
+\includegraphics[width=\linewidth]{images/staticsskycam.png}
+\label{fig:staticsskycam}
+\end{wrapfigure}
+Ans: \begin{align*}
+    |\vec{A}| &= 196.4 \text{ N} \\ 
+    |\vec{B}| &= 192.2 \text{ N} \\ 
+    |\vec{C}| &= 98.5 \text{ N} 
+\end{align*}
+\clearpage
+\subsection{Balancing Torque}
+In order for rotational static equilibrium, net torque needs to be zero. i.e. 
+$$\sum_i \tau_{i,x} = \sum_i \tau_{i,y} = \sum_i \tau_{i,z} = 0$$
+Note: In physics olympiad, usually it suffices to consider torque in 2D. \\[10pt]
+Recall that torque is always defined \textbf{about an origin} (of your choice). Your choice of origin will make a big difference in your quality of life when solving statics questions.
+\subsubsection{Example: Lever}
 
-
+\clearpage 
+\subsubsection{(JUICY) Example: Hinged Shelf}
+A shelf of mass $m$ is attached to the wall with a hinge at $P$ such that it can rotate freely about $P$ but not translate. The right end is held up by a string with tension $T$ at angle $\theta$. \\[5pt] 
+(a) By considering torque about $P$, express $T$ in terms of $m,g,\theta$ \\[5pt] 
+(b) By considering torque about the center of mass and horizontal forces, express $F_{\text{carry}}$ and $N$ in terms of $T,\theta$. \\
+\begin{wrapfigure}{r}{0.5\textwidth} 
+\includegraphics[width=\linewidth]{images/shelf0.png}
+\label{fig:shelf}
+\end{wrapfigure}
+Ans: \\ (a) $T = \frac{mg}{2\sin\theta}$ \\ (b) $F_{\text{carry}} = T \sin \theta$, $N = T \cos \theta$\\[20pt]
+Comment: This question teaches you that you can "eliminate" certain terms in your equation by choosing your axis to calculate torque wisely. Imagine if you knew $T$ but didn't know $mg$, or you knew $mg$ but didn't know $T$. Using this trick saves time and cuts down the algebra.
+\clearpage
+\subsection{3 Concurrent Forces: Intersection of 3 Lines}
+\textbf{Theorem}: If an object is in static equilibrium (rotational and translational), and there are \textbf{only 3 forces} acting on it, then the 3 forces are concurrent (intersect at the same point).\\[10pt]
+\textbf{Proof}: Consider the intersection $C$ of any 2 out of the 3 forces. By considering torque about $C$, the 2 forces exert no torque. To be in static equilibrium (no net torque), the 3rd force must also exert no torque. By line of action, the 3rd force must be concurrent (intersect at the same point).
+\subsubsection{(JUICY) Example: Hinged Shelf (cont'd)}
+A shelf of mass $m$ is attached to the wall with a hinge at $P$ such that it can rotate freely about $P$ but not translate. The right end is held up by a string with tension $T$ at angle $\theta$. \\[5pt]
+(c) Find $|F_{\text{carry}}|/|N|$ in terms of $\theta$. \\[5pt] 
+{
+\begin{wrapfigure}{r}{0.5\textwidth} 
+\includegraphics[width=\linewidth]{images/shelf.png}
+\label{fig:shelf}
+\end{wrapfigure}
+Ans: $|F_{\text{carry}}|/|N| = \tan \theta$\\[200pt]
+}
+\clearpage
+\subsubsection{(JUICY) Example: Morin Chap 2.2 (Leaning ladder)}
+A ladder leans against a frictionless wall. If the coefficient of friction with the ground is $\mu$, what is the smallest angle the ladder can make with the ground and not slip?\\
+\begin{wrapfigure}{r}{0.5\textwidth} 
+\includegraphics[width=\linewidth]{images/morinleaningladder.png}
+\label{fig:morinleaningladder}
+\end{wrapfigure}
+Ans: $\tan \theta \leq \frac{1}{2\mu}$
+\clearpage 
 \section{Assorted Questions II}
 \subsubsection{SJPO 2016 General Round Q25}
 A circular disc with an axle of diameter $2 \mathrm{~cm}$, is attached with strings to the ceiling. The disc is rotated so that the strings wind up along the axle so that the disc is raised up to the ceiling. The string is long such that that when the disc is released from rest, its center of mass falls $2.0 \mathrm{~m}$. The disc does not slip from the string. Assume that the axle is massless and the disc has all of its $5 \mathrm{~kg}$ mass at radius $3 \mathrm{~cm}$. Estimate the acceleration of the center of mass of the disc near the bottom of the fall. \\
 {
-\begin{wrapfigure}{r}{0.6\textwidth} 
+\begin{wrapfigure}{r}{0.4\textwidth} 
 \includegraphics[width=\linewidth]{images/sjpo2016q25.png}
 \end{wrapfigure}
 \begin{itemize}
@@ -1994,6 +2099,39 @@ A sphere rolls without slipping down a rough inclined plane. The gain in rotatio
 \subsubsection{Taylor Problem 3.5}
 Consider an elastic collision between two \textbf{equal mass} bodies, one of which is initially at rest. Let their velocities be $\mathbf{v}_1$ and $\mathbf{v}_2=0$ before the collision, and $\mathbf{v}_1^{\prime}$ and $\mathbf{v}_2^{\prime}$ after. Show that $\mathbf{v}_1^{\prime} \cdot \mathbf{v}_2^{\prime}=0$. \\[10pt]
 Extra: This result was important in the history of atomic and nuclear physics: That two bodies emerged from a collision traveling on perpendicular paths was strongly suggestive that they had equal mass and had undergone an elastic collision.
+\subsubsection{(JUICY) Sliding Mass Down a Hemisphere}
+A small marble placed at the top of a smooth hemisphere slides off the hemisphere. At what angle $\theta$ from the vertical does the marble lose contact with the hemisphere?
+\subsubsection{Morin Problem 2.4 (Keeping a book up)}
+A book of mass $M$ is positioned against a vertical wall. The coefficient of friction between the book and the wall is $\mu$. You wish to keep the book from falling by pushing on it with a force $F$ applied at an angle $\theta$ with respect to the horizontal $(-\pi / 2<\theta<\pi / 2)$, as shown in Figure \ref{fig:morinkeepingbookup}. \\[10pt]
+{
+(a) For a given $\theta$, what is the minimum $F$ required? \\[5pt]
+(b) For what $\theta$ is this minimum $F$ the smallest? What is the corresponding minimum $F$ ?\\[5pt]
+(c) What is the limiting value of $\theta$, below which there does not exist an $F$ that keeps the book up?\\[5pt]
+\begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/morinkeepingbookup.png}
+\label{fig:morinkeepingbookup}
+\end{wrapfigure}
+}
+\clearpage
+\subsubsection{Morin Problem 2.14 (Leaning sticks)}
+One stick leans on another as shown in Figure \ref{fig:morin2.14}. A right angle is formed where they meet, and the right stick makes an angle $\theta$ with the horizontal. The left stick extends infinitesimally beyond the end of the right stick. The coefficient of friction between the two sticks is $\mu$. The sticks have the same mass density per unit length and are both hinged at the ground. What is the minimum angle $\theta$ for which the sticks don't fall? \\
+{
+\begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/morin2.14.png}
+\label{fig:morin2.14}
+\end{wrapfigure}\\[70pt]
+}
+\subsubsection{Morin Problem 2.15 (Supporting a ladder)}
+A ladder of length $L$ and mass $M$ has its bottom end attached to the ground by a pivot. It makes an angle $\theta$ with the horizontal and is held up by a massless stick of length $\ell$ that is also attached to the ground by a pivot (see Figure \ref{fig:morin2.15}). The ladder and the stick are perpendicular to each other. Find the force that the stick exerts on the ladder.\\
+{
+\begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/morin2.15.png}
+\label{fig:morin2.15}
+\end{wrapfigure}
+}
+
+\clearpage
+
 \section{Physics: Springs}
 \subsubsection{SJPO 2018 General Round Q19}
 Two adventurous Physics students, each weighing $60 \mathrm{~kg}$, jump off a $43 \mathrm{~m}$ high bridge on a Bungee cord. The length of the cord is such that the students together will just touch the water and rebound. While Bungee cords become softer (more elastic) with increasing extension, for our calculations we can approximate the cord as having a constant stiffness of $k=330 \mathrm{~N} / \mathrm{m}$, and we can ignore the height of the students and where the cord is tied on their body. What is the unstretched length of the cord?
@@ -2085,7 +2223,8 @@ Ans: \ifpaper D \fi
 \subsection{SHM: Driven and Damping}
 \subsection{Laplace Transform}
 
-\section{Physics: Constraining Forces - Normal, Tension, Friction}
+\section{Physics: Ropes}
+\subsection{Friction - Capstan Equation}
 \section{Physics: Pulleys}
 \subsubsection{Qn: Morin Problem 8.1 (Massive pulley)}
 Consider the Atwood's machine shown in Figure \ref{fig:morin8.1}. The masses are $m$ and $2 m$, and the pulley is a uniform disk of mass $m$ and radius $r$. The string is massless and does not slip with respect to the pulley. Find the acceleration of the masses. Use conservation of energy. \\
@@ -2094,8 +2233,6 @@ Consider the Atwood's machine shown in Figure \ref{fig:morin8.1}. The masses are
 \label{fig:morin8.1}
 \end{wrapfigure}
 Ans: $2g/7$
-
-\subsection{Friction - Capstan Equation}
 \section{Physics: DC Circuits}
 \section{Physics: Effective Resistance}
 \subsection{Equipotential Method}
@@ -2144,7 +2281,4 @@ A plumb line is held steady while being carried in a moving train. The mass of t
 \item[] (D) $2 mg$
 \item[] (E) Cannot be determined from the given information.
 \end{itemize}
-
-
-
 \end{document}
