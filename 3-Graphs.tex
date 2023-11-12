@@ -1,0 +1,206 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\graphicspath{ {./images} }
+
+
+\title{Linear and Quadratic Graphs}
+\author{
+    Tan Chien Hao\\
+    \texttt{www.tchlabs.net}\\
+    \texttt{Telegram @tch1001}
+    % new collaborators add your name and contact here!
+}
+
+\date{\today}
+\begin{document}
+\newif\ifpaper
+
+% TOGGLE ANSWER HERE
+\paperfalse 
+
+\maketitle
+\section{Recap: Assorted Kinematics Questions}
+% Src: https://www.physicsclassroom.com/class/1DKin/Lesson-6/Sample-Problems-and-SolutionsIn physics, 
+\begin{itemize}
+    \item $s$ is displacement 
+    \item $u$ is \textbf{initial} velocity 
+    \item $v$ is \textbf{final} velocity
+    \item $a$ is acceleration
+    \item $t$ is time
+\end{itemize}
+\begin{align}
+    v &= u + at \label{eq:vuat2} \\
+    s &= \frac{u+v}{2} t \label{eq:suvt2}\\
+s & =u t+\frac{1}{2} a t^2 \label{eq:suat2} \\
+v^2 & =u^2+2 a s \label{eq:vuas2} \\
+s & =v t-\frac{1}{2} a t^2 \label{eq:svat2}
+\end{align}
+\subsubsection{Q1}
+An airplane accelerates down a runway at $3.20 \mathrm{~m} / \mathrm{s}^2$ for $32.8 \mathrm{~s}$ until is finally lifts off the ground. Determine the distance traveled before takeoff. \ifpaper Ans: $1720$ m \fi 
+\subsubsection{Q2}
+A car starts from rest and accelerates uniformly over a time of 5.21 seconds for a distance of $110 \mathrm{~m}$. Determine the acceleration of the car. \ifpaper Ans: $8.10 \text{m/s}^2$ \fi
+\subsubsection{Q3}
+A ball (initially stationary) is released and falls for 2.60 seconds before hitting the ground, what will be its final velocity and how far will it fall?
+\ifpaper Ans:  $v=25.5$ m/s and $s=33.1$ m\fi
+\subsubsection{Q4}
+A race car accelerates uniformly from $18.5 \mathrm{~m} / \mathrm{s}$ to $46.1 \mathrm{~m} / \mathrm{s}$ in 2.47 seconds. Determine the acceleration of the car and the distance traveled. 
+\ifpaper Ans: $a=11.2 \mathrm{~m} / \mathrm{s}^2 \text { and } d=79.8 \mathrm{~m}$ \fi 
+\subsubsection{Q5}
+A feather is dropped on the moon from a height of 1.40 meters. The acceleration of gravity on the moon is $1.67 \mathrm{~m} / \mathrm{s}^2$. Determine the time for the feather to fall to the surface of the moon.
+\ifpaper Ans: $t=1.29 \mathrm{~s}$ \fi 
+\subsubsection{Q6}
+Rocket-powered sleds are used to test the human response to acceleration. If a rocketpowered sled is accelerated to a speed of $444 \mathrm{~m} / \mathrm{s}$ in 1.83 seconds, then what is the acceleration and what is the distance that the sled travels? 
+\ifpaper Ans: $a=243 \mathrm{~m} / \mathrm{s}^2$ and $\mathrm{d}=406 \mathrm{~m}$ \fi 
+\subsubsection{Q7}
+A bike accelerates uniformly from rest to a speed of $7.10 \mathrm{~m} / \mathrm{s}$ over a distance of $35.4 \mathrm{~m}$. Determine the acceleration of the bike.
+\ifpaper Ans: $a=0.712 \mathrm{~m} / \mathrm{s}^2$ \fi 
+\subsubsection{Q8}
+An engineer is designing the runway for an airport. Of the planes that will use the airport, the lowest acceleration rate is likely to be $3 \mathrm{~m} / \mathrm{s}^2$. The takeoff speed for this plane will be $65 \mathrm{~m} / \mathrm{s}$. Assuming this minimum acceleration, what is the minimum allowed length for the runway?
+\ifpaper Ans: $d=704 \mathrm{~m}$ \fi 
+\subsubsection{Q9}
+A car traveling at $22.4 \mathrm{~m} / \mathrm{s}$ skids to a stop in $2.55 \mathrm{~s}$. Determine the skidding distance of the car (assume uniform acceleration).
+\ifpaper Ans: $d=28.6 \mathrm{~m}$ \fi 
+\subsubsection{Q10}
+A kangaroo is capable of jumping to a height of $2.62 \mathrm{~m}$. Determine the takeoff speed of the kangaroo.
+\ifpaper Ans: $u=7.17 \text{m/s}$ \fi
+\subsubsection{Q11}
+If Michael Jordan has a vertical leap of $1.29 \mathrm{~m}$, then what is his takeoff speed and his hang time (time spent off the ground)?
+\ifpaper Ans: $u=5.03 \text{ m/s}$ and $t=1.03$ s \fi
+\subsubsection{Q12}
+A bullet leaves a rifle with a muzzle velocity of $521 \mathrm{~m} / \mathrm{s}$. While accelerating through the barrel of the rifle, the bullet moves a distance of $0.840 \mathrm{~m}$. Determine the acceleration of the bullet (assume a uniform acceleration).
+\ifpaper Ans: $a=1.62 \times 10^5 \text{ m/s}^2 $ \fi
+
+\subsubsection{Q13}
+A baseball is thrown straight up into the air from an initial height of $1$ m and spends $6.25 \mathrm{~s}$ before returning to a height of $1$ m. Determine the height to which the ball rises before it reaches its peak. 
+\ifpaper Ans: $s=49.0$ m \fi
+
+\subsubsection{Q14}
+The observation deck of tall skyscraper $370 \mathrm{~m}$ above the street. Determine the time required for a penny to free fall from the deck to the street below.
+\ifpaper Ans: $t=8.69$ s \fi
+
+\subsubsection{Q15}
+A bullet is moving at a speed of $367 \mathrm{~m} / \mathrm{s}$ when it embeds into a lump of moist clay. The bullet penetrates for a distance of $0.0621 \mathrm{~m}$. Determine the acceleration of the bullet while moving into the clay. (Assume a uniform acceleration.)
+\ifpaper Ans: $a=-1.08\times 10^6 \text{ m/s}^2$ \fi
+
+\subsubsection{Q16}
+
+A stone is dropped into a deep well and is heard to hit the water $3.41 \mathrm{~s}$ after being dropped. Determine the depth of the well.
+\ifpaper Ans: $s=-57.0$ m \fi
+
+\subsubsection{Q17}
+
+It was once recorded that a Jaguar left skid marks that were $290 \mathrm{~m}$ in length. Assuming that the Jaguar skidded to a stop with a constant acceleration of $-3.90 \mathrm{~m} / \mathrm{s}^2$, determine the speed of the Jaguar before it began to skid.
+\ifpaper Ans: $u=47.6$ m/s \fi
+
+\subsubsection{Q18}
+
+
+A plane has a takeoff speed of $88.3 \mathrm{~m} / \mathrm{s}$ and requires $1365 \mathrm{~m}$ to reach that speed. Determine the acceleration of the plane and the time required to reach this speed.
+\ifpaper Ans: $a=2.86 \text{ m/s}^2$ and $t=30.8$ s \fi
+
+\subsubsection{Q19}
+
+A dragster accelerates to a speed of $112 \mathrm{~m} / \mathrm{s}$ over a distance of $398 \mathrm{~m}$. Determine the acceleration (assume uniform) of the dragster.
+\ifpaper Ans: $a=15.8 \text{ m/s}^2$ \fi
+
+\subsubsection{Q20}
+
+With what speed must an object be thrown to reach a height of $91.5 \mathrm{~m}$? Assume negligible air resistance.
+\ifpaper Ans: $u=42.3$ m/s \fi
+
+\section{Math: Functions}
+Before we talk about graphs, we need to talk about functions. This is because graphs are a way to visualise functions. A graph is a plot of a function on a 2D plane.\\[10pt]
+Functions take in inputs and return outputs. Here are some examples:
+\begin{itemize}
+    \item $y(x) = 12-2x$ (linear function)
+    \item $y(x) = x^2 + 2x + 1$ (quadratic function)
+    \item $y(x) = 3$ (constant function)
+\end{itemize}
+More physics related functions:
+\begin{itemize}
+    \item $s(t) = 5t+3$ 
+    \item $s(t) = -10t^2 + 5t$
+    \item $v(t) = 3 + 4t$
+    \item $v(t) = u + at$
+    \item $a(t) = -9.81$
+\end{itemize}
+Extra: Functions may also take in multiple variables, these functions are called multivariate functions.
+\section{Math: Graphs}
+If I give you a function $y(x)$, you can use a 2D graph to represent it. Here's how
+\begin{itemize}
+    \item Let the horizontal axis be the \textbf{input}.
+    \item Let the vertical axis be the \textbf{output}.
+    \item Each point on the plot has coordinate $(a,y(a))$ for some value $x=a$.
+\end{itemize}
+Let's see some examples: 
+\begin{itemize}
+    \item $y(x) = 12-2x$ (linear function)
+    \item $y(x) = x^2 + 2x + 1$ (quadratic function)
+    \item $y(x) = 3$ (constant function)
+\end{itemize}
+There are a few things to look out for in every graph are
+\begin{itemize}
+    \item y-intercept $y(0)$
+    \item x-intercept(s) (the set of $x_i$ for which $y(x_i) = 0$)
+    \item slope or gradient $\frac{\Delta y}{\Delta x} = \frac{y_1 - y_0}{x_1 - x_0}$
+\end{itemize}
+For graphs where the horizontal axis is time $t$, the physical significance of the above quantities are:
+\begin{itemize}
+    \item y-intercept represents "initial" quantity. E.g. initial velocity
+    \item x-intercept represents solutions to an equation, which may be used to find \textbf{when} an object has hit the ground / returned to its initial location. E.g. roots/solutions to a quadratic solution. 
+    \item gradient represents the rate of change. E.g. gradient of $s(t)$ graph is $v(t)$ graph. And gradient of $v(t)$ graph is $a(t)$ graph. Extra: This is related to differentiation.
+\end{itemize}
+\clearpage 
+\noindent Velocity-time graphs are especially useful for motions where there are multiple segments with different accelerations for each segment. In those cases, using SUVAT alone will be quite messy as there are multiple phases of time to keep track of. Plotting graphs and calculating area under the graphs will simplify your life greatly in those situations. We will talk about \textbf{multi-phase kinematics} in the next lesson.
+\section{Physics: $v(t)$ Velocity-Time graphs}
+Plot the velocity-time graphs for the following questions using $v(t)=u+at$, indicating the 
+\begin{itemize}
+    \item x-intercept ($v(t=0) = u$)
+    \item y-intercept ($t=T_0=-u/a$ where $v(t=T_0) = 0$)
+    \item the point for "final velocity" $(T,u+aT)$ where $T$ is the duration.
+    \item gradient ($\text{grad }=a$)
+\end{itemize}
+\subsubsection{Q1}
+A car is moving with initial velocity $u=5 \text{ m/s}$. It accelerates with an acceleration of $a = 2\text{ m/s}^2$ for $3\text{ s}$. What is it's final velocity $v$?
+\subsubsection{Q2}
+A car is moving with initial velocity $u=10 \text{ ms}^{-1}$. It accelerates with an acceleration of $a = -2\text{ ms}^{-2}$ for $2\text{ s}$. What is it's final velocity $v$?
+\subsubsection{Q3}
+A car is moving \textbf{right} with initial speed of $5 \text{ m/s}$. It accelerates \textbf{leftward} at $2\text{ m/s}^2$ for $10\text{ s}$. What is it's final velocity?
+\subsubsection{Q4}
+A car starts out \textbf{stationary}. It accelerates \textbf{rightward} at $2\text{ m/s}^2$ for $5\text{ s}$. What is it's final velocity?
+\subsubsection{Q5}
+A car starts with an initial velocity of $u=2 \text{ m/s}$. It accelerates at $a=5\text{ m/s}^2$ for some time $t$ and ends up with a final velocity of $v=12 \text{ m/s}$. What is $t$?
+\subsubsection{Q6}
+A car starts with an initial velocity of $u=2 \text{ m/s}$. It accelerates at $a=-5\text{ m/s}^2$ for some time $t$ and ends up with a final velocity of $v=-18 \text{ m/s}$. What is $t$?
+\subsubsection{Q7}
+A car starts out moving \textbf{leftward} at $10 \text{ m/s}$. It accelerates \textbf{rightward} at $2\text{ m/s}^2$ for some time $t$ and ends up \textbf{stationary}. What is $t$?
+\subsubsection{Q8}
+A car accelerates from $u=4\text{ m/s}$ to $v=20\text{ m/s}$ over $5\text{ s}$. What is it's acceleration $a$?
+\subsubsection{Q9}
+A car accelerates from $u=20\text{ m/s}$ to $v=10\text{ m/s}$ over $2\text{ s}$. What is it's acceleration $a$?
+\section{Physics: Displacement = Area under $v(t)$ graph}
+Recall that $$s=\frac{v+u}{2} t$$
+One can think of displacement as the area under the $v(t)$ graph from time $t=0$ (where velocity is \textbf{initial} velocity) to time $t=T$ (where velocity is \textbf{final} velocity), 
+\subsubsection{Q1}
+A car accelerates at constant acceleration from $u=2\text{ ms}^{-1}$ to $v=12\text{ ms}^{-1}$ over $t=10\text{ s}$. What is it's displacement $s$?
+\subsubsection{Q2}
+I throw a ball downward with an initial velocity of $4 \text{ m/s}$. It accelerates downwards under gravity at $9.81 \text{ m/s}^2$. It takes $2 \text{ s}$ for the ball to hit the ground. How far did the ball travel? 
+\subsubsection{Q3}
+A car starts out at an unknown initial velocity and accelerating rightward at $1 \text{ m/s}^2$. After $4$ s, the car has moved $100$ m. What was the car's initial velocity? 
+\subsubsection{Q4}
+Armstrong is on an unknown planet, which he wishes to test the gravitational acceleration for. He releases a coin with \textbf{zero initial speed} from a height of $100$ m, and measures the duration it takes to hit the floor to be $4$ s. What is the magnitude of gravitational acceleration on the unknown planet (in $\text{m/s}^2$)?
+\subsection{Negative Area}
+If a graph is below the horizontal axis, the area is considered to be negative. 
+\subsubsection{Q1}
+A ball is thrown upward with an initial velocity of $20\text{ m/s}$. If the gravitational acceleration is $9.81\text{ m/s}^2$ downwards. How long does it take to reach the ground again? 
+\subsubsection{Q2}
+A car accelerates at constant acceleration from $u=2\text{ ms}^{-1}$ to $v=-4\text{ ms}^{-1}$ over $2\text{ s}$. What is it's displacement $s$?
+\subsubsection{Q3}
+A car accelerates at constant acceleration from $u=-10\text{ ms}^{-1}$ to $v=10\text{ ms}^{-1}$ over $20\text{ s}$. What is it's displacement $s$?
+\end{document}
