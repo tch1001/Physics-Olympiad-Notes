@@ -22,11 +22,11 @@
 \newif\ifpaper
 
 % TOGGLE ANSWER HERE
-\paperfalse 
+\papertrue
 
 \maketitle
 
-Updated notes are available at \url{https://bit.ly/3E6SuwA}. Please inform me of any errors. Feel free to message me to explain something in greater detail :) I also run a weekly SJPO / SPhO class if you're interested.
+Updated notes are available at \url{https://bit.ly/physicsolympiadnotes}. Please inform me of any errors. Feel free to message me to explain something in greater detail :) I also run a weekly SJPO / SPhO class if you're interested.
 \tableofcontents
 
 \section{Math: Functions}
@@ -1515,6 +1515,7 @@ I will compile all the SHM questions later on because SHM spans across all the p
     \item[] 4. Match with the SHM equation $\ddot q(t) = -\omega^2 q(t)$
 \end{itemize}
 \section{Math: Polar Coordinates (2D)}
+\label{sec:polar}
 We previously described the location of a particle using 2 coordinates $x(t),y(t)$. When it comes to rotational questions, it's often more convenient to describe location using polar coordinates $r(t), \theta(t)$. The conversion between the coordinates are given by
 \begin{align}
     r &= \sqrt{x^2 + y^2} \\
@@ -1529,6 +1530,7 @@ where $\operatorname{atan2}$ is basically $\arctan (y/x)$ but sensitive to signs
 Side Note: If we used $\theta = \arctan(y/x)$ instead, one might be worried it is unable to distinguish $(x,y)$ and $(-x,-y)$, since both result in the same numerical value for $\theta$. This is a valid mathematical concern. However, for most physics calculations we won't run into issues since we mainly deal with differential forms $ds^2 = dr^2 + r^2 d\theta^2$ and vectors (which are secretly derivatives $\partial/\partial r, \partial/\partial \theta$), both of which are "local objects". Even though the definition uses $\operatorname{atan2}(y,x)$, when performing calculations, we often pretend it is $\arctan(y/x)$ because it results in the same formulas. The reason that it gives the same results is intuitive from the definition (\ref{eq:atan2}), but to be mathematically rigorous, the proof will be annoyingly lengthy.
 
 \subsection{Basis Vectors}
+\label{sec:polarbasis}
 \begin{wrapfigure}{r}{0.35\textwidth}
 \includegraphics[width=0.9\linewidth]{images/polarbasis.png}
 \caption{Basis vectors for polar coordinates}
@@ -1935,7 +1937,7 @@ Intuition for angular momentum in 2D:
 Qn: If you pin a laminar with moment of inertia $I$ such that it can freely rotate about its pivot, and the center of mass is distance $L$ away from the pivot, show that the angular frequency of oscillations is given by $$\omega = \sqrt{\frac{mgL}{I}}$$
 \subsubsection{SJPO 2016 General Round Q16}
 The diagram below shows 3 pendulums of length $\mathrm{L}$. The first uses a point mass $\mathrm{m}$ suspended from a string of length $\mathrm{L}$; the second uses a sphere with radius $\mathrm{R}$ and mass $\mathrm{m}$ suspended such that the centre of mass of the sphere is length $L$ away from the pivot point; the last uses a rigid rod of length $L$ and mass $\mathrm{m}$ pivoted at its end. Which of the following statements correctly describes the periods of these 3 pendulums?\\
-\noindent Hint: Moment of inertia of the 3 setups are $I_1=I_2>I_3$ \\
+\noindent Hint: Moment of inertia of the 3 setups are $I_2>I_1>I_3$ \\
 {
 \begin{wrapfigure}{r}{0.5\textwidth} 
 \includegraphics[width=\linewidth]{images/sjpo2016q16.png}
@@ -1948,7 +1950,7 @@ The diagram below shows 3 pendulums of length $\mathrm{L}$. The first uses a poi
 \item[] (E) Period of $3>2>1$
 \end{itemize}
 }
-Ans: \ifpaper A \fi
+Ans: \ifpaper B \fi
 \subsubsection{Qn: Taylor Example 3.3}
 A uniform circular turntable (mass $M$, radius $R$, center $O$) is at rest in the x-y plane and is mounted on a frictionless axle, which lies along the vertical $z$ axis. I throw a lump of putty (mass $m$) with speed $v$ toward the edge of the turntable, so it approaches along a line that passes within a distance $b$ of $O$, as shown in Figure \ref{fig:taylor3.3}. When the putty hits the turntable, it sticks to the edge, and the two rotate together with angular velocity $\omega$. Find $\omega$. \\
 {
@@ -1958,7 +1960,8 @@ A uniform circular turntable (mass $M$, radius $R$, center $O$) is at rest in th
 \caption{A lump of putty of mass $m$ is thrown with velocity $\mathbf{v}$ at a stationary turntable. The putty's line of approach passes within the distance $b$ of the table's center $O$.}
 \end{wrapfigure}\\[200pt]
 }
-\noindent Ans: $\omega = \frac{m}{m+M/2} \frac{vb}{R^2}$
+\noindent Ans: $\omega = \frac{m}{m+M/2} \frac{vb}{R^2}$\\
+\noindent Extra: Can we use conservation of momentum? Why not?
 \subsection{Central Forces Conserve Angular Momentum}
 \label{chap:centralforce}
 \subsubsection{2D Explanation}
@@ -1969,11 +1972,6 @@ Torque $\vec{\tau} = \vec{r} \times \vec{F}$ is the cross product between positi
 A particle of mass $m$ is moving on a frictionless horizontal table and is attached to a massless string, whose other end passes through a hole in the table, where I am holding it. Initially the particle is moving in a circle of radius $r_0$ with angular velocity $\omega_0$, but I now \textbf{slowly} pull the string down through the hole until a length $r$ remains between the hole and the particle. What is the particle's angular velocity now?\\[10pt]
 Ans: $\omega = \omega_0 (r_0/r)^2 $ \\[10pt]
 Extra: Does the kinetic energy increase? Does work energy theorem apply? 
-
-\subsubsection{Qn: Morin Problem 7.8 (Wrapping around a pole)}
-A puck of mass $m$ sliding on frictionless ice is attached by a horizontal string of length $\ell$ to a thin vertical pole of radius $R$. The puck initially travels in (essentially) a circle around the pole at speed $v_0$. The string wraps around the pole, and the puck gets drawn in and eventually hits the pole. What quantity is conserved during this motion? What is the puck's speed right before it hits the pole?\\[5pt]
-Remark: Discuss the questionable assumptions of this problem.\\[5pt]
-Ans: $v_0 \ell / R$
 
 
 \subsection{Rotational Kinetic Energy}
@@ -1987,7 +1985,7 @@ A uniform stick of length $L$ is pivoted at its bottom end and is initially held
 \end{wrapfigure}\\
 Ans: $\omega = \sqrt{3g/L}$\\[5pt]
 Extra Qn: What is the maximum height of the center of the stick in the resulting motion? At what angle is the stick tilted when the center reaches this maximum height? \\[5pt]
-Ans: $3L/8$
+Ans: $3L/8, 1.5\text{ rad}$
 \newpage\clearpage 
 \section{Physics: Statics}
 Now that we have covered friction, normal contact force, and tension (Section \ref{sec:fnt}) and Torque (Section \ref{sec:torque}), we can now learn some olympiad tricks to solve statics questions!\\[10pt]
@@ -2064,6 +2062,7 @@ A shelf of mass $m$ is attached to the wall with a hinge at $P$ such that it can
 Ans: $|F_{\text{carry}}|/|N| = \tan \theta$\\[200pt]
 }
 \clearpage
+
 \subsubsection{(JUICY) Example: Morin Chap 2.2 (Leaning ladder)}
 A ladder leans against a frictionless wall. If the coefficient of friction with the ground is $\mu$, what is the smallest angle the ladder can make with the ground and not slip?\\
 \begin{wrapfigure}{r}{0.5\textwidth} 
@@ -2072,6 +2071,657 @@ A ladder leans against a frictionless wall. If the coefficient of friction with 
 \end{wrapfigure}
 Ans: $\tan \theta \leq \frac{1}{2\mu}$
 \clearpage 
+\section{Physics: Electrostatics (Point Charges)}
+Every object has some amount of charge. "Electro" refers to the interaction of charges, "statics" mean that we are dealing with situations where the objects are not moving (in contrast with "dynamics"). In this section, we will talk about point charges, which are 0-dimensional objects that are precisely located at one point in space. This is an idealisation, and in the real world point charges don't exist. However, in most scenarios, one can prove that this idealisation will be "good enough", such the results we get from assuming our charges are point-like objects will coincide with the results we get if we had relaxed the assumption. Wherever applicable, we like to assume point charges because it makes the math easier.
+\subsection{Electric Force}
+If 2 point charges $Q$ and $q$ are separated by distance $r$, they exert (equal and opposite) forces on each other with magnitude 
+\begin{align}
+    | \vec{F}_{\text{Q on q}} | = | \vec{F}_{\text{q on Q}} | = \frac{k\ |Q|\ |q|}{r^2}
+\end{align}
+where $k = \frac{1}{4\pi\epsilon_0}$ is called Coulomb's constant. $\epsilon_0 = 8.85\times 10^{-12}\text{ Fm}^{-1}$ is the permittivity of vacuum. The unit F is Farad. \\[10pt]
+The direction of the force depends on the relative sign of the 2 charges. If they are of the same sign (both positive or both negative), the direction of the force is radially outward (the force pushes the 2 charges away i.e. \textbf{like charges repel}). If they are of opposite sign (one negative and the other positive), the direction of the force is radially inward (the force pulls the 2 charges together i.e. \textbf{unlike charges attract}). We can summarise this in a single vector equation.
+\begin{align}
+    - \vec{F}_{\text{q on Q}} =\vec{F}_{\text{Q on q}} = \frac{kQq}{r^2} \hat{r} 
+\end{align}
+where $\hat{r}$ is the unit vector pointing from $Q$ to $q$.
+\subsubsection{Principle of Superposition (Force)}
+Note: The word superposition is used a lot all over physics to mean different things. It generally refers to the linearity of a system. \\[10pt]
+If there are $N$ point charges $\{Q_1, Q_2, ..., Q_N\}$ (excluding our test charge), then the net force experienced by a test charge $q$ is just the sum of forces each charge individually exerts on it. 
+\begin{align}
+    \vec{F}_{\text{net on }q} = \sum_{i=1}^N \vec{F}_{Q_i \text{ on }q}
+\end{align}
+The proof of this is due to linearity of electric field (covered later). It is also verified experimentally.
+\subsection{Electric Potential Energy (EPE)}
+We won't be able to do the definition of EPE justice without mentioning line integrals, which we cover very soon. But for now, we take the following as fact. \\[10pt]
+If 2 point charges $Q$ and $q$ are separated by distance $r$, the electric potential energy stored in this configuration is given by
+\begin{align}
+    U = \frac{kQq}{r}
+\end{align}
+Notice how EPE $U$ varies with respect to distance between the charges $r$.
+\begin{itemize}
+    \item For like charges ($Qq>0$), if the separation $r$ increases, the potential energy $U$ decreases.
+    \item For unlike charges ($Qq<0$), if the separation $r$ increases, the potential energy $U$ increases.
+\end{itemize}
+Although we haven't talked about potential energy (and we can't until we talk about line integrals), there is a simple intuition I'd like to emphasise. \\[10pt]
+Intuition: Nature generally seeks configurations that have \textbf{lower potential energy} (think of a ball on a hill). So for like charges, since potential energy decreases with increasing separation, \textbf{like charges naturally seek to increase their separation}, i.e. like charges repel. Likewise, for unlike charges, since potential energy decreases with decreasing separation, \textbf{unlike charges naturally seek to decrease their separation}, i.e. unlike charges attract.
+\subsubsection{Principle of Superposition (EPE)}
+The total potential energy of the system of $N$ charges $\{Q_1, Q_2, ..., Q_N\}$ is the \textbf{pairwise sum} of potential energies.
+\begin{align}
+    U_{\text{total}} = \sum_{1\leq i<j \leq N} U_{i,j} = \sum_{1\leq i<j \leq N} \frac{kQ_i Q_j}{r_{ij}}
+\end{align}
+This can be proved by constructing the configuration of charges one charge at a time. 
+\subsection{Electric Field (from Electric Force)}
+Note: At the moment, it seems almost redundant to define the electric field and potential. But from a theoretical point of view, the electric field and potential are actually more fundamental objects. The electric force and EPE are typically introduced first in most introductory courses/textbooks because they build on the student's pre-existing intuition for force and potential energy. The conceptual differences will become significant once we allow the charges to move, which we will study in Electrodynamics. \\[10pt]
+A point charge has a charge $Q$ and is located at a point in space $\vec{r}_Q$ induces an electric field spanning all of space
+\begin{align}
+    \vec{E}(\vec{r}) = \frac{kQ}{|\vec{r} - \vec{r}_Q|^3} (\vec{r} - \vec{r}_Q)
+\end{align}
+I chose to put let the point charge be anywhere in space, but in most definitions you'll see the point charge placed at the origin $\vec{r}_Q = \vec{0}$, simplifying the electric field to
+\begin{align}
+    \vec{E}(\vec{r}) = \frac{kQ}{|\vec{r}|^2} \hat{r}
+\end{align}
+where $\hat r$ is a unit vector, pointing in the same direction as $\vec{r}$ but with length of 1. 
+\subsubsection{Principle of Superposition (Field)}
+If there are $N$ point charges $\{Q_1, Q_2, ..., Q_N\}$, then the electric field due to all these charges will be the \textbf{vector sum} of the electric field created by each individual charge. 
+\begin{align}
+    \vec{E}_{\text{total}}(\vec{r}) = \sum_{i=1}^N \vec{E}_{\text{due to }Q_i}(\vec{r})
+\end{align}
+This is due to linearity of Gauss' law (one of the 4 Maxwell equations). It is also verified experimentally.
+\subsubsection{Force Per Unit Charge}
+Electric Field is defined as the \textbf{force per unit charge} experienced by a \textbf{test charge}. In other words, if I put a test charge $q$ at a point $\vec{r}_q$, it would experience force 
+\begin{align}
+    \vec{F}_{\text{on }q} = q\vec{E}(\vec{r}_q)
+\end{align}
+It is often said that the test charge must be \textbf{infinitesimally small}, and the reason is that if it wasn't small, the test charge would exert a non-negligible force on the configuration of $N$ point charges, causing their positions to shift and changing the entire electric field. \\[10pt]
+Even though the charge being infinitesimally small would result in the electric force on the test charge being infinitesimally small in magnitude as well, the ratio of $\vec{F} / q = \vec{E}$ will stay constant no matter how small $q$ is. This is akin to taking the derivative of a function $f'(x) = \lim_{h\rightarrow 0} [f(x+h)-f(x)]/h$ from first principles. 
+\subsubsection{Cartesian Coordinates}
+Lastly, I would like to write down the electric field in Cartesian coordinates and basis vectors, as an example of how to perform calculations using the above definition.
+\begin{align}
+    \vec{r} &= \left(\begin{array}{c}
+         x \\
+         y \\
+         z 
+    \end{array}\right) \\
+    \hat{r} &= \frac{\vec{r}}{|\vec{r}|} = \frac{1}{\sqrt{x^2 + y^2 + z^2}} \left(\begin{array}{c}
+         x \\
+         y \\
+         z 
+    \end{array}\right)\\
+    \vec{E}(x,y,z) &= \frac{kQ}{x^2 + y^2 + z^2} \frac{1}{\sqrt{x^2 + y^2 + z^2}} \left(\begin{array}{c}
+         x \\
+         y \\
+         z 
+    \end{array}\right) \\
+    &= \frac{kQ}{(x^2 + y^2 + z^2)^{3/2}} \left(\begin{array}{c}
+         x \\
+         y \\
+         z 
+    \end{array}\right) 
+\end{align}
+\subsection{Electric Potential (from EPE)}
+Similar to the electric field, the existence of an electric charge with charge $Q$ at position $\vec{r}_Q$ will cause an electric potential to permeate all of space
+\begin{align}
+    \phi(\vec{r}) = \frac{kQ}{|\vec{r} - \vec{r}_Q|}
+\end{align}
+Note: The electric potential $\phi(\vec{r})$ is a scalar field, as opposed to the electric field which is a vector field.\\[10pt]
+And if $\vec{r}_Q = \vec{0}$ then
+\begin{align}
+    \phi(\vec{r}) = \frac{kQ}{|\vec{r}|}
+\end{align}
+\subsubsection{Potential Energy Per Unit Charge}
+Similarly to the electric field, the electric potential is the potential energy per unit charge. If I put a test charge $q$ at position $\vec{r}_q$, the \textbf{increase} in potential energy of the configuration of charges will be
+\begin{align}
+    U_{\text{increase due to }q} = q\phi(\vec{r}_q) 
+\end{align}
+If the test charge $q$ is now added permanently to the configuration, then the electric potential will include it's contribution too (according to superposition principle).
+\subsubsection{Principle of Superposition (Potential)}
+The total electric potential due to a collection of $N$ charges $\{Q_1, Q_2, ..., Q_N\}$ will be the sum of the potentials due to each individual charge
+\begin{align}
+    \phi_{\text{total}}(\vec{r}) = \sum_{i=1}^N \phi_{\text{due to }Q_i}(\vec{r}) 
+\end{align}
+\subsubsection{Cartesian Coordinates}
+Once again, I think it would be pedagogical if I write it out in Cartesian coordinates
+\begin{align}
+    \vec{r} &= \left(\begin{array}{c}
+         x \\
+         y \\
+         z 
+    \end{array}\right) \\
+    \phi(\vec{r}) &= \frac{kQ}{\sqrt{x^2 + y^2 + z^2}}
+\end{align}
+\subsection{Exercises}
+\subsubsection{SJPO 2016 General Round Q33}
+4 point charges are arranged at the corners of a square of side length $\mathrm{d}$. The charges are as indicated on the diagram. What is the electric potential $V$ and the magnitude of the electrostatic force $F$ felt by a point charge of -1 e placed at the centre of the square? \\[0pt]
+\begin{wrapfigure}{r}{0.4\textwidth} 
+\includegraphics[width=\linewidth]{images/sjpo2016q33.png}
+\end{wrapfigure}
+\begin{itemize}
+\item[] (A) $\quad V=0, F=\frac{1}{\sqrt{2}}\left(\frac{e^2}{\pi \varepsilon_0 d^2}\right)$
+\item[] (B) $\quad V=0, F=\frac{e^2}{\pi \varepsilon_0 d^2}$
+\item[] (C) $\quad V=0, F=0$
+\item[] (D) $\quad V=\frac{1}{\sqrt{2}}\left(\frac{e}{\pi \varepsilon_0 d}\right), F=0$
+\item[] (E) $\quad V=\frac{1}{\sqrt{2}}\left(\frac{e}{\pi \varepsilon_0 d}\right), F=\frac{1}{\sqrt{2}}\left(\frac{e^2}{\pi \varepsilon_0 d^2}\right)$
+\end{itemize}
+Ans: \ifpaper A \fi
+\clearpage
+\section{Math: Integration Techniques}
+We introduce examples by techniques first. At the end we will summarise the different examples by their occurrence in physics, highlighting their similarities.
+\subsection{Just Memorise}
+For some integrals you just have to memorise the trick. For example
+\begin{align}
+    \int \sec x\ dx &= \ln |\sec x + \tan x| + C \\
+    \int \sec^2 x\ dx &= \tan x + C 
+\end{align}
+\subsection{Integration by Parts}
+If we consider the product rule
+\begin{align}
+    \frac{d}{dx} (UV) = \frac{dU}{dx} V + U \frac{dV}{dx}
+\end{align}
+Integrating both sides wrt $dx$ from $x=a$ to $x=b$, and rearranging,
+\begin{align}
+    \int_a^b U d V&=[U V]_a^b-\int_a^b V d U \\
+    \int_a^b g \ f dx &= \left[ g\left(\int f dx \right) \right]_a^b - \int_a^b \left[ \left(\int f dx \right) \frac{dg}{dx}\right] dx 
+\end{align}
+My mnemonic is "integrate, keep, minus, integral of, integrate differentiate".\\[10pt]
+You can use the following 2 expressions to remember integral by parts. The former one being a definite integral, the latter being an indefinite integral. Do note that in both expressions, $\displaystyle \left( \int f\ dx \right)$ does \textbf{not} include $+C$.
+\begin{align}
+    \int_a^b f g \ dx &= \Biggl[ \underbrace{\left(\int f\ dx \right)}_{\text{integrate}} \underbrace{\biggl. g \biggr.}_{\text{keep}} \Biggr]_a^b - \underbrace{\int_a^b dx }_{\text{integral of}}\Biggl[ \underbrace{\left(\int f\ dx \right)}_{\text{integrate}} \underbrace{\biggl.\frac{dg}{dx}\biggr.}_{\text{differentiate}}\Biggr] \\
+    \int f g \ dx &= \Biggl[ \underbrace{\left(\int f\ dx \right)}_{\text{integrate}} \underbrace{\biggl. g \biggr.}_{\text{keep}} \Biggr] - \underbrace{\int dx }_{\text{integral of}}\Biggl[ \underbrace{\left(\int f\ dx \right)}_{\text{integrate}} \underbrace{\biggl.\frac{dg}{dx}\biggr.}_{\text{differentiate}}\Biggr] + C
+\end{align}
+It is best to just do a few exercises to find your \textbf{personal mnenomic} and stick to it.
+\subsubsection{Exercises}
+Show the following
+\begin{align}
+    \int \ln x \ dx &= x \ln x - x + C \\
+    \int x \ln x \ dx &= \frac{x^2}{2} \ln x - \frac{x^2}{4} + C
+\end{align}
+\subsubsection{Physics Examples}
+
+The following requires you to integrate by part twice and rearrange. \\
+\noindent Source: \url{https://youtu.be/DoK5ZSGJNwE?t=485}
+\begin{align}
+    \text{Show that }\int_0^{\frac{\pi}{2}} T_0 e^{\mu \theta}(\mu \sin \theta+\cos \theta) d \theta = T_0 e^{\mu \frac{\pi}{2}}
+\end{align}
+\subsection{U-Substitution}
+\subsubsection{$1/r$ integrals (potentials)}
+\label{sec:potential_integral}
+\begin{align}
+& \int_{-b}^b \frac{d x}{\sqrt{x^2+a^2}} \\
+& \text{Sub } x=a \tan \theta, \quad d x=a \sec ^2 \theta\ d \theta 
+\end{align}
+\begin{align}
+\int_{\theta=\tan ^{-1}\left(-\frac{b}{a}\right)}^{\theta=\tan ^{-1}\left(\frac{b}{a}\right)} \frac{a \sec ^2 \theta\ d \theta}{\sqrt{a^2 \tan ^2 \theta+a^2}} &= \int_{-\tan ^{-1}\left(\frac{b}{a}\right)}^{\tan ^{-1}\left(\frac{b}{a}\right)}|\sec \theta|\ d \theta \\ 
+& =\int_{-\alpha}^\alpha \sec \theta\ d \theta \text{    where } \alpha := \tan^{-1}(b/a) \notag \\
+&= \ln \left| \frac{\sec \alpha + \tan \alpha}{\sec \alpha - \tan \alpha}\right| \\
+&= \ln \left| \frac{\sec \left(\tan^{-1}(b/a)\right) + \tan \left(\tan^{-1}(b/a)\right)}{\sec \left(\tan^{-1}(b/a)\right) - \tan \left(\tan^{-1}(b/a)\right)}\right| \notag \\
+&= \ln \left| \frac{\sqrt{1+\left(\frac{b}{a}\right)^2} + \frac{b}{a}}{\sqrt{1+\left(\frac{b}{a}\right)^2} - \frac{b}{a}}\right| \notag \\
+&= 2 \ln \left( \sqrt{1+\left(\frac{b}{a}\right)^2} + \frac{b}{a} \right)
+\end{align}
+\subsubsection{$1/r^2$ integrals}
+\begin{align}
+& \int_{-b}^b \frac{d x}{{x^2+a^2}} \\
+& \text{Sub } x=a \tan \theta, \quad d x=a \sec ^2 \theta\ d \theta 
+\end{align}
+\begin{align}
+\int_{\theta=\tan ^{-1}\left(-\frac{b}{a}\right)}^{\theta=\tan ^{-1}\left(\frac{b}{a}\right)} \frac{a \sec ^2 \theta\ d \theta}{{a^2 \tan ^2 \theta+a^2}} &= \frac{1}{a} \int_{-\tan ^{-1}\left(\frac{b}{a}\right)}^{\tan ^{-1}\left(\frac{b}{a}\right)}\ d \theta \\ 
+& = \frac{2}{a} \tan^{-1}\left(\frac{b}{a}\right)
+\end{align}
+\subsubsection{$1/r^3$ integrals (fields)}
+\begin{align}
+& \int_{-b}^b \frac{d x}{\sqrt{x^2+a^2}^3 } \\
+& \text{Sub } x=a \tan \theta, \quad d x=a \sec ^2 \theta\ d \theta 
+\end{align}
+\begin{align}
+\int_{\theta=\tan ^{-1}\left(-\frac{b}{a}\right)}^{\theta=\tan ^{-1}\left(\frac{b}{a}\right)} \frac{a \sec ^2 \theta\ d \theta}{\sqrt{a^2 \tan ^2 \theta+a^2}^3 } &= \frac{1}{a^2}\int_{-\tan ^{-1}\left(\frac{b}{a}\right)}^{\tan ^{-1}\left(\frac{b}{a}\right)} \cos \theta \ d \theta \\ 
+& =\frac{1}{a^2} \int_{-\alpha}^\alpha \cos \theta\ d \theta \\
+&= \frac{2}{a^2} \sin \alpha \\
+&= \frac{2}{a^2} \sin \left( \tan^{-1} \left( \frac{b}{a} \right) \right)\\
+&= \frac{2}{a^2} \frac{b}{\sqrt{a^2 + b^2}} 
+\end{align}
+\clearpage
+\subsubsection{Geometrical Interpretation}
+Draw a picture in lesson for the limits of integration.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/usubgeom.png}
+    \caption{U-substitution is a reparametrization of curve}
+    \label{fig:usubgoem}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/usubgeom2.png}
+    \caption{$dx=a \sec^2 \theta\ d\theta$ in greater detail}
+    \label{fig:usubgeom2}
+\end{figure}
+% \subsection{Misc.}
+\clearpage 
+\section{Math: Line Integrals}
+Let's begin by first mentioning a few examples of line integrals. 
+\begin{align}
+    \text{Work Done} &= \int_\gamma \vec{F}(\mathbf{s}) \cdot \overrightarrow{d\mathbf{s}} \\
+    \phi(\rho) &= \int_\gamma \frac{k\ dq}{r} \\
+    \vec{E}(\rho) &= \int_\gamma \frac{k \ dq}{r^2} \hat{r}
+\end{align}
+The common thing all these share is they are integrals over some curve $\gamma$. Pictorially (draw in class), 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/lineintegral.png}
+    \caption{$\overrightarrow{ds}$ is tangent vector to the curve}
+    \label{fig:lineintegral}
+\end{figure}\\
+\subsection{Parametrization}
+How do we actually perform such a calculation? We perform the following steps 
+\begin{enumerate}
+    \item Choose a parametrization of the curve $\gamma$
+    $$\mathbf{s}(t) = \left(\begin{array}{l}
+         x(t) \\
+         y(t) \\
+         z(t) 
+    \end{array}\right) \stackrel{\text{e.g.}}{=} \left(\begin{array}{c}
+         5 \sin 2t\\ t^2\\ -t
+    \end{array}\right) \quad \text{ for } t \in [0,1]$$
+    \item Differentiate the coordinates with respect to the parameter.
+    $$\frac{\overrightarrow{d\mathbf{s}}}{dt} = \frac{d}{dt} \left(\begin{array}{c}
+         x(t) \\
+         y(t) \\
+         z(t) 
+    \end{array}\right) = \left(\begin{array}{c}
+         10 \cos 2t\\ 2t\\ -1
+    \end{array}\right)$$
+    \item Substitute back into the integral
+    $$\int_\gamma \vec{F}(\mathbf{s}) \cdot \overrightarrow{d\mathbf{s}} = \int_0^1 \vec{F}(\mathbf{s}(t)) \cdot \frac{\overrightarrow{d\mathbf{s}}}{dt} dt = \int_0^1 \vec{F}(\mathbf{s}(t)) \cdot \left(\begin{array}{c}
+         10 \cos 2t\\ 2t\\ -1
+    \end{array}\right) dt$$
+    \item Evaluate the 1D integral 
+    \begin{align}
+    \vec{F}(x,y,z) &\stackrel{\text{e.g.}}{=} \left(\begin{array}{c}
+         0 \\ z \\ 0
+    \end{array}\right) \\
+    \int_0^1 \vec{F}(\mathbf{s}(t)) \cdot \frac{\overrightarrow{d\mathbf{s}}}{dt} dt &= \int_0^1 \left(\begin{array}{c}
+         0 \\ -t \\ 0
+    \end{array}\right) \cdot \left(\begin{array}{c}
+         10 \cos 2t\\ 2t\\ -1
+    \end{array}\right) dt = \left[-\frac{2}{3} t^3\right]^1_0 = -\frac{2}{3} \notag
+    \end{align}
+\end{enumerate}
+I would like to place emphasis on this step
+\begin{align}
+    \int_\gamma \vec{F}(\mathbf{s}) \cdot \overrightarrow{d \mathbf{s}}=\int_0^1 \vec{F}(\mathbf{s}(t)) \cdot \frac{\overrightarrow{d \mathbf{s}}}{d t} d t \label{eq:param}
+\end{align}
+It is the step where we go from an abstract integral over a curve to an actual calculation which we extract a numerical value from. Moreover, our choice of parametrization will determine how easy our calculation is. \\[10pt]
+When we did the integral 
+\begin{align}
+    \int_{-b}^b \frac{d x}{{\sqrt{x^2+a^2}}^3} = \frac{1}{a^2} \left[ \frac{x}{\sqrt{x^2+a^2}} \right]^b_{-b} 
+\end{align}
+One can verify that the derivative of the RHS is indeed our integrand. However, it's not immediately obvious how one can go from the LHS to the RHS. In other words, if we had parametrized our curve using $x$, it is hard to perform the integral. However, choosing a different parametrization $\theta = \tan^{-1}(x/a)$ will make our life a lot easier
+\begin{align}
+    \int_{\theta=\tan ^{-1}\left(-\frac{b}{a}\right)}^{\theta=\tan ^{-1}\left(\frac{b}{a}\right)} \frac{a \sec ^2 \theta d \theta}{{\sqrt{a^2 \tan ^2 \theta+a^2}}^3}=\frac{1}{a^2} \int_{-\tan ^{-1}\left(\frac{b}{a}\right)}^{\tan ^{-1}\left(\frac{b}{a}\right)} \cos \theta d \theta
+\end{align}
+This is what we are actually doing when we do U-substitution. \\[10pt] \textbf{U-substitution is just a reparametrization of our curve!}\\[10pt]
+Although it is easier to perform the calculation in the $\theta$ parametrization, it's geometrically easier to formulate the integral in the $x$ parametrization. U-substitution helps us reap the best of both worlds, by letting us formulate the geometry of the line integral in the $x$ parametrization, and evaluate the integral analytically using the $\theta$ parametrization in a systematic and purely algebraic way (so we won't need to think of the geometry). 
+\subsection{Integrating Infinitesimal Charge $dq$}
+One might see the line integral for electric potential \begin{align}
+    \phi(\rho)=\int_\gamma \frac{k\ d q}{r}
+\end{align}
+and wonder where our familiar $\overrightarrow{d\mathbf{s}}$ went. In the context of physics, the curve $\gamma$ represents our line charge. Imagine a rope in 3D space, and imagine we sprinkle charges along the rope such that the rope now has charge distribution $\lambda(x)$. $dq$ means a "small segment of line charge" along our curve. If we parametrize our curve with parameter $x$, we may write $dq = \lambda(x)\ dx$. We will cover the example of "finite line charge" in greater detail later, but the parametrized integral will end up being 
+\begin{align}
+    \phi(\rho)=\int_\gamma \frac{k\ d q}{r} = \int_{-a}^a \frac{k \lambda(x)\ dx}{\sqrt{x^2 + \rho^2}}
+\end{align}
+\subsection{Integrating Vector Functions}
+When we see a vector quantity in the integrand, such as in 
+\begin{align}
+    \vec{E}(\rho) &= \int_\gamma \frac{k \ dq}{r^2} \hat{r}
+\end{align}
+It just means we sum up vectors instead of scalars (real numbers). Numerically, it effectively means we perform 3 integrals instead of 1. In most physics questions, however, some components turn out to be zero by symmetry considerations (integral of an odd function vanishes). \\[10pt]
+Also it's worth mentioning that when summing up vectors, our choice of coordinate system, and consequently the basis vectors, will determine the difficulty of the calculation. A common choice is the cylindrical coordinate basis vectors $\{\hat{\rho}, \hat{z}, \hat{\phi} \}$.
+
+\section{Math: Cylindrical Coordinates Calculus}
+\subsection{Recap: Polar Coordinates}
+Refer to section \ref{sec:polar}.
+\subsection{Cylindrical Coordinates}
+The 3rd dimension is simply $\hat{z}$. Points in 3D space are labelled by coordinates $\rho, z, \phi$. \\[10pt]
+\subsection{Cylindrical Basis Vectors}
+Recall in section \ref{sec:polarbasis} that a basis vector \textbf{at a point P} is defined by "change \textbf{each} coordinate of P and see where it moves". With this, the basis vectors $\{\hat{rho}, \hat{z}, \hat{\phi}\}$ look like
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/cylindricalbasis2.png}
+    \caption{Basis Vectors in Cylindrical Coordinates}
+    \label{fig:cylindricalbasis}
+\end{figure}\\[10pt]
+The position vector is 
+\begin{align}
+    \vec{r} = \rho \hat{\rho} + z \hat{z}
+\end{align}
+We can differentiate this vector to obtain velocity and acceleration. We will end up with something like the centrifugal, Coriolis, and Euler force for the $\rho, \phi$ coordinates. This is because ${d\hat{\rho}}/{dt}$ involves both $\hat{\rho}$ and $\hat{\phi}$, and similarly for ${d\hat{\rho}}/{dt}$, whereas $d\hat{z}/dt$ is just $\dot{z} \hat{z}$. And $\hat{\rho}, \hat{\phi}$ change depending on where we are in space, while $\hat{z}$ is a constant basis vector everywhere.
+\subsection{Integration in Cylindrical Coordinates}
+One can see a nice table at \url{https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates}.
+\subsubsection{Line Integral}
+This is useful for Biot-Savart.
+\begin{align}
+{d\mathbf{s}} = d \rho\ \hat{{\rho}}+\rho\ d \phi \ \hat{{\phi}}+d z\ \hat{{z}}
+\end{align}
+How one can use the above, is by choosing a parameterization $t$ of the curve $\gamma$. Then recalling Equation \ref{eq:param}
+\begin{align}
+    \int_\gamma \mathbf{F}(\mathbf{s}) \cdot {d \mathbf{s}}=\int_0^1 \mathbf{F}(\mathbf{s}(t)) \cdot \frac{{d \mathbf{s}}}{d t} d t
+\end{align}
+Writing $\displaystyle \frac{d\mathbf{s}}{dt}$ from the RHS in polar coordinates means 
+\begin{align}
+{d\mathbf{s}} &= d \rho\ \hat{{\rho}}+\rho\ d \phi \ \hat{{\phi}}+d z\ \hat{{z}} \\ 
+ &\  \bigg| \text{ "Divide" both sides by }dt\\
+    \frac{d\mathbf{s}}{dt} &= \frac{d\rho}{dt} \hat{\rho} + \rho \frac{d\phi}{dt} \hat{\phi} + \frac{dz}{dt} \hat{z}
+\end{align}
+Note: Maybe you're confused about what $d\mathbf{s}$ is, it seems to be both an infinitesimal (due to the $d$) and a vector (due to bolded $\mathbf{s}$), or an "infinitesimal line segment". Moreover, you might be unsure what $d\rho$ on the RHS is (it's actually a "differential form"). \\[10pt]
+\textbf{To resolve these conceptual confusions, choose a parameterization}, which means symbolically dividing it by $dt$. Then, it's now much clearer that $\displaystyle \frac{d\mathbf{s}}{dt}$ is the vector tangent to the curve, and $\displaystyle \frac{d\rho}{dt}$ is the derivative of the curve's $\rho(t)$ coordinate with respect to time.\\[10pt]
+Extra: In most cases, the value of the line integral \textbf{depends on the path/curve taken}, which means that to calculate the result, we definitely have to parameterize it. However, in some special cases known as \textbf{conservative vector fields}, one can show that the result is independent of our path. In such cases, the vector field $\mathbf{F}(\mathbf{s})$ can be written directly in terms of $\rho, \phi, z$ and their respective basis vectors (e.g. $\mathbf{F} = (1/\rho) \hat{\rho}$ for infinite line charge), and so we can evaluate the line integral without choosing any parameterization. We will talk about conservative vector fields in the Vector Calculus chapter.
+\subsubsection{Surface Integral}
+This probably isn't used much.
+\begin{align}
+{d\mathbf{A}} = \rho\ d \phi\ d z\ \hat{{\rho}} 
++d \rho\ d z\ \hat{{\phi}}
++\rho\ d \rho\ d \phi\ \hat{{z}}
+\end{align}
+We will talk about surface integrals in detail later.
+\subsubsection{Volume Integral}
+This is useful in Moment of Inertia calculations.
+\begin{align}
+dV = \rho\ d \rho\ d \varphi\ d z
+\end{align}
+We will talk about volume integrals in detail later.
+
+\section{Physics: Electrostatics (1D Examples)}
+We consider charges of the following shapes
+\begin{itemize}
+    \item Ring Charge
+    \item Finite Line 
+    \item Infinite Line 
+    % \item Square Loop 
+\end{itemize}
+
+\subsection{Ring Charge (Axial)}
+"Axial" means along the axis perpendicular to the plane spanned by the ring charge.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/ringcharge.png}
+    \caption{Ring Charge}
+    \label{fig:ringcharge}
+\end{figure}\\[10pt]
+We can parameterize the ring by an angle $\theta$, then the infinitesimal charge $ds = R\ d\theta$ where $R$ is the radius of the ring. $dq = k \lambda\ ds = k \lambda R\ d\theta$ and $r = \sqrt{z^2 + R^2}$. \\[10pt]
+Calculating the potential,
+\begin{align}
+\phi(z) &= \int_\mathcal{C} \frac{k\ dq}{r} \\ 
+&=\int_0^{2 \pi} \frac{k \lambda R\ d \theta}{\sqrt{z^2+R^2}} \\
+&= \frac{ \lambda R}{2 \epsilon_0 \sqrt{z^2+R^2}} 
+\end{align}
+where we substituted $k=1/4\pi\epsilon_0$ in the final expression. \\[10pt]
+For the electric field,
+\begin{align} 
+\vec{r}&=z \hat{z}-R \hat{\rho} \\
+d \vec{E}&= \frac{k\ dq}{r^3} \vec{r}\\
+&=\frac{k \lambda R\ d \theta}{\sqrt{z^2+R^2}^3}(z \hat{z}-R \hat{\rho}) \\
+&= \frac{k \lambda R\ d \theta}{\sqrt{z^2+R^2}^3}z\ \hat{z}- \frac{k \lambda R\ d \theta}{\sqrt{z^2+R^2}^3} R\ \hat{\rho} \\
+&= dE_z\ \hat{z} + dE_\rho\ \hat{\rho} \\
+E_\rho &= 0 \text{ by symmetry} \\
+E_z&=\int_0^{2 \pi} \frac{k \lambda R\ d \theta}{{\sqrt{z^2+R^2}}^3} z \\
+&= \frac{ \lambda R z}{{2\epsilon_0 \sqrt{z^2+R^2}}^3} 
+\end{align}
+Once again, you can verify that $E_z = -\frac{\partial \phi}{\partial z}$.
+
+\subsection{Finite Line Charge}
+Suppose we have a straight line charge of length $2a$ and charge density $\rho$. Find the potential $\phi(\rho)$ and electric field $\vec{E}(\rho)$ at distance $\rho$ away from the center of the line charge.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/finiteline.png}
+    \caption{Finite Line Charge}
+    \label{fig:finiteline}
+\end{figure}
+\subsubsection{Potential}
+Each small charge $dq$ contributes $\displaystyle d\phi = \frac{k\ dq}{r}$ to the potential, where $r$ is the distance from the infinitesimal charge $dq$ to the point in space where we are measuring the potential of. Pictorially
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/finiteline2.png}
+    \caption{Each $dq$ contributes $d\phi$}
+    \label{fig:finiteline2}
+\end{figure}\\[10pt]
+The total electric potential will hence be 
+\begin{align}
+    \phi(\rho)=\int_\gamma \frac{k\ d q}{r}
+\end{align}
+where $\gamma$ is the curve representing the line charge. To evaluate this line integral, we choose a parameterization for the curve. In this case we choose $z$ as the parameter.
+\begin{align}
+    \phi(\rho)&=\int_{-a}^a \frac{k \lambda\ d z}{\sqrt{z^2+\rho^2}} 
+\end{align}
+This is just the integral in Section \ref{sec:potential_integral}. Evaluating it yields 
+\begin{align}
+    \phi(\rho) &= 2k\lambda \ln \left( \sqrt{1+\left(\frac{a}{\rho}\right)^2} + \frac{a}{\rho}\right)
+\end{align}
+Right now we see that if we take the limit $\lim_{a\rightarrow\infty}$, the potential at a finite distance will diverge $\phi(\rho) \rightarrow \infty$. One also observes that the answer is only dependent on the ratio $a/\rho$.
+\subsubsection{Electric Field}
+Now let's turn out attention to calculating the Electric Field. We will be integrating the the infinitesimal Electric Field (a vector)
+\begin{align}
+    d\vec{E} &= \frac{k \lambda d z}{{\sqrt{z^2+\rho^2}}^3} \vec{r} \\
+    \text{where }\vec{r} &= -z \hat{z} + \rho \hat{\rho} 
+\end{align}
+Because the direction of $\vec{r}$ changes depending on where you are along the $z$-axis, we need to decompose $\vec{r}$ into \textbf{constant bases} before we perform integration
+\begin{align}
+\text{Substituting } \vec{r} &= -z \hat{z} + \rho \hat{\rho} \\
+    d\vec{E} &= \frac{-z k \lambda d z}{{\sqrt{z^2+\rho^2}}^3} \hat{z}+\frac{\rho k \lambda d z}{{\sqrt{z^2+\rho^2}}^3} \hat{\rho} \\ 
+    &= dE_z\ \hat{z} + dE_{\rho}\ \hat{\rho} 
+\end{align}
+Integrating $dE_z$ and $dE_\rho$ we obtain
+\begin{align}
+    E_z &= \int_{-a}^{a} \frac{-z k \lambda d z}{{\sqrt{z^2+\rho^2}}^3} = 0 \\
+    E_\rho &= \int_{-a}^{a} \frac{\rho k \lambda d z}{{\sqrt{z^2+\rho^2}}^3} = 2k\lambda \frac{  a}{\rho \sqrt{a^2 + \rho^2}}
+\end{align}
+where $E_z=0$ follows from the fact that the integrand is an odd function.\\[10pt]
+Extra: One can verify that electric field is the gradient of potential $$E_\rho = -\frac{\partial \phi(\rho)}{\partial \rho}$$
+
+\subsection{Infinite Line Charge}
+\subsubsection{Electric Field}
+Taking the limit $a\rightarrow\infty$, we get
+\begin{align}
+    \lim_{a\rightarrow\infty} E_\rho&= 2 k \lambda\lim_{a\rightarrow\infty} \frac{a}{\rho \sqrt{a^2+\rho^2}} \\
+    &=  2 k \lambda\lim_{a\rightarrow\infty} \frac{1}{\rho \sqrt{1+\left(\frac{\rho}{a}\right)^2}}\\
+    &= \frac{2k\lambda}{\rho}
+\end{align}
+\subsubsection{Potential (First Attempt: Pesky Infinity)}
+One can take the limit $a\rightarrow\infty$. One sees that 
+\begin{align}
+    \lim_{a\rightarrow\infty}\phi(\rho)&=2 k \lambda  \lim_{a\rightarrow\infty}\ln \left(\sqrt{1+\left(\frac{a}{\rho}\right)^2}+\frac{a}{\rho}\right) = \infty 
+\end{align}
+This may seem unintuitive as the potential is infinity no matter where we are in space, but yet there is a notion of "location A has higher potential than location B" which leads to the non-zero electric field. The correct intuition is that wherever you are, you experience electric field proportional to $1/\rho$, which causes you to accelerate and gain kinetic energy by Work-Energy theorem. Suppose you place a stationary test charge at location X with the same polarity as the infinite line charge. As it get repelled, the amount of kinetic energy it gains is proportional to $1/\rho$, which means it approaches $0$ as you move to infinity. However, even though the contribution converges to zero, the partial sum of contributions diverges (\href{https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)}{Harmonic Series}). As it flies off to infinity, it gains infinite amount of kinetic energy. This implies that the potential at the starting location X is infinity. \\[10pt]
+The same argument can be made for a test charge of opposite polarity, except it flies towards the line charge instead.
+\subsubsection{Potential}
+There is a way to resolve the issue of $\phi(\rho) = \infty$ so that we get $\phi(\rho) = - 2k \lambda \ln \rho$, which matches textbook results. Resolving this will also be a pedagogical exercise in solidifying our conceptual understanding. \\[10pt]
+\textbf{Point}: Only potential \textit{differences} matter.\\[10pt]
+The electric potential difference between two points is defined by 
+\begin{align}
+    \phi_{B} - \phi_{A} = -\int_A^B \vec{E} \cdot d\vec{s}
+\end{align}
+For the infinite line charge, 
+\begin{align}
+    \vec{E} = \frac{2k\lambda}{\rho}\ \hat{\rho} 
+\end{align}
+(Extra: Because this vector field is curl-free, line integral doesn't depend on path taken)\\[10pt]
+Choosing a radial path from $A$ to $B$, we get
+\begin{align}
+    \phi_B - \phi_A &= -\int_A^B \vec{E} \cdot d\vec{s} \\
+    &= -\int_{\rho_A}^{\rho_B} \frac{2k\lambda}{\rho} d\rho \\
+    &= - 2k\lambda \ln \left( \frac{\rho_B}{\rho_A} \right) \\ 
+    &= - 2k\lambda \left( \ln \rho_B - \ln \rho_A \right) 
+\end{align}
+Or for an indefinite integral,
+\begin{align}
+    \phi(\rho) &= -2k \lambda \ln \rho + C \\
+    \text{where } C &\text{ is an arbitrary constant}
+\end{align}
+Even though this \textit{seems like} doesn't make sense dimensionally since we can't plug in a dimensional quantity $\rho$ (meters) into the $\ln$ function, the $C$ here actually saves the day. $C/2k\lambda$ has units of $\ln (\text{meters})$, and if we write $C = 2k\lambda \ln \rho_0$ then $C$ sets the radius $\rho_0$ of \textit{zero potential}.
+\begin{align}
+    \phi(\rho) = -2k \lambda \ln \left(\frac{\rho}{\rho_0}\right) \label{eq:phirho}
+\end{align}
+We could choose any distance $\rho_0$ to be our point of zero potential. \\[10pt]
+Remark: In fact, this illuminates why our first attempt gets infinity for the potential! When we said that each infinitesimal line element $dq$ had potential of $d\phi = k\ dq / r$, we implicitly set the zero potential to be at infinity. That worked well for the point charge, but if we set $\rho_0=\infty$ in \ref{eq:phirho}, we see that gives us $\phi(\rho) = -2k \lambda \ln 0 = \infty$. \\[10pt]
+\textbf{When} we set the location of zero potential matters! The 2 attempts of calculating potential of line charge
+\begin{enumerate}
+    \item E field of point charge $\Rightarrow$ Potential of point charge $\Rightarrow$ Potential field of line charge
+    \item E field of point charge $\Rightarrow$ E field of line charge $\Rightarrow$ Potential of line charge
+\end{enumerate}
+Calculation 1 yields infinity because when we go from E field to potential (of point charge), we implicitly set the point of zero potential to be at infinity. \\[10pt]
+Calculation 2 yields a sensible potential function because when we go from E field to potential (of line charge), we set the point of zero potential to be some finite distance.
+\section{Math: Spherical Coordinates Calculus}
+\section{Math: 2D Integrals}
+\section{Physics: Electrostatics (2D Examples)}
+\begin{itemize}
+    \item Infinite Sheet 
+    \item Spherical Shell (Inside)
+    \item Spherical Shell (Outside)
+    \item Disk (Axial) (Morin)
+    \item Disk (Rim) (Morin)
+\end{itemize}
+\section{Math: Surface Integrals}
+\subsection{Moment of Inertia}
+Integrating scalar functions over a surface is something we need to perform, for say, finding the moment of inertia of a 2D laminar. Once again, to calculate a surface integral, we need to find a parameterization of the surface. We illustrate this with the following examples:
+\begin{itemize}
+    \item Rectangular Laminar
+    \item Disk (Perpendicular Axis)
+    \item Disk (Parallel Axis)
+\end{itemize}
+\subsubsection{Rectangular Laminar}
+We may parameterize a rectangular surface $\mathcal{S}$ as 
+\begin{align}
+\mathcal{S} = \{(x,y)\ \vert -a/2 \leq x \leq a/2,\ -b/2 \leq y \leq b/2 \}
+\end{align}
+Then performing the integral would just be substituting the parameterization into the limits of integration
+\begin{align}
+    I &= \iint_{\mathcal{S}} r^2\ dm \\
+    &= \int_{y=-b/2}^{y=b/2} \underbrace{\int_{x=-a/2}^{x=a/2} (x^2 + y^2)\ \sigma dx}dy \\
+    &= \sigma \int_{y=-b/2}^{y=b/2} \left[ \frac{x^3}{3} + xy^2 \right]^{x=a/2}_{x=-a/2} \ dy \\
+    &= \sigma \int_{y=-b/2}^{y=b/2} \left( \frac{a^3}{12} + ay^2 \right)  \ dy\\
+    &= \sigma \left[ \frac{a^3}{12}y + \frac{ay^3}{3} \right]^{y=b/2}_{y=-b/2} \\ 
+    &= \sigma \left(\frac{a^3 b}{12} + \frac{a b^3}{12} \right) \\
+    &= \frac{1}{12} m (a^2 + b^2)
+\end{align}
+\subsubsection{Disk (Perpendicular Axis)}
+Parameterizing the disk $\mathcal{S}$ as 
+\begin{align}
+    \mathcal{S} = \{ (\rho,\theta)\ \vert\ 0 \leq \rho \leq R, \ 0 \leq \theta \leq 2\pi \} 
+\end{align}
+And remembering that for polar coordinates, the differential area form 
+\begin{align}
+    dA = \rho\ d\rho \ d\theta
+\end{align}
+Finding the moment of inertia of the disk about an axis perpendicular to the disk,
+\begin{align}
+    I &= \iint_\mathcal{S} r^2\ dm \\
+    &= \int_{\theta=0}^{\theta=2\pi} \int_{\rho=0}^{\rho=R} \rho^2\ \sigma \ \rho\  d\rho \ d\theta \\
+    &= \sigma \int_{\theta=0}^{\theta=2\pi} \left[\frac{\rho^4}{4}\right]^R_0 d\theta \\
+    &= \frac{m}{\pi R^2} \int_{\theta=0}^{\theta=2\pi} \left(\frac{R^4}{4}\right) d\theta \\
+    &= \frac{m}{\pi R^2} 2\pi \frac{R^4}{4} \\
+    &= \frac{1}{2} m R^2
+\end{align}
+\subsubsection{Disk (Parallel Axis)}
+We parameterize the disk the same way, except now the distance $r$ to the parallel axis is
+\begin{align}
+    r = \rho \sin \theta
+\end{align}
+So the moment of inertia with respect to an axis parallel to the disk is
+\begin{align}
+    I &= \iint_\mathcal{S} r^2\ dm \\
+    &= \int_{\theta=0}^{\theta=2\pi} \int_{\rho=0}^{\rho=R} \rho^2 \sin^2 \theta \ \sigma \ \rho\  d\rho \ d\theta \\
+    &= \sigma \int_{\theta=0}^{\theta=2\pi} \left[\frac{\rho^4}{4}\right]^R_0 \sin^2 \theta\ d\theta \\
+    &= \frac{m}{\pi R^2} \int_{\theta=0}^{\theta=2\pi} \left(\frac{R^4}{4} \sin^2 \theta \right) d\theta \\
+    &= \frac{m}{\pi R^2} \frac{R^4}{4} \pi \\
+    &= \frac{1}{4} m R^2
+\end{align}
+\subsection{Flux}
+Flux of a vector field $\vec{E}$ through a surface $\mathcal{S}$ is given by 
+\begin{align}
+    \Phi = \iint_\mathcal{S} \vec{E} \cdot \overrightarrow{dA}
+\end{align}
+We need to parameterize the surface as usual, but this time our $\overrightarrow{dA}$ is a vector. The simplest example would be a point charge and a spherical surface surrounding it.
+\subsubsection{Point Charge}
+To calculate the electric flux of a point charge, through a spherical Gaussian surface $\mathcal{S}$ centered at the point charge, we can parameterize the Gaussian surface as
+\begin{align}
+    \mathcal{S} &= \{ (\rho,\theta,\varphi)\ \vert\ \rho = R,\ \theta \in [0,\pi],\ \varphi \in [0,2\pi] \} \\
+    \overrightarrow{dA} &= \rho^2 \sin \theta\ d\theta\ d\varphi\ \hat{\rho} + \rho\sin\theta\ d\rho\ d\varphi\ \hat{\theta} + \rho\ d\rho\ d\theta\ \hat{\varphi} 
+\end{align}
+where we obtained $\overrightarrow{dA}$ from \url{https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates}. \\[10pt]
+The electric field of a point charge is 
+\begin{align}
+    \vec{E} = \frac{kQ}{\rho^2} \hat{\rho}
+\end{align}
+Hence the flux may be evaluated
+\begin{align}
+    \Phi &= \iint_\mathcal{S} \vec{E} \cdot \overrightarrow{dA} \\
+    &= \iint_\mathcal{S} \frac{kQ}{\rho^2} \hat{\rho} \cdot (\rho^2 \sin \theta\ d\theta\ d\varphi\ \hat{\rho} + \rho\sin\theta\ d\rho\ d\varphi\ \hat{\theta} + \rho\ d\rho\ d\theta\ \hat{\varphi}) \\
+    &= \iint_\mathcal{S} \frac{kQ}{\rho^2} \hat{\rho} \cdot \rho^2 \sin \theta\ d\theta\ d\varphi\ \hat{\rho} \\
+    &= \int_0^{\pi} d\theta \int_0^{2\pi} d\varphi \frac{kQ}{\rho^2} \rho^2 \sin \theta \\
+    &= kQ \int_0^{\pi} d\theta \int_0^{2\pi} d\varphi \sin \theta \\
+    &= 2\pi kQ \int_0^{\pi} d\theta\ \sin \theta \\
+    &= 4\pi kQ \\
+    &= \frac{Q}{\epsilon_0}
+\end{align}
+This is a boring result, but it does illustrate how one performs flux calculations. Another boring result you can check is that the flux of a dipole is $0$.
+\subsubsection{Point Charge (Cartesian)}
+We could very well have chosen a different parameterization of our Gaussian surface,
+\begin{align}
+    \mathcal{S} &= \{ (x,y,z)\ \vert\ x^2 + y^2 + z^2 = R \}  \\
+    \overrightarrow{dA} &= dx\ dy\ \hat{z} + dy\ dz\ \hat{x} + dx\ dz\ \hat{y}
+\end{align}
+This leads to a more complicated integral where the symmetry of the problem is not manifest, but it'll be a good exercise to verify that it leads to the same answer for flux.
+\section{Gauss Law \& Gaussian Surfaces}
+The integral form of Gauss law for electric field is 
+\begin{align}
+    \iint_\mathcal{S} \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enclosed}}}{\epsilon_0}
+\end{align}
+The integral form of Gauss law for magnetic field is 
+\begin{align}
+    \iint_\mathcal{S} \mathbf{B} \cdot d\mathbf{A} = 0
+\end{align}
+\subsection{Infinite Sheet revisited}
+Consider a pillbox as a Gaussian surface. The flux through the sides of the pillbox are $0$ since the electric field is purely vertical due to symmetry of the system. Hence, the total flux is through the top and bottom surfaces of the cylindrical pillbox. By Gauss' law, 
+\begin{align}
+    \Phi_{\text{top}} + \Phi_{\text{bottom}} = \frac{\sigma A}{\epsilon_0}
+\end{align}
+Since $\Phi_{\text{top}} = \Phi_{\text{bottom}}$, 
+\begin{align}
+    \Phi_{\text{top}} = \frac{\sigma A}{2\epsilon_0}
+\end{align}
+The flux is also by definition 
+\begin{align}
+    \Phi_{\text{top}} = E_{z} A 
+\end{align}
+So equating the two gets us
+\begin{align}
+    E_{z} = \frac{\sigma}{2\epsilon_0}
+\end{align}
+which coincides with the answer we get through direct integration over the infinite surface.
+\subsection{Shell Theorem}
+\textbf{Theorem}: A spherically symmetric charge distribution affects \textbf{external} objects as though all the charge was concentrated at a point at its center.\\[10pt]
+(Draw picture in class) Consider a spherical Gaussian surface of radius $R$ around the charge distribution. By spherical symmetry, total flux is just 
+\begin{align}
+    \Phi = E\ 4\pi R^2
+\end{align}
+Gauss Law tells us 
+\begin{align}
+    \Phi = \frac{Q}{\epsilon_0}
+\end{align}
+where $Q$ is the total charge of the charge distribution. Equating the two, the electric field is 
+\begin{align}
+    E = \frac{kQ}{R^2}
+\end{align}
+which is the same result if we pretended all the charge was concentrated into a point charge at the center of the charge distribution. \\[10pt]
+\textbf{Note:} If you are inside the charge distribution, however, you need to be more careful when calculating how much charge your Gaussian surface encloses. Let's illustrate this with an example.
+\subsection{Uniformly Charged Solid Sphere}
+\textbf{Qn}: If we have a uniformly charged solid (not hollow) sphere of radius $R$ with charge density $\rho$, find the electric field $E$ and potential $\phi$ as a function of distance $r$ from the center. Consider regions both inside and outside the sphere. \\[10pt]
+We first find the electric field using Gaussian surface, then we integrate it to find the potential. 
+\subsection{Exercises}
+(Competitive Physics 5.4.1) Problem: Determine the electric field at a point $\frac{l}{2}$ above the center of a square with a uniform surface charge density $\sigma$ and edge length $l$. \\[20pt]
+Prove Earnshaw's theorem with Gauss' theorem.
+\section{Math: 3D Integrals}
+\section{Math: Volume Integrals}
+\begin{itemize}
+    \item Filled Shell (Inside/Outside)
+\end{itemize}
 \section{Assorted Questions II}
 \subsubsection{SJPO 2016 General Round Q25}
 A circular disc with an axle of diameter $2 \mathrm{~cm}$, is attached with strings to the ceiling. The disc is rotated so that the strings wind up along the axle so that the disc is raised up to the ceiling. The string is long such that that when the disc is released from rest, its center of mass falls $2.0 \mathrm{~m}$. The disc does not slip from the string. Assume that the axle is massless and the disc has all of its $5 \mathrm{~kg}$ mass at radius $3 \mathrm{~cm}$. Estimate the acceleration of the center of mass of the disc near the bottom of the fall. \\
@@ -2129,6 +2779,9 @@ A ladder of length $L$ and mass $M$ has its bottom end attached to the ground by
 \label{fig:morin2.15}
 \end{wrapfigure}
 }
+\clearpage
+\subsubsection{(JUICY) Morin Problem 7.8 (Wrapping around a pole)}
+A puck of mass $m$ sliding on frictionless ice is attached by a horizontal string of length $\ell$ to a thin vertical pole of radius $R$. The puck initially travels in (essentially) a circle around the pole at speed $v_0$. The string wraps around the pole, and the puck gets drawn in and eventually hits the pole. What quantity is conserved during this motion? What is the puck's speed right before it hits the pole?\\[5pt]
 
 \clearpage
 
@@ -2153,8 +2806,6 @@ An ideal uniform spring of mass $m \mathrm{~kg}$, unstretched length $L \mathrm{
 \end{itemize}
 Ans: \ifpaper E \fi
 
-\section{Math: Other Coordinates}
-\section{Math: 2D \& 3D Integrals}
 \clearpage
 \section{Physics: Center of Mass}
 \subsubsection{SJPO 2018 General Round Q5}
@@ -2195,9 +2846,9 @@ Examples: uniform rod, uniform disc, shell, solid sphere, rectangular plate, gri
 \subsubsection{SPhO 2020 Q1}
 A cylindrical rod has a radius of 1.0 cm and length 1.0 m. It is made up of two sections, each of length 0.5 m. The material of one section is zinc and that of the other section is copper. The end of the rod made of zinc is pivoted to a fixed point O. The rod is first held so that it is horizontal and then released. Determine the angular velocity of the rod when it is in the vertical position. (Densities: zinc: 7135 kg $\text{m}^{-3}$; copper: 8940 kg $\text{m}^{-3}$) [10]\\
 \noindent Ans: $0.91258 \text{ kg m}^2$
-\section{Physics: Electrostatics}
-
+\clearpage
 \section{Math: Vector Calculus}
+\noindent The approach I will take in this book will differ from conventional methods. I plan to use surface and line integrals to introduce divergence and curl respectively. 
 \clearpage
 \section{Physics: Potentials \& Potential Energy}
 \subsubsection{SJPO 2018 General Round Q1}
